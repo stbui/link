@@ -33,4 +33,19 @@
 # 行情
 
 - [广发操盘手](https://hippo.gf.com.cn/)
-- [国海证券网上交易](https://jy.ghzq.com.cn/hq/index.html）
+- [国海证券网上交易](https://jy.ghzq.com.cn/hq/index.html)
+
+
+- [巨潮资讯网](http://www.cninfo.com.cn/)
+- [深圳证券交易所](http://www.szse.cn/)
+- [上海证券交易所](http://www.sse.com.cn/)
+- [国证指数网](http://www.cnindex.com.cn/)
+
+
+# 财经
+- [和讯网](http://www.hexun.com/)
+- [证券之星](https://www.stockstar.com/)
+- [第一财经](https://www.yicai.com/)
+- [全景网](https://www.p5w.net/)
+- [财联社](https://www.cls.cn/)
+- 
