@@ -34,7 +34,19 @@
 
 - [广发操盘手](https://hippo.gf.com.cn/)
 - [国海证券网上交易](https://jy.ghzq.com.cn/hq/index.html)
+- [选股宝](https://xuangubao.cn/dingpan)
+- [雪球](https://xueqiu.com/)
+- [http://www.etf.group/data/list1.html](http://www.etf.group/data/list1.html)
 
+# 行情k图
+- [https://xuangubao.cn/tools/chart-widget/ashares/110051.SS](https://xuangubao.cn/tools/chart-widget/ashares/110051.SS)
+
+# 可转债行情
+- [https://ww2.ezhai.net.cn/](https://ww2.ezhai.net.cn/)
+- [https://money.sina.cn/h5chart/apptkchartleju.html?direction=vertical&symbol=sh113591](https://money.sina.cn/h5chart/apptkchartleju.html?direction=vertical&symbol=sh113591)
+- [jisilu](https://www.jisilu.cn/web/data/cb/list)
+
+# 交易所
 
 - [巨潮资讯网](http://www.cninfo.com.cn/)
 - [深圳证券交易所](http://www.szse.cn/)
@@ -48,4 +60,10 @@
 - [第一财经](https://www.yicai.com/)
 - [全景网](https://www.p5w.net/)
 - [财联社](https://www.cls.cn/)
-- 
+- [华尔街见闻](https://wallstreetcn.com/)
+
+# 接口
+- https://w.sinajs.cn/etag.php?_=1639153280222&list=sz000792
+
+# 开源
+- [KLineChart](https://github.com/liihuu/KLineChart)
