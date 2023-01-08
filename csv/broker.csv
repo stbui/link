@@ -39,7 +39,7 @@
 格隆汇,https://www.gelonghui.com/
 中证路演中心,https://www.cs.com.cn/
 
-行情
+数据行情
 广发操盘手,https://hippo.gf.com.cn/
 国海证券网上交易,https://jy.ghzq.com.cn/hq/
 东莞证券行情服务,https://newh5.dgzq.com.cn:8888/
@@ -47,6 +47,9 @@
 手机金融界,https://m.jrj.com.cn/hq/
 选股宝,https://xuangubao.cn/
 好灵数据网,http://www.h0.cn/
+新浪股市行情,https://vip.stock.finance.sina.com.cn/mkt/
+东方财富网行情,http://quote.eastmoney.com/center/
+搜狐股市行情,https://q.stock.sohu.com/cn/ph.shtml
 同花顺热榜,https://eq.10jqka.com.cn/frontend/thsTopRank/index.html#/
 同花顺龙虎榜,https://eq.10jqka.com.cn/lhbEnhanced/public/indexV2.html
 同花顺涨停聚焦,https://data.10jqka.com.cn/datacenterph/limitup/limtupInfo.html
@@ -55,6 +58,8 @@
 行情K图,https://xuangubao.cn/tools/chart-widget/ashares/000001.SS
 行情K图,https://money.sina.cn/h5chart/apptkchartleju.html?direction=vertical&symbol=sh113591
 集思录,https://www.jisilu.cn/web/data/cb/list
+外汇牌价,https://www.boc.cn/sourcedb/whpj/
+
 
 券商
 国泰君安,https://www.gtja.com/
@@ -159,6 +164,8 @@ N视界,https://n-sight.com.cn/
 东方财富终端,https://emdesk.eastmoney.com/pc_activity/AHome/Index
 九方旗舰版,https://www.9fzt.com/download.html
 大智慧,https://www.gw.com.cn/download.shtml#download
+益盟操盘手,http://www.emoney.cn/
+钱龙,https://www.ql18.com.cn/
 通达信软件,https://www.tdx.com.cn/soft.html
 国泰君安,https://www.gtja.com/content/download.html
 国信证券,https://www.guosen.com.cn/gs/software/index.html
@@ -335,17 +342,10 @@ Apple Pay,https://www.apple.com.cn/apple-pay/
 蛋卷基金,https://danjuanapp.com/
 天天基金,https://fund.eastmoney.com/
 同花顺爱基金,https://fund.10jqka.com.cn/
+和讯基金,http://funds.hexun.com/
 好买基金网,https://www.howbuy.com/
-易方达基金,https://www.efunds.com.cn/
-广发基金,http://www.gffunds.com.cn/
-华夏基金,https://www.chinaamc.com/
-天弘基金,http://www.thfund.com.cn/
-博时基金,http://www.bosera.com
-南方基金,http://www.nffund.com/
-富国基金,https://www.fullgoal.com.cn/
-鹏华基金,https://www.phfund.com.cn/
-汇添富基金,https://www.99fund.com/
-工银瑞信基金,https://www.icbccs.com.cn/
+金融界基金,http://fund.jrj.com.cn/
+
 
 港股美股软件
 华盛通,https://www.hstong.com/

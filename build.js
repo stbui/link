@@ -228,7 +228,7 @@ const html = `
         <div class="content">
           <div class="flex">
             <% for (var i=0;i<data.length;i++)  { %>
-            <div id="<%= data[i].name %>" class="<%= data[i].url?'flex-item':'column' %>"><a class="card" href="<%= data[i].url ? data[i].url : '#'+data[i].name %>" title="<%= data[i].name %>" <%= data[i].url ? 'target="_blank' : '' %>"><div class="card-body"><%= data[i].name %></div></a></div>
+            <div id="<%= data[i].name %>" class="<%= data[i].url?'flex-item':'column' %>"><a class="card" href="<%= data[i].url ? data[i].url : '#'+data[i].name %>" title="<%= data[i].name %>" <%= data[i].url ? 'target="_blank"' : '' %>"><div class="card-body"><%= data[i].name %></div></a></div>
             <% } %>
           </div>
         </div>
@@ -296,6 +296,22 @@ const topic = [
   {
     title: "股市财经",
     type: 'broker',
+  },
+  {
+    title: "基金公司",
+    type: 'fund',
+  },
+  {
+    title: "银行",
+    type: 'bank',
+  }, 
+  {
+    title: "房产",
+    type: 'fangchan',
+  },
+  {
+    title: "汽车",
+    type: 'fangchan',
   },
   {
     title: "电视直播",
