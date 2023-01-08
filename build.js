@@ -228,7 +228,7 @@ const html = `
         <div class="content">
           <div class="flex">
             <% for (var i=0;i<data.length;i++)  { %>
-            <div id="<%= data[i].name %>" class="<%= data[i].url?'flex-item':'column' %>"><a class="card" href="<%= data[i].url ? data[i].url : '#'+data[i].name %>" title="<%= data[i].name %>" <%= data[i].url ? 'target=_blank' : '' %>"><div class="card-body"><%= data[i].name %></div></a></div>
+            <div id="<%= data[i].name %>" class="<%= data[i].url?'flex-item':'column' %>"><a class="card" href="<%= data[i].url ? data[i].url : '#'+data[i].name %>" title="<%= data[i].name %>" target="<%= data[i].url ? '_blank' : '_self' %>" ><div class="card-body"><%= data[i].name %></div></a></div>
             <% } %>
           </div>
         </div>
