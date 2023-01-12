@@ -12,9 +12,16 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
+      run: npm install && npm run build
+      
+    - name: 'commit'
+      run: |
+          git config --local user.email "w431106@163.com" 
+          git config --local user.name "stbui"
+          git add .
+          git commit -m "render template" 
+    - name: 'push'
+      uses: ad-m/github-push-action@master
+      with: 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
