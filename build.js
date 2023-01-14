@@ -365,6 +365,10 @@ const topic = [
     type: 'study',
   },
   {
+    title: "ycnav",
+    type: 'ycnav',
+  },
+  {
     title: "xxx",
     type: 'xxx',
   }
