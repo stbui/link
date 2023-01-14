@@ -1,0 +1,731 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>上市公司</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        vertical-align: baseline;
+        word-wrap: break-word;
+        color: #282a2d;
+        background: #f9f9f9;
+      }
+
+      a {
+        color: #282a2d;
+        outline: 0 !important;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #e94041;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1080;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .mt24 {
+        margin-top: 24px
+      }
+      .border-top {
+        border-top: 1px solid #dee2e6;
+      }
+
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        font-size: 14px;
+        width: 200px;
+        height: 100vh;
+        z-index: 1081;
+        background: #f0f2f4;
+        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+      }
+      .sidebar-logo {
+        height: 74px;
+        border-bottom: 1px solid #dee2e6;
+        background: #fff;
+        text-align: center;
+        line-height: 74px;
+        font-size: 22px;
+      }
+      .sidebar-nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      .sidebar-item {
+        position: relative;
+        display: block;
+      }
+      .sidebar-item > a:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        color: #e94041;
+      }
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {
+        display: flex;
+        overflow: hidden;
+        padding: 8px 10px;
+        margin: 1.5px 8px;
+        color: #515c6b;
+        font-size: 16px;
+        align-items: center;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+      .sidebar-menu ul:first-child > li > a {
+        padding: 12px 10px;
+      }
+      .sidebar-nav-inner {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .sidebar-nav-inner .flex-fill {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .header-nav {
+        position: fixed;
+        right: 0;
+        left: 200px;
+        background: rgb(255 255 255 / 77%);
+      }
+
+      .main-content {
+        flex-direction: column;
+        display: flex;
+      }
+
+      .flex-fill {
+        flex: 1 1 auto;
+      }
+
+      .container {
+        margin: auto;
+      }
+      .main-content {
+        margin-left: 200px;
+      }
+      .content {
+        margin-left: 12px;
+      }
+
+      .customize-width {
+        min-width: 1140px;
+        max-width: 1900px;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .flex-item {
+        flex: 0 0 20%;
+        border: 1px solid transparent;
+        padding: 0 12px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        background-color: #eee;
+        margin-bottom: 12px;
+      }
+      .card-body {
+        position: relative;
+        padding: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .column {
+        flex: 1 1 100%;
+        padding: 0 12px;
+        margin-top: 24px;
+      }
+      .column .card {
+        border-left: 4px solid #e94041;
+        background: transparent;
+      }
+      .column .card-body {
+        padding: 0 0 0 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar-nav sticky">
+      <div class="sidebar-nav-inner">
+        <div class="sidebar-logo">
+          <div class="logo overflow-hidden">上市公司</div>
+        </div>
+        <div class="sidebar-menu flex-fill">
+          <div class="sidebar-scroll">
+            <div class="sidebar-menu-inner">
+              <ul>
+                
+                <li class="sidebar-item">
+                  <a href="#农业行业"><span>农业行业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#林业行业"><span>林业行业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#畜牧业"><span>畜牧业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#渔业"><span>渔业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#煤炭开采和洗选业"><span>煤炭开采和洗选业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#石油和天然气开采业"><span>石油和天然气开采业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#黑色金属矿采选业"><span>黑色金属矿采选业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#有色金属矿采选业"><span>有色金属矿采选业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#非金属矿采选业"><span>非金属矿采选业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#开采辅助活动"><span>开采辅助活动</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#农副食品加工业"><span>农副食品加工业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#食品制造业"><span>食品制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#酒、饮料和精制茶制造业"><span>酒、饮料和精制茶制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#纺织业"><span>纺织业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#纺织服装、服饰业"><span>纺织服装、服饰业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#皮革、毛皮、羽毛及其制品和制鞋业"><span>皮革、毛皮、羽毛及其制品和制鞋业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#木材加工和木、竹、藤、棕、草制品业"><span>木材加工和木、竹、藤、棕、草制品业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#家具制造业"><span>家具制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#造纸和纸制品业"><span>造纸和纸制品业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#印刷和记录媒介复制业"><span>印刷和记录媒介复制业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#文教、工美、体育和娱乐用品制造业"><span>文教、工美、体育和娱乐用品制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#石油加工、炼焦和核燃料加工业"><span>石油加工、炼焦和核燃料加工业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#化学原料和化学制品制造业"><span>化学原料和化学制品制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#医药制造业"><span>医药制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#化学纤维制造业"><span>化学纤维制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#橡胶和塑料制品业"><span>橡胶和塑料制品业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#非金属矿物制品业"><span>非金属矿物制品业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#黑色金属冶炼和压延加工业"><span>黑色金属冶炼和压延加工业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#有色金属冶炼和压延加工业"><span>有色金属冶炼和压延加工业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#金属制品业"><span>金属制品业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#通用设备制造业"><span>通用设备制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#专用设备制造业"><span>专用设备制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#汽车制造业"><span>汽车制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#铁路、船舶、航空航天和其他运输设备制造业"><span>铁路、船舶、航空航天和其他运输设备制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#电气机械和器材制造业"><span>电气机械和器材制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#计算机、通信和其他电子设备制造业"><span>计算机、通信和其他电子设备制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#仪器仪表制造业"><span>仪器仪表制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#其他制造业"><span>其他制造业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#废弃资源综合利用业"><span>废弃资源综合利用业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#电力、热力生产和供应业"><span>电力、热力生产和供应业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#燃气生产和供应业"><span>燃气生产和供应业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#水的生产和供应业"><span>水的生产和供应业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#房屋建筑业"><span>房屋建筑业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#土木工程建筑业"><span>土木工程建筑业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#建筑安装业"><span>建筑安装业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#建筑装饰和其他建筑业"><span>建筑装饰和其他建筑业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#批发业"><span>批发业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#零售业"><span>零售业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#铁路运输业"><span>铁路运输业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#道路运输业"><span>道路运输业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#水上运输业"><span>水上运输业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#航空运输业"><span>航空运输业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#装卸搬运和运输代理业"><span>装卸搬运和运输代理业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#仓储业"><span>仓储业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#邮政业"><span>邮政业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#住宿业"><span>住宿业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#餐饮业"><span>餐饮业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#电信、广播电视和卫星传输服务"><span>电信、广播电视和卫星传输服务</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#互联网和相关服务"><span>互联网和相关服务</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#软件和信息技术服务业"><span>软件和信息技术服务业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#货币金融服务"><span>货币金融服务</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#资本市场服务"><span>资本市场服务</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#保险业"><span>保险业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#其他金融业"><span>其他金融业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#房地产业"><span>房地产业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#租赁业"><span>租赁业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#商务服务业"><span>商务服务业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#研究和试验发展"><span>研究和试验发展</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#专业技术服务业"><span>专业技术服务业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#科技推广和应用服务业"><span>科技推广和应用服务业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#生态保护和环境治理业"><span>生态保护和环境治理业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#公共设施管理业"><span>公共设施管理业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#教育"><span>教育</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#卫生"><span>卫生</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#新闻和出版业"><span>新闻和出版业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#广播、电视、电影和影视录音制作业"><span>广播、电视、电影和影视录音制作业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#文化艺术业"><span>文化艺术业</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#体育"><span>体育</span></a>
+                </li>
+                
+                <li class="sidebar-item">
+                  <a href="#综合"><span>综合</span></a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top">
+          <div class="flex-bottom">
+            <ul>
+              <li class="sidebar-item">
+                <a href="#"><span>网站提交</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content flex-fill">
+      <div class="container customize-width">
+        <div class="header-nav"></div>
+        <div class="content">
+          <div class="flex">
+            
+            <div id="农业行业" class="column"><a class="card" href="#农业行业" title="农业行业" target="_self" ><div class="card-body">农业行业</div></a></div>
+            
+            <div id="甘肃亚盛实业(集团)股份有限公司" class="flex-item"><a class="card" href="http://www.yasheng.com.cn" title="甘肃亚盛实业(集团)股份有限公司" target="_blank" ><div class="card-body">甘肃亚盛实业(集团)股份有限公司</div></a></div>
+            
+            <div id="中农发种业集团股份有限公司" class="flex-item"><a class="card" href="https://znfzy.cnadc.com.cn/" title="中农发种业集团股份有限公司" target="_blank" ><div class="card-body">中农发种业集团股份有限公司</div></a></div>
+            
+            <div id="甘肃省敦煌种业集团股份有限公司" class="flex-item"><a class="card" href="http://www.dhseed.com" title="甘肃省敦煌种业集团股份有限公司" target="_blank" ><div class="card-body">甘肃省敦煌种业集团股份有限公司</div></a></div>
+            
+            <div id="新疆塔里木农业综合开发股份有限公司" class="flex-item"><a class="card" href="http://www.xnkf.com" title="新疆塔里木农业综合开发股份有限公司" target="_blank" ><div class="card-body">新疆塔里木农业综合开发股份有限公司</div></a></div>
+            
+            <div id="万向德农股份有限公司" class="flex-item"><a class="card" href="http://www.wxdoneed.com/" title="万向德农股份有限公司" target="_blank" ><div class="card-body">万向德农股份有限公司</div></a></div>
+            
+            <div id="新疆库尔勒香梨股份有限公司" class="flex-item"><a class="card" href="http://www.xjxlgf.com.cn/" title="新疆库尔勒香梨股份有限公司" target="_blank" ><div class="card-body">新疆库尔勒香梨股份有限公司</div></a></div>
+            
+            <div id="新疆赛里木现代农业股份有限公司" class="flex-item"><a class="card" href="http://www.xinsai.com.cn/" title="新疆赛里木现代农业股份有限公司" target="_blank" ><div class="card-body">新疆赛里木现代农业股份有限公司</div></a></div>
+            
+            <div id="黑龙江北大荒农业股份有限公司" class="flex-item"><a class="card" href="http://www.hacl.cn/" title="黑龙江北大荒农业股份有限公司" target="_blank" ><div class="card-body">黑龙江北大荒农业股份有限公司</div></a></div>
+            
+            <div id="海南天然橡胶产业集团股份有限公司" class="flex-item"><a class="card" href="http://www.hirub.cn" title="海南天然橡胶产业集团股份有限公司" target="_blank" ><div class="card-body">海南天然橡胶产业集团股份有限公司</div></a></div>
+            
+            <div id="林业行业" class="column"><a class="card" href="#林业行业" title="林业行业" target="_self" ><div class="card-body">林业行业</div></a></div>
+            
+            <div id="云南景谷林业股份有限公司" class="flex-item"><a class="card" href="http://www.jgly.cn" title="云南景谷林业股份有限公司" target="_blank" ><div class="card-body">云南景谷林业股份有限公司</div></a></div>
+            
+            <div id="畜牧业" class="column"><a class="card" href="#畜牧业" title="畜牧业" target="_self" ><div class="card-body">畜牧业</div></a></div>
+            
+            <div id="湖南新五丰股份有限公司" class="flex-item"><a class="card" href="http://www.newwf.com/" title="湖南新五丰股份有限公司" target="_blank" ><div class="card-body">湖南新五丰股份有限公司</div></a></div>
+            
+            <div id="乐山巨星农牧股份有限公司" class="flex-item"><a class="card" href="https://www.juxingnongmu.cn/" title="乐山巨星农牧股份有限公司" target="_blank" ><div class="card-body">乐山巨星农牧股份有限公司</div></a></div>
+            
+            <div id="云南神农农业产业集团股份有限公司" class="flex-item"><a class="card" href="www.ynsnjt.com" title="云南神农农业产业集团股份有限公司" target="_blank" ><div class="card-body">云南神农农业产业集团股份有限公司</div></a></div>
+            
+            <div id="渔业" class="column"><a class="card" href="#渔业" title="渔业" target="_self" ><div class="card-body">渔业</div></a></div>
+            
+            <div id="上海开创国际海洋资源股份有限公司" class="flex-item"><a class="card" href="http://www.skmic.sh.cn/" title="上海开创国际海洋资源股份有限公司" target="_blank" ><div class="card-body">上海开创国际海洋资源股份有限公司</div></a></div>
+            
+            <div id="大湖水殖股份有限公司" class="flex-item"><a class="card" href="http://www.dhszgf.com" title="大湖水殖股份有限公司" target="_blank" ><div class="card-body">大湖水殖股份有限公司</div></a></div>
+            
+            <div id="山东好当家海洋发展股份有限公司" class="flex-item"><a class="card" href="https://www.ynsnjt.com/" title="山东好当家海洋发展股份有限公司" target="_blank" ><div class="card-body">山东好当家海洋发展股份有限公司</div></a></div>
+            
+            <div id="煤炭开采和洗选业" class="column"><a class="card" href="#煤炭开采和洗选业" title="煤炭开采和洗选业" target="_self" ><div class="card-body">煤炭开采和洗选业</div></a></div>
+            
+            <div id="石油和天然气开采业" class="column"><a class="card" href="#石油和天然气开采业" title="石油和天然气开采业" target="_self" ><div class="card-body">石油和天然气开采业</div></a></div>
+            
+            <div id="黑色金属矿采选业" class="column"><a class="card" href="#黑色金属矿采选业" title="黑色金属矿采选业" target="_self" ><div class="card-body">黑色金属矿采选业</div></a></div>
+            
+            <div id="有色金属矿采选业" class="column"><a class="card" href="#有色金属矿采选业" title="有色金属矿采选业" target="_self" ><div class="card-body">有色金属矿采选业</div></a></div>
+            
+            <div id="非金属矿采选业" class="column"><a class="card" href="#非金属矿采选业" title="非金属矿采选业" target="_self" ><div class="card-body">非金属矿采选业</div></a></div>
+            
+            <div id="开采辅助活动" class="column"><a class="card" href="#开采辅助活动" title="开采辅助活动" target="_self" ><div class="card-body">开采辅助活动</div></a></div>
+            
+            <div id="农副食品加工业" class="column"><a class="card" href="#农副食品加工业" title="农副食品加工业" target="_self" ><div class="card-body">农副食品加工业</div></a></div>
+            
+            <div id="食品制造业" class="column"><a class="card" href="#食品制造业" title="食品制造业" target="_self" ><div class="card-body">食品制造业</div></a></div>
+            
+            <div id="酒、饮料和精制茶制造业" class="column"><a class="card" href="#酒、饮料和精制茶制造业" title="酒、饮料和精制茶制造业" target="_self" ><div class="card-body">酒、饮料和精制茶制造业</div></a></div>
+            
+            <div id="纺织业" class="column"><a class="card" href="#纺织业" title="纺织业" target="_self" ><div class="card-body">纺织业</div></a></div>
+            
+            <div id="纺织服装、服饰业" class="column"><a class="card" href="#纺织服装、服饰业" title="纺织服装、服饰业" target="_self" ><div class="card-body">纺织服装、服饰业</div></a></div>
+            
+            <div id="皮革、毛皮、羽毛及其制品和制鞋业" class="column"><a class="card" href="#皮革、毛皮、羽毛及其制品和制鞋业" title="皮革、毛皮、羽毛及其制品和制鞋业" target="_self" ><div class="card-body">皮革、毛皮、羽毛及其制品和制鞋业</div></a></div>
+            
+            <div id="木材加工和木、竹、藤、棕、草制品业" class="column"><a class="card" href="#木材加工和木、竹、藤、棕、草制品业" title="木材加工和木、竹、藤、棕、草制品业" target="_self" ><div class="card-body">木材加工和木、竹、藤、棕、草制品业</div></a></div>
+            
+            <div id="家具制造业" class="column"><a class="card" href="#家具制造业" title="家具制造业" target="_self" ><div class="card-body">家具制造业</div></a></div>
+            
+            <div id="造纸和纸制品业" class="column"><a class="card" href="#造纸和纸制品业" title="造纸和纸制品业" target="_self" ><div class="card-body">造纸和纸制品业</div></a></div>
+            
+            <div id="印刷和记录媒介复制业" class="column"><a class="card" href="#印刷和记录媒介复制业" title="印刷和记录媒介复制业" target="_self" ><div class="card-body">印刷和记录媒介复制业</div></a></div>
+            
+            <div id="文教、工美、体育和娱乐用品制造业" class="column"><a class="card" href="#文教、工美、体育和娱乐用品制造业" title="文教、工美、体育和娱乐用品制造业" target="_self" ><div class="card-body">文教、工美、体育和娱乐用品制造业</div></a></div>
+            
+            <div id="石油加工、炼焦和核燃料加工业" class="column"><a class="card" href="#石油加工、炼焦和核燃料加工业" title="石油加工、炼焦和核燃料加工业" target="_self" ><div class="card-body">石油加工、炼焦和核燃料加工业</div></a></div>
+            
+            <div id="化学原料和化学制品制造业" class="column"><a class="card" href="#化学原料和化学制品制造业" title="化学原料和化学制品制造业" target="_self" ><div class="card-body">化学原料和化学制品制造业</div></a></div>
+            
+            <div id="医药制造业" class="column"><a class="card" href="#医药制造业" title="医药制造业" target="_self" ><div class="card-body">医药制造业</div></a></div>
+            
+            <div id="化学纤维制造业" class="column"><a class="card" href="#化学纤维制造业" title="化学纤维制造业" target="_self" ><div class="card-body">化学纤维制造业</div></a></div>
+            
+            <div id="橡胶和塑料制品业" class="column"><a class="card" href="#橡胶和塑料制品业" title="橡胶和塑料制品业" target="_self" ><div class="card-body">橡胶和塑料制品业</div></a></div>
+            
+            <div id="非金属矿物制品业" class="column"><a class="card" href="#非金属矿物制品业" title="非金属矿物制品业" target="_self" ><div class="card-body">非金属矿物制品业</div></a></div>
+            
+            <div id="黑色金属冶炼和压延加工业" class="column"><a class="card" href="#黑色金属冶炼和压延加工业" title="黑色金属冶炼和压延加工业" target="_self" ><div class="card-body">黑色金属冶炼和压延加工业</div></a></div>
+            
+            <div id="有色金属冶炼和压延加工业" class="column"><a class="card" href="#有色金属冶炼和压延加工业" title="有色金属冶炼和压延加工业" target="_self" ><div class="card-body">有色金属冶炼和压延加工业</div></a></div>
+            
+            <div id="金属制品业" class="column"><a class="card" href="#金属制品业" title="金属制品业" target="_self" ><div class="card-body">金属制品业</div></a></div>
+            
+            <div id="通用设备制造业" class="column"><a class="card" href="#通用设备制造业" title="通用设备制造业" target="_self" ><div class="card-body">通用设备制造业</div></a></div>
+            
+            <div id="专用设备制造业" class="column"><a class="card" href="#专用设备制造业" title="专用设备制造业" target="_self" ><div class="card-body">专用设备制造业</div></a></div>
+            
+            <div id="汽车制造业" class="column"><a class="card" href="#汽车制造业" title="汽车制造业" target="_self" ><div class="card-body">汽车制造业</div></a></div>
+            
+            <div id="铁路、船舶、航空航天和其他运输设备制造业" class="column"><a class="card" href="#铁路、船舶、航空航天和其他运输设备制造业" title="铁路、船舶、航空航天和其他运输设备制造业" target="_self" ><div class="card-body">铁路、船舶、航空航天和其他运输设备制造业</div></a></div>
+            
+            <div id="电气机械和器材制造业" class="column"><a class="card" href="#电气机械和器材制造业" title="电气机械和器材制造业" target="_self" ><div class="card-body">电气机械和器材制造业</div></a></div>
+            
+            <div id="计算机、通信和其他电子设备制造业" class="column"><a class="card" href="#计算机、通信和其他电子设备制造业" title="计算机、通信和其他电子设备制造业" target="_self" ><div class="card-body">计算机、通信和其他电子设备制造业</div></a></div>
+            
+            <div id="仪器仪表制造业" class="column"><a class="card" href="#仪器仪表制造业" title="仪器仪表制造业" target="_self" ><div class="card-body">仪器仪表制造业</div></a></div>
+            
+            <div id="其他制造业" class="column"><a class="card" href="#其他制造业" title="其他制造业" target="_self" ><div class="card-body">其他制造业</div></a></div>
+            
+            <div id="废弃资源综合利用业" class="column"><a class="card" href="#废弃资源综合利用业" title="废弃资源综合利用业" target="_self" ><div class="card-body">废弃资源综合利用业</div></a></div>
+            
+            <div id="电力、热力生产和供应业" class="column"><a class="card" href="#电力、热力生产和供应业" title="电力、热力生产和供应业" target="_self" ><div class="card-body">电力、热力生产和供应业</div></a></div>
+            
+            <div id="燃气生产和供应业" class="column"><a class="card" href="#燃气生产和供应业" title="燃气生产和供应业" target="_self" ><div class="card-body">燃气生产和供应业</div></a></div>
+            
+            <div id="水的生产和供应业" class="column"><a class="card" href="#水的生产和供应业" title="水的生产和供应业" target="_self" ><div class="card-body">水的生产和供应业</div></a></div>
+            
+            <div id="房屋建筑业" class="column"><a class="card" href="#房屋建筑业" title="房屋建筑业" target="_self" ><div class="card-body">房屋建筑业</div></a></div>
+            
+            <div id="土木工程建筑业" class="column"><a class="card" href="#土木工程建筑业" title="土木工程建筑业" target="_self" ><div class="card-body">土木工程建筑业</div></a></div>
+            
+            <div id="建筑安装业" class="column"><a class="card" href="#建筑安装业" title="建筑安装业" target="_self" ><div class="card-body">建筑安装业</div></a></div>
+            
+            <div id="建筑装饰和其他建筑业" class="column"><a class="card" href="#建筑装饰和其他建筑业" title="建筑装饰和其他建筑业" target="_self" ><div class="card-body">建筑装饰和其他建筑业</div></a></div>
+            
+            <div id="批发业" class="column"><a class="card" href="#批发业" title="批发业" target="_self" ><div class="card-body">批发业</div></a></div>
+            
+            <div id="零售业" class="column"><a class="card" href="#零售业" title="零售业" target="_self" ><div class="card-body">零售业</div></a></div>
+            
+            <div id="铁路运输业" class="column"><a class="card" href="#铁路运输业" title="铁路运输业" target="_self" ><div class="card-body">铁路运输业</div></a></div>
+            
+            <div id="道路运输业" class="column"><a class="card" href="#道路运输业" title="道路运输业" target="_self" ><div class="card-body">道路运输业</div></a></div>
+            
+            <div id="水上运输业" class="column"><a class="card" href="#水上运输业" title="水上运输业" target="_self" ><div class="card-body">水上运输业</div></a></div>
+            
+            <div id="航空运输业" class="column"><a class="card" href="#航空运输业" title="航空运输业" target="_self" ><div class="card-body">航空运输业</div></a></div>
+            
+            <div id="装卸搬运和运输代理业" class="column"><a class="card" href="#装卸搬运和运输代理业" title="装卸搬运和运输代理业" target="_self" ><div class="card-body">装卸搬运和运输代理业</div></a></div>
+            
+            <div id="仓储业" class="column"><a class="card" href="#仓储业" title="仓储业" target="_self" ><div class="card-body">仓储业</div></a></div>
+            
+            <div id="邮政业" class="column"><a class="card" href="#邮政业" title="邮政业" target="_self" ><div class="card-body">邮政业</div></a></div>
+            
+            <div id="住宿业" class="column"><a class="card" href="#住宿业" title="住宿业" target="_self" ><div class="card-body">住宿业</div></a></div>
+            
+            <div id="餐饮业" class="column"><a class="card" href="#餐饮业" title="餐饮业" target="_self" ><div class="card-body">餐饮业</div></a></div>
+            
+            <div id="电信、广播电视和卫星传输服务" class="column"><a class="card" href="#电信、广播电视和卫星传输服务" title="电信、广播电视和卫星传输服务" target="_self" ><div class="card-body">电信、广播电视和卫星传输服务</div></a></div>
+            
+            <div id="互联网和相关服务" class="column"><a class="card" href="#互联网和相关服务" title="互联网和相关服务" target="_self" ><div class="card-body">互联网和相关服务</div></a></div>
+            
+            <div id="软件和信息技术服务业" class="column"><a class="card" href="#软件和信息技术服务业" title="软件和信息技术服务业" target="_self" ><div class="card-body">软件和信息技术服务业</div></a></div>
+            
+            <div id="货币金融服务" class="column"><a class="card" href="#货币金融服务" title="货币金融服务" target="_self" ><div class="card-body">货币金融服务</div></a></div>
+            
+            <div id="资本市场服务" class="column"><a class="card" href="#资本市场服务" title="资本市场服务" target="_self" ><div class="card-body">资本市场服务</div></a></div>
+            
+            <div id="保险业" class="column"><a class="card" href="#保险业" title="保险业" target="_self" ><div class="card-body">保险业</div></a></div>
+            
+            <div id="其他金融业" class="column"><a class="card" href="#其他金融业" title="其他金融业" target="_self" ><div class="card-body">其他金融业</div></a></div>
+            
+            <div id="房地产业" class="column"><a class="card" href="#房地产业" title="房地产业" target="_self" ><div class="card-body">房地产业</div></a></div>
+            
+            <div id="租赁业" class="column"><a class="card" href="#租赁业" title="租赁业" target="_self" ><div class="card-body">租赁业</div></a></div>
+            
+            <div id="商务服务业" class="column"><a class="card" href="#商务服务业" title="商务服务业" target="_self" ><div class="card-body">商务服务业</div></a></div>
+            
+            <div id="研究和试验发展" class="column"><a class="card" href="#研究和试验发展" title="研究和试验发展" target="_self" ><div class="card-body">研究和试验发展</div></a></div>
+            
+            <div id="专业技术服务业" class="column"><a class="card" href="#专业技术服务业" title="专业技术服务业" target="_self" ><div class="card-body">专业技术服务业</div></a></div>
+            
+            <div id="科技推广和应用服务业" class="column"><a class="card" href="#科技推广和应用服务业" title="科技推广和应用服务业" target="_self" ><div class="card-body">科技推广和应用服务业</div></a></div>
+            
+            <div id="生态保护和环境治理业" class="column"><a class="card" href="#生态保护和环境治理业" title="生态保护和环境治理业" target="_self" ><div class="card-body">生态保护和环境治理业</div></a></div>
+            
+            <div id="公共设施管理业" class="column"><a class="card" href="#公共设施管理业" title="公共设施管理业" target="_self" ><div class="card-body">公共设施管理业</div></a></div>
+            
+            <div id="教育" class="column"><a class="card" href="#教育" title="教育" target="_self" ><div class="card-body">教育</div></a></div>
+            
+            <div id="卫生" class="column"><a class="card" href="#卫生" title="卫生" target="_self" ><div class="card-body">卫生</div></a></div>
+            
+            <div id="新闻和出版业" class="column"><a class="card" href="#新闻和出版业" title="新闻和出版业" target="_self" ><div class="card-body">新闻和出版业</div></a></div>
+            
+            <div id="广播、电视、电影和影视录音制作业" class="column"><a class="card" href="#广播、电视、电影和影视录音制作业" title="广播、电视、电影和影视录音制作业" target="_self" ><div class="card-body">广播、电视、电影和影视录音制作业</div></a></div>
+            
+            <div id="文化艺术业" class="column"><a class="card" href="#文化艺术业" title="文化艺术业" target="_self" ><div class="card-body">文化艺术业</div></a></div>
+            
+            <div id="体育" class="column"><a class="card" href="#体育" title="体育" target="_self" ><div class="card-body">体育</div></a></div>
+            
+            <div id="综合" class="column"><a class="card" href="#综合" title="综合" target="_self" ><div class="card-body">综合</div></a></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

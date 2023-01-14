@@ -39,6 +39,7 @@
 格隆汇,https://www.gelonghui.com/
 中证路演中心,https://www.cs.com.cn/
 每经网,https://www.nbd.com.cn/
+金十数据唯,https://www.jin10.com/
 
 数据行情
 广发操盘手,https://hippo.gf.com.cn/
@@ -101,9 +102,7 @@
 中国金融期货交易所,http://cffex.com.cn/
 深圳证券信息有限公司,http://www.szsi.cn/
 上海联合产权交易所,https://www.suaee.com/
-烯牛数据,https://www.xiniudata.com/
 中证指数有限公司,https://www.csindex.com.cn/
-中国证券监督管理委员会,http://www.csrc.gov.cn/
 郑州商品交易所,http://www.czce.com.cn/
 中国证券登记结算有限责任公司,http://www.chinaclear.cn/
 中证数据有限责任公司,https://www.csdata.cn/
@@ -113,28 +112,39 @@
 上海期货交易所,http://www.shfe.com.cn/
 大连商品交易所,http://www.dce.com.cn/
 广州期货交易所,http://www.gfex.com.cn/
+中国债券信息网,https://www.chinabond.com.cn/
 中国证券投资者保护基金有限责任公司,http://www.sipf.com.cn/
 中国证券金融股份有限公司,http://www.csf.com.cn/
 中国期货市场监控中心有限责任公司,http://www.cfmmc.com/
 全国中小企业股份转让系统有限责任公司,http://www.neeq.com.cn/
 中国证券业协会,https://www.sac.net.cn/
 中国期货业协会,http://www.cfachina.org/
+中国货币网-中国外汇交易中心主办,https://www.chinamoney.com.cn/chinese/index.html
 中国证券投资基金业协会,https://www.amac.org.cn/
 中证信息技术服务有限责任公司,http://www.csits.org.cn/
 中证中小投资者服务中心有限责任公司,http://www.isc.com.cn/
 中证金融研究院,https://www.cifcm.cn/
-资本市场学院,http://www.ccmi.edu.cn/
 中华证券交易服务,https://www.cesc.com/
 上海黄金交易所,https://www.sge.com.cn/
 前海股权交易中心,https://www.qhee.com/
 高新区金融平台,https://www.chinahtz.com/park/home
-九方智投,https://www.9fzt.com/
-盈亚股市网,https://www.gushi.com/
+上海国际货币经纪有限责任公司,http://www.cfets-nex.com.cn/
+上海中汇亿达金融信息技术有限公司,https://www.cfets-comstar.com/
+上海清算所,https://www.shclearing.com.cn/
+中国银行业协会,https://www.china-cba.net/
+
+监管机构
+中国人民银行,http://www.pbc.gov.cn/
+国家外汇管理局,http://www.safe.gov.cn/
+中华人民共和国财政部,http://www.mof.gov.cn/
+中国银行保险监督管理委员会,http://www.cbrc.gov.cn/
+中国证券监督管理委员会,http://www.csrc.gov.cn/
 
 投教基地
 雪球,https://xueqiu.com/
 韭研公社,https://www.jiuyangongshe.com/
 淘股吧,https://www.taoguba.com.cn/
+资本市场学院,http://www.ccmi.edu.cn/
 
 研报
 见微数据,https://www.jianweidata.com/
@@ -150,6 +160,7 @@
 最新指数ETF列表,http://www.etf.group/data/list1.html
 理杏仁,https://www.lixinger.com/
 易债网,https://ww2.ezhai.net.cn/
+烯牛数据,https://www.xiniudata.com/
 
 量化
 果仁网,https://guorn.com/
@@ -261,6 +272,8 @@ N视界,https://n-sight.com.cn/
 中天国富,https://www.ztfsec.com
 中天证券,http://www.iztzq.com
 中信证券华南,http://www.gzs.com.cn
+九方智投,https://www.9fzt.com/
+盈亚股市网,https://www.gushi.com/
 
 网上银行
 工商银行,http://www.icbc.com.cn/
@@ -346,10 +359,14 @@ Apple Pay,https://www.apple.com.cn/apple-pay/
 和讯基金,http://funds.hexun.com/
 好买基金网,https://www.howbuy.com/
 金融界基金,http://fund.jrj.com.cn/
+汇丰晋信基金管理有限公司,https://www.hsbcjt.cn/
 
 
 港股美股软件
 华盛通,https://www.hstong.com/
+
+金融数据服务
+恒生聚源,https://www.gildata.com/
 
 行业资讯
 鑫椤资讯,http://www.iccarbon.com/
@@ -357,6 +374,19 @@ Apple Pay,https://www.apple.com.cn/apple-pay/
 光伏材料网,http://www.iccarbon.com/
 耐火材料,http://www.znhcl.com/
 中国储能网,http://www.escn.com.cn/
+上海有色,https://www.smm.cn/
+中国化工制造网,http://www.chemmade.com/
+粉体网,https://www.cnpowder.com.cn/
+超硬材料网,http://www.idacn.org/
+木材网,http://www.chinatimber.org/
+中国瓷砖网,https://www.xbcd.cn/
+中国工控网,http://www.gongkong.com/
+中国水泥网,https://www.ccement.com/
+全屋定制网,https://www.cnyigui.com/
+煤矿安全网,http://www.mkaq.org/
+中国抗菌产业网,https://www.kjj.com.cn/
+环保在线,https://www.hbzhan.com/
+招标网,http://www.bidizhaobiao.com/
 
 协会
 乘用车市场信息联席会官网,http://www.cpcaauto.com/
@@ -365,4 +395,5 @@ Apple Pay,https://www.apple.com.cn/apple-pay/
 中国国际电池技术交流会,http://cibf.org.cn/
 电动汽车网,http://www.evpartner.com/
 EV视界|电动汽车普及者,https://www.evlook.com/
-
+联合资信评估股份有限公司,http://www.lhratings.com/
+心流网-心流慧估-企业价值评估股权评估,重组并购上市公司估值大数据查询,http://www.flcccc.com/index.html

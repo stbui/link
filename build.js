@@ -138,17 +138,12 @@ const html = `
       .main-content {
         margin-left: 200px;
       }
-
-      @media (min-width: 992px) {
-      }
-
-      @media (min-width: 1200px) {
-        .container {
-          max-width: 1140px;
-        }
+      .content {
+        margin-left: 12px;
       }
 
       .customize-width {
+        min-width: 1140px;
         max-width: 1900px;
       }
 
@@ -304,6 +299,10 @@ const topic = [
   {
     title: "银行",
     type: 'bank',
+  }, 
+  {
+    title: "上市公司",
+    type: 'ssgs',
   }, 
   {
     title: "房产",
