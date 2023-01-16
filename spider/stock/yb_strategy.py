@@ -139,4 +139,4 @@ dd = db.select_all()
 
 
 Table(['日期', '机构名称', '报告名称'],
-      dd).to_html('./html/stock/strategy', '策略报告', cell)
+      dd).to_html('./html/stock_report/strategy', '策略报告', cell)

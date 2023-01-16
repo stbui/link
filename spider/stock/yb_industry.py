@@ -154,4 +154,4 @@ dd = get_data(1)
 dd = db.select_all()
 
 Table(['日期', '机构名称', '行业名称', '报告名称'],
-      dd).to_html('./html/stock/industry', '行业研报', cell)
+      dd).to_html('./html/stock_report/industry', '行业研报', cell)

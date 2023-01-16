@@ -69,7 +69,7 @@ class Table():
         head = self.table_head()
         body = self.table_body(cell)
 
-        html = f'<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><title>{title}</title><style></style></head><body><table>{head}{body}</table></body></html>'.replace(
+        html = f'<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><title>{title}</title><style></style></head><body><div class="title">{title}</div><table>{head}{body}</table></body></html>'.replace(
             '<style></style>', self.css)
         return html
 

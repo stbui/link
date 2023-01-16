@@ -125,4 +125,4 @@ def get_data(num):
         return get_data(num+1)
 
 
-Table(['日期', '机构名称', '报告名称'], get_data(1)).to_html('./html/stock/macresearch', '券商晨报')
+Table(['日期', '机构名称', '报告名称'], get_data(1)).to_html('./html/stock_report/macresearch', '券商晨报')
