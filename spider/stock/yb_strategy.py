@@ -1,12 +1,8 @@
 
-import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
 from table import Table
 import sqlite3
 
-import re
-import json
+import eastmoney
 
 
 class Datebase():
@@ -56,52 +52,11 @@ class Datebase():
         return self.cursor.fetchall()
 
 
-def loads_jsonp(_jsonp):
-    try:
-        return json.loads(re.match(".*?({.*}).*", _jsonp, re.S).group(1))
-    except:
-        raise ValueError('Invalid Input')
-
-
-EastmoneyHeaders = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-    'Referer': 'https://data.eastmoney.com/',
-}
-
-
-def start_page(pageNo='1'):
-    # 策略报告
-    # url = 'https://reportapi.eastmoney.com/report/jg?cb=datatable3569085&pageSize=50&beginTime=2021-01-06&endTime=2023-01-06&pageNo=2&fields=&qType=2&orgCode=&author=&p=2&pageNum=2&pageNumber=2&_=1672973717319'
-
-    data = datetime.now().strftime("%Y-%m-%d")
-    params = (
-        ('pageNo', pageNo),
-        ('pageSize', '50'),
-        ('beginTime', '2021-01-01'),
-        # ('endTime', '2023-01-04'),
-        ('endTime', data),
-        ('cb', 'datatable3569085'),
-        ('qType', '2'),
-    )
-
-    url = f'https://reportapi.eastmoney.com/report/jg'
-    res = requests.get(url=url, params=params, headers=EastmoneyHeaders)
-    return loads_jsonp(res.text)
-
-
-def query_pdf_page(encodeUrl):
-    url = f'https://data.eastmoney.com/report/zw_strategy.jshtml?encodeUrl={encodeUrl}'
-    res = requests.get(url=url, headers=EastmoneyHeaders)
-    html = BeautifulSoup(res.text, 'html.parser')
-    return html.select('.pdf-link')[0].get('href')
-
-
-new_data = []
 db = Datebase()
 
 
 def get_data(num):
-    data = start_page(num)['data']
+    data = eastmoney.strategy_api(num)['data']
 
     for item in data:
         info_code = item['encodeUrl']
@@ -114,8 +69,7 @@ def get_data(num):
         res = db.select([info_code])
 
         if res == None:
-            pdf_link = query_pdf_page(info_code)
-            # pdf_link = get_pdf_by_code(info_code)
+            pdf_link = eastmoney.strategy_pdf_page(info_code)
             print(f'新增:{num},{date},{title},{pdf_link}')
 
             db.add((info_code, title, pdf_link, date, orgSName,))
@@ -123,7 +77,7 @@ def get_data(num):
             print(f'已存在:{num},{date},{info_code},{title}')
 
     if num == 2:
-        return new_data
+        return []
     else:
         return get_data(num+1)
 

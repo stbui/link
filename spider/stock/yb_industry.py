@@ -1,12 +1,7 @@
 
-import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
 from table import Table
 import sqlite3
-import re
-import json
-
+import eastmoney
 
 # https://data.eastmoney.com/report/industry.jshtml
 
@@ -61,61 +56,11 @@ class Datebase():
         return self.cursor.fetchall()
 
 
-def loads_jsonp(_jsonp):
-    try:
-        return json.loads(re.match(".*?({.*}).*", _jsonp, re.S).group(1))
-    except:
-        raise ValueError('Invalid Input')
-
-
-EastmoneyHeaders = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-    'Accept': '*/*',
-    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7,lb;q=0.6',
-    'Referer': 'https://data.eastmoney.com/',
-}
-
-
-def start_page(pageNo='1'):
-    data = datetime.now().strftime("%Y-%m-%d")
-    params = (
-        ('pageNo', pageNo),
-        ('pageSize', '50'),
-        ('beginTime', '2021-01-01'),
-        # ('endTime', '2023-01-04'),
-        ('endTime', data),
-        ('cb', 'datatable7532024'),
-        ('qType', '1'),
-    )
-
-    # https://reportapi.eastmoney.com/report/list?cb=datatable3457433&industryCode=*&pageSize=50&industry=*&rating=*&ratingChange=*&beginTime=2021-01-14&endTime=2023-01-14&pageNo=2&fields=&qType=1&orgCode=&rcode=&p=2&pageNum=2&pageNumber=2&_=1673674403059
-    url = f'https://reportapi.eastmoney.com/report/list'
-    res = requests.get(url=url, params=params, headers=EastmoneyHeaders)
-    return loads_jsonp(res.text)
-
-
-def query_pdf_page(infoCode):
-    url = f'https://data.eastmoney.com/report/zw_industry.jshtml?infocode={infoCode}'
-    res = requests.get(url=url, headers=EastmoneyHeaders)
-    try:
-        html = BeautifulSoup(res.text, 'html.parser')
-        return html.select('.pdf-link')[0].get('href')
-    except:
-        return ''
-
-
-def get_pdf_by_code(code):
-    # https://pdf.dfcfw.com/pdf/H3_AP202301111581866526_1.pdf?1673446413000.pdf
-    return f'https://pdf.dfcfw.com/pdf/H3_{code}_1.pdf'
-
-
-new_data = []
-
 db = Datebase()
 
 
 def get_data(num):
-    data = start_page(num)['data']
+    data = eastmoney.industry_api(num)['data']
 
     for item in data:
         info_code = item['infoCode']
@@ -130,7 +75,7 @@ def get_data(num):
 
         if res == None:
             # pdf_link = query_pdf_page(info_code)
-            pdf_link = get_pdf_by_code(info_code)
+            pdf_link = eastmoney.industry_pdf_page(info_code)
             print(f'新增:{num},{date},{title},{pdf_link}')
 
             db.add((title, info_code, orgSName,
@@ -139,7 +84,7 @@ def get_data(num):
             print(f'已存在:{num},{date},{info_code},{title}')
 
     if num == 10:
-        return new_data
+        return []
     else:
         return get_data(num+1)
 
