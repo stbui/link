@@ -7,22 +7,29 @@ import eastmoney
 
 
 class Datebase():
-    conn = None
-    cursor = None
-
     table = 'yb_industry'
 
     def __init__(self,) -> None:
+        self.db_client = None
+        self.cursor = None
+        self.connected = False
+
         self.conncet()
         self.init_table()
 
     def conncet(self):
-        self.conn = sqlite3.connect('yb.db')
-        print("数据库打开成功")
-        self.cursor = self.conn.cursor()
+        if not self.db_client:
+            self.db_client = sqlite3.connect('yb.db')
+            print("数据库打开成功")
+            self.cursor = self.db_client.cursor()
+            self.connected = True
 
     def close(self):
-        self.conn.close()
+        """数据服务关闭"""
+        self.connected = False
+        if self.db_client:
+            self.db_client.close()
+        self.db_client = None
 
     def init_table(self):
         self.cursor.execute('''
@@ -38,17 +45,19 @@ class Datebase():
         print("数据表创建成功")
 
     def add(self, params):
+        """数据库插入数据操作"""
         self.cursor.execute(
             f"INSERT INTO {self.table} (title,info_code,org_name,industry_name,pdf_link,date) \
                 VALUES (?, ?, ?, ? ,?, ?)", params)
-        self.conn.commit()
+        self.db_client.commit()
 
-    def select(self, params):
+    def on_select(self, params):
+        """数据库查询操作"""
         self.cursor.execute(
             f"SELECT info_code FROM {self.table} WHERE info_code=?", params)
         return self.cursor.fetchone()
 
-    def select_all(self):
+    def on_select_all(self):
         # where title like '%月报%'
         # where title like '%周报%'
         self.cursor.execute(
@@ -71,7 +80,7 @@ def get_data(num):
         pdf_link = ''
 
         # 如果已经有
-        res = db.select([info_code])
+        res = db.on_select([info_code])
 
         if res == None:
             # pdf_link = query_pdf_page(info_code)
@@ -96,7 +105,7 @@ def cell(fields):
 # 写入数据库中
 dd = get_data(1)
 # # 从数据库中查询所以的列表
-dd = db.select_all()
+dd = db.on_select_all()
 
 Table(['日期', '机构名称', '行业名称', '报告名称'],
       dd).to_html('./html/stock_report/industry', '行业研报', cell)

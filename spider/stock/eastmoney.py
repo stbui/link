@@ -113,3 +113,53 @@ def macresearch_pdf_page(encodeUrl):
     res = requests.get(url=url)
     html = BeautifulSoup(res.text, 'html.parser')
     return html.select('.pdf-link')[0].get('href')
+
+
+def choice_yb_api():
+    fields = (
+        ('S103001', '24小时热门研报'),
+        ('S103002', '近一周热门研报'),
+        ('S103003', '近一月热门研报'),
+        ('S004024', '公众号文章'),
+        ('T004001001', '晨会纪要'),
+        ('T004001002', '早间资讯'),
+        ('T004002001', '宏观研究'),
+        ('T004002002', '投资策略'),
+        ('T004021001', '宏观资讯'),
+        # 1990-00-00T00:00:00Z TO 9999-99-99T99:99:99Z
+        ('S005008', '全部研报'),
+        # 2022-01-17T00:00:00Z TO 9999-99-99T99:99:99Z
+        ('S005007', '近一年研报'),
+    )
+
+    params = (
+        ('id', 'S005008'),
+        ('request', 'simpleSearch'),
+        ('cid', '2278064648495130'),
+        ('vipIds', ''),
+        ('gridTitle', '全部研报'),
+        ('type', '1'),
+        ('requestAction', '0'),
+        ('date', '1990-00-00T00:00:00Z TO 9999-99-99T99:99:99Z'),
+        ('types', 'S005008'),
+        ('securitycodes', ''),
+        ('columnType', ''),
+        ('isShow', 'false'),
+        ('isSelectStock', 'false'),
+        ('pageIndex', '1'),
+        ('limit', '50'),
+        ('sort', 'datetime'),
+        ('order', 'desc'),
+    )
+
+    headers = {
+        'token': '',
+        'Origin': 'https://choicewzp1.eastmoney.com',
+        'Referer': 'https://choicewzp1.eastmoney.com/',
+        'Accept': 'application/json, text/javascript, */*; q=0.01',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36'
+    }
+
+    url = 'https://choicewzp1.eastmoney.com/Report/GetReportByTreeNode.do'
+    res = requests.get(url=url, params=params, headers=headers)
+    return res.json()
