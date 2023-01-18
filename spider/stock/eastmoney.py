@@ -115,7 +115,7 @@ def macresearch_pdf_page(encodeUrl):
     return html.select('.pdf-link')[0].get('href')
 
 
-def choice_yb_api():
+def choice_yb_api(page='1'):
     fields = (
         ('S103001', '24小时热门研报'),
         ('S103002', '近一周热门研报'),
@@ -138,7 +138,7 @@ def choice_yb_api():
         ('cid', '2278064648495130'),
         ('vipIds', ''),
         ('gridTitle', '全部研报'),
-        ('type', '1'),
+        ('type', '8'),
         ('requestAction', '0'),
         ('date', '1990-00-00T00:00:00Z TO 9999-99-99T99:99:99Z'),
         ('types', 'S005008'),
@@ -146,8 +146,8 @@ def choice_yb_api():
         ('columnType', ''),
         ('isShow', 'false'),
         ('isSelectStock', 'false'),
-        ('pageIndex', '1'),
-        ('limit', '50'),
+        ('pageIndex', page),
+        ('limit', '500'),
         ('sort', 'datetime'),
         ('order', 'desc'),
     )
@@ -160,6 +160,8 @@ def choice_yb_api():
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36'
     }
 
+    # http://choicewzp1.eastmoney.com/Report/Search.do?title=&cid=2278064648495130&pageIndex=1&limit=10&sort=datetime&order=desc
+    # https://choicewzp1.eastmoney.com/Report/Search.do?&cid=2278064648495130&vipIds=&permssionReport=1
     url = 'https://choicewzp1.eastmoney.com/Report/GetReportByTreeNode.do'
     res = requests.get(url=url, params=params, headers=headers)
     return res.json()
