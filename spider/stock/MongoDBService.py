@@ -52,7 +52,7 @@ class MongoDBService():
         try:
             db = self.db_client[self.db_name]
             cl = db[self.db_cl]
-            result = cl.find(flt)
+            result = cl.find(flt, {'_id': 0})
 
             return result
         except:

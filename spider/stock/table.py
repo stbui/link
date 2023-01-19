@@ -30,6 +30,10 @@ class Table():
       a:hover {
         color: #e94041;
       }
+      .title { 
+        text-align: center;
+        font-size: 18px;
+       }
       </style>'''
 
     column = []
