@@ -24,14 +24,15 @@ def main(num):
         else:
             print(f"已存在:{num},{row['id']}")
 
-    if num == 10:
+    if num == 50:
         return
 
     return main(num+1)
 
 
 def cell(fields):
-    return f'<td>{fields["sortTime"]}</td><td>{fields["org"]}</td><td>{fields["rtype"]}</td><td><a href="{fields["attach"][0]["url"]}" target="_blank" title="{fields["title"]}">{fields["title"]}</a></td>'
+    url = fields['sourceurl'] if fields['sourceurl'] else fields["attach"][0]["url"]
+    return f'<td>{fields["sortTime"]}</td><td>{fields["org"]}</td><td>{fields["rtype"]}</td><td><a href="{url}" target="_blank" title="{fields["title"]}">{fields["title"]}</a></td>'
 
 
 def start():
@@ -41,5 +42,5 @@ def start():
           result).to_html(output_path, title, cell)
 
 
-# main(5)
+# main(10)
 start()

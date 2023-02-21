@@ -21,7 +21,7 @@ data = datetime.now().strftime("%Y%m%d")
 
 # # # # 沪深市场 A 股最新状况
 # stock_realtime = ef.stock.get_realtime_quotes('ETF')
-# stock_realtime.to_csv('web/public/etf/{}.csv'.format(data))
+# stock_realtime.to_csv('etf/{}.csv'.format(data))
 
 # engine = create_engine('sqlite:///bond.db')
 # df = pandas.read_sql("SELECT * from bond", engine)
@@ -45,29 +45,29 @@ data = datetime.now().strftime("%Y%m%d")
 #     print(code)
 
 # 龙虎榜详情数据
-billboard = ef.stock.get_daily_billboard()
-billboard.to_csv('web/public/billboard/{}.csv'.format(data))
-print('龙虎榜详情数据')
+# billboard = ef.stock.get_daily_billboard()
+# billboard.to_csv('billboard/{}.csv'.format(data))
+# print('龙虎榜详情数据')
 
 bond_realtime = ef.bond.get_realtime_quotes()
-bond_realtime.to_csv('web/public/bond/{}.csv'.format(data))
+bond_realtime.to_csv('{}.csv'.format(data))
 print('沪深市场全部债券实时行情信息')
 
-stock_etf = ef.stock.get_realtime_quotes('ETF')
-stock_etf.to_csv('web/public/etf/{}.csv'.format(data))
-print('ETF')
+# stock_etf = ef.stock.get_realtime_quotes('ETF')
+# stock_etf.to_csv('etf/{}.csv'.format(data))
+# print('ETF')
 
-# 沪深市场 A 股最新状况
-stock_realtime = ef.stock.get_realtime_quotes()
-stock_realtime.to_csv('web/public/stock/{}.csv'.format(data))
-print('沪深')
+# # 沪深市场 A 股最新状况
+# stock_realtime = ef.stock.get_realtime_quotes()
+# stock_realtime.to_csv('stock/{}.csv'.format(data))
+# print('沪深')
 
-stock_realtime = ef.stock.get_realtime_quotes('行业板块')
-stock_realtime.to_csv('web/public/bk/{}.csv'.format(data))
-print('行业板块')
+# stock_realtime = ef.stock.get_realtime_quotes('行业板块')
+# stock_realtime.to_csv('bk/{}.csv'.format(data))
+# print('行业板块')
 
-stock_realtime = ef.stock.get_realtime_quotes('概念板块')
-stock_realtime.to_csv('web/public/gn/{}.csv'.format(data))
-print('概念板块')
+# stock_realtime = ef.stock.get_realtime_quotes('概念板块')
+# stock_realtime.to_csv('gn/{}.csv'.format(data))
+# print('概念板块')
 
 print('收工')
