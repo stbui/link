@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>人工智能</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="人工智能" />
+    <meta name="description" content="人工智能" />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        vertical-align: baseline;
+        word-wrap: break-word;
+        color: #282a2d;
+        background: #f9f9f9;
+      }
+
+      a {
+        color: #282a2d;
+        outline: 0 !important;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #e94041;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1080;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .mt24 {
+        margin-top: 24px
+      }
+      .border-top {
+        border-top: 1px solid #dee2e6;
+      }
+
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        font-size: 14px;
+        width: 200px;
+        height: 100vh;
+        z-index: 1081;
+        background: #f0f2f4;
+        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+      }
+      .sidebar-logo {
+        height: 74px;
+        border-bottom: 1px solid #dee2e6;
+        background: #fff;
+        text-align: center;
+        line-height: 74px;
+        font-size: 22px;
+      }
+      .sidebar-nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      .sidebar-item {
+        position: relative;
+        display: block;
+      }
+      .sidebar-item > a:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        color: #e94041;
+      }
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {
+        display: flex;
+        overflow: hidden;
+        padding: 8px 10px;
+        margin: 1.5px 8px;
+        color: #515c6b;
+        font-size: 16px;
+        align-items: center;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+      .sidebar-menu ul:first-child > li > a {
+        padding: 12px 10px;
+      }
+      .sidebar-nav-inner {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .sidebar-nav-inner .flex-fill {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .header-nav {
+        position: fixed;
+        right: 0;
+        left: 200px;
+        background: rgb(255 255 255 / 77%);
+      }
+
+      .main-content {
+        flex-direction: column;
+        display: flex;
+      }
+
+      .flex-fill {
+        flex: 1 1 auto;
+      }
+
+      .container {
+        margin: auto;
+      }
+      .main-content {
+        margin-left: 200px;
+      }
+      .content {
+        margin-left: 12px;
+      }
+
+      .customize-width {
+        min-width: 1140px;
+        max-width: 1900px;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .flex-item {
+        flex: 0 0 20%;
+        border: 1px solid transparent;
+        padding: 0 12px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        background-color: #eee;
+        margin-bottom: 12px;
+      }
+      .card-body {
+        position: relative;
+        padding: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .column {
+        flex: 1 1 100%;
+        padding: 0 12px;
+        margin-top: 24px;
+      }
+      .column .card {
+        border-left: 4px solid #e94041;
+        background: transparent;
+      }
+      .column .card-body {
+        padding: 0 0 0 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar-nav sticky">
+      <div class="sidebar-nav-inner">
+        <div class="sidebar-logo">
+          <div class="logo overflow-hidden">人工智能</div>
+        </div>
+        <div class="sidebar-menu flex-fill">
+          <div class="sidebar-scroll">
+            <div class="sidebar-menu-inner">
+              <ul>
+                <li class="sidebar-item">
+                  <a href="#游戏AI"><span>游戏AI</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#图片AI"><span>图片AI</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#视频AI"><span>视频AI</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#音频AI"><span>音频AI</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#文章AI"><span>文章AI</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#聊天AI"><span>聊天AI</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#编程AI"><span>编程AI</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#3D"><span>3D</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#商业"><span>商业</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#其他"><span>其他</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top">
+          <div class="flex-bottom">
+            <ul>
+              <li class="sidebar-item">
+                <a href="#"><span>网站提交</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content flex-fill">
+      <div class="container customize-width">
+        <div class="header-nav"></div>
+        <div class="content">
+          <div class="flex">
+            <div id="游戏AI" class="column"><a class="card" href="#游戏AI" title="游戏AI" target="_self"><div class="card-body">游戏AI</div></a></div>
+            <div id="AI创造绝美游戏素材" class="flex-item"><a class="card" href="https://leonardo.ai" title="AI创造绝美游戏素材" target="_blank"><div class="card-body">AI创造绝美游戏素材</div></a></div>
+            <div id="Niji Journey" class="flex-item"><a class="card" href="https://nijijourney.com/zh" title="Niji Journey" target="_blank"><div class="card-body">Niji Journey</div></a></div>
+            <div id="scenario" class="flex-item"><a class="card" href="https://app.scenario.gg" title="scenario" target="_blank"><div class="card-body">scenario</div></a></div>
+            <div id="Waifulabs" class="flex-item"><a class="card" href="https://waifulabs.com" title="Waifulabs" target="_blank"><div class="card-body">Waifulabs</div></a></div>
+            <div id="GET3D (Nvidia)" class="flex-item"><a class="card" href="https://nv-tlabs.github.io/GET3D" title="GET3D (Nvidia)" target="_blank"><div class="card-body">GET3D (Nvidia)</div></a></div>
+            <div id="Pixela AI" class="flex-item"><a class="card" href="https://pixela.ai" title="Pixela AI" target="_blank"><div class="card-body">Pixela AI</div></a></div>
+            <div id="图片AI" class="column"><a class="card" href="#图片AI" title="图片AI" target="_self"><div class="card-body">图片AI</div></a></div>
+            <div id="You" class="flex-item"><a class="card" href="https://you.com" title="You" target="_blank"><div class="card-body">You</div></a></div>
+            <div id="意间AI绘画" class="flex-item"><a class="card" href="http://portal.yjai.art/#" title="意间AI绘画" target="_blank"><div class="card-body">意间AI绘画</div></a></div>
+            <div id="换脸科技" class="flex-item"><a class="card" href="http://huanlian.com" title="换脸科技" target="_blank"><div class="card-body">换脸科技</div></a></div>
+            <div id="Midjourney" class="flex-item"><a class="card" href="https://www.midjourney.com" title="Midjourney" target="_blank"><div class="card-body">Midjourney</div></a></div>
+            <div id="6pen Art" class="flex-item"><a class="card" href="https://6pen.art" title="6pen Art" target="_blank"><div class="card-body">6pen Art</div></a></div>
+            <div id="toonme" class="flex-item"><a class="card" href="https://toonme.com" title="toonme" target="_blank"><div class="card-body">toonme</div></a></div>
+            <div id="猴子无限｜AI 生成引擎" class="flex-item"><a class="card" href="https://frame.infmonkeys.com" title="猴子无限｜AI 生成引擎" target="_blank"><div class="card-body">猴子无限｜AI 生成引擎</div></a></div>
+            <div id="Vega AI 创作平台" class="flex-item"><a class="card" href="https://rightbrain.art" title="Vega AI 创作平台" target="_blank"><div class="card-body">Vega AI 创作平台</div></a></div>
+            <div id="LogoLuck" class="flex-item"><a class="card" href="https://logoluck.nolibox.com" title="LogoLuck" target="_blank"><div class="card-body">LogoLuck</div></a></div>
+            <div id="AI Creator" class="flex-item"><a class="card" href="https://ai-creator.net" title="AI Creator" target="_blank"><div class="card-body">AI Creator</div></a></div>
+            <div id="文心一格" class="flex-item"><a class="card" href="https://yige.baidu.com" title="文心一格" target="_blank"><div class="card-body">文心一格</div></a></div>
+            <div id="ZMO.Ai" class="flex-item"><a class="card" href="https://imgcreator.zmo.ai?invitationCode=YWVK1WJS" title="ZMO.Ai" target="_blank"><div class="card-body">ZMO.Ai</div></a></div>
+            <div id="标小智" class="flex-item"><a class="card" href="https://www.logosc.cn/?coupon=ainavpro" title="标小智" target="_blank"><div class="card-body">标小智</div></a></div>
+            <div id="Face⁺⁺" class="flex-item"><a class="card" href="https://www.faceplusplus.com.cn" title="Face⁺⁺" target="_blank"><div class="card-body">Face⁺⁺</div></a></div>
+            <div id="Draft" class="flex-item"><a class="card" href="https://draft.art/1891704" title="Draft" target="_blank"><div class="card-body">Draft</div></a></div>
+            <div id="VisualizeAI" class="flex-item"><a class="card" href="https://visualizeai.pro" title="VisualizeAI" target="_blank"><div class="card-body">VisualizeAI</div></a></div>
+            <div id="MakeLogoAI: Unique Logos" class="flex-item"><a class="card" href="https://makelogo.ai/af=c4d39d" title="MakeLogoAI: Unique Logos" target="_blank"><div class="card-body">MakeLogoAI: Unique Logos</div></a></div>
+            <div id="腾讯AIDesign" class="flex-item"><a class="card" href="https://ailogo.qq.com" title="腾讯AIDesign" target="_blank"><div class="card-body">腾讯AIDesign</div></a></div>
+            <div id="意表" class="flex-item"><a class="card" href="https://yibiao.fun" title="意表" target="_blank"><div class="card-body">意表</div></a></div>
+            <div id="Nolibox 计算美学" class="flex-item"><a class="card" href="https://nolibox.com" title="Nolibox 计算美学" target="_blank"><div class="card-body">Nolibox 计算美学</div></a></div>
+            <div id="节奏照片" class="flex-item"><a class="card" href="https://nodtotherhythm.com" title="节奏照片" target="_blank"><div class="card-body">节奏照片</div></a></div>
+            <div id="皮卡智能抠图" class="flex-item"><a class="card" href="https://www.picup.shop" title="皮卡智能抠图" target="_blank"><div class="card-body">皮卡智能抠图</div></a></div>
+            <div id="NightCafe Studio" class="flex-item"><a class="card" href="https://creator.nightcafe.studio" title="NightCafe Studio" target="_blank"><div class="card-body">NightCafe Studio</div></a></div>
+            <div id="图像转绘" class="flex-item"><a class="card" href="https://transpic.ai" title="图像转绘" target="_blank"><div class="card-body">图像转绘</div></a></div>
+            <div id="Waifu Labs" class="flex-item"><a class="card" href="https://waifulabs.com" title="Waifu Labs" target="_blank"><div class="card-body">Waifu Labs</div></a></div>
+            <div id="快速涂鸦" class="flex-item"><a class="card" href="https://quickdraw.withgoogle.com" title="快速涂鸦" target="_blank"><div class="card-body">快速涂鸦</div></a></div>
+            <div id="有道智云AI开放平台" class="flex-item"><a class="card" href="https://ai.youdao.com/#" title="有道智云AI开放平台" target="_blank"><div class="card-body">有道智云AI开放平台</div></a></div>
+            <div id="looka" class="flex-item"><a class="card" href="https://looka.com" title="looka" target="_blank"><div class="card-body">looka</div></a></div>
+            <div id="Cleanup.pictures" class="flex-item"><a class="card" href="https://cleanup.pictures" title="Cleanup.pictures" target="_blank"><div class="card-body">Cleanup.pictures</div></a></div>
+            <div id="鹿班" class="flex-item"><a class="card" href="https://luban.aliyun.com" title="鹿班" target="_blank"><div class="card-body">鹿班</div></a></div>
+            <div id="Lobe" class="flex-item"><a class="card" href="https://www.lobe.ai" title="Lobe" target="_blank"><div class="card-body">Lobe</div></a></div>
+            <div id="Dream by WOMBO" class="flex-item"><a class="card" href="https://dream.ai" title="Dream by WOMBO" target="_blank"><div class="card-body">Dream by WOMBO</div></a></div>
+            <div id="Petalica paint" class="flex-item"><a class="card" href="https://petalica.com/index_zh.html" title="Petalica paint" target="_blank"><div class="card-body">Petalica paint</div></a></div>
+            <div id="Photo Editor" class="flex-item"><a class="card" href="https://photokit.com" title="Photo Editor" target="_blank"><div class="card-body">Photo Editor</div></a></div>
+            <div id="6pen Art" class="flex-item"><a class="card" href="https://6pen.art/?invite=4175669#no_universal_links" title="6pen Art" target="_blank"><div class="card-body">6pen Art</div></a></div>
+            <div id="Playground AI" class="flex-item"><a class="card" href="https://playgroundai.com" title="Playground AI" target="_blank"><div class="card-body">Playground AI</div></a></div>
+            <div id="MewXAI" class="flex-item"><a class="card" href="#" title="MewXAI" target="_blank"><div class="card-body">MewXAI</div></a></div>
+            <div id="Looka" class="flex-item"><a class="card" href="https://looka.com" title="Looka" target="_blank"><div class="card-body">Looka</div></a></div>
+            <div id="Tome" class="flex-item"><a class="card" href="https://beta.tome.app" title="Tome" target="_blank"><div class="card-body">Tome</div></a></div>
+            <div id="AI渲染360全息场景" class="flex-item"><a class="card" href="https://skybox.blockadelabs.com/ " title="AI渲染360全息场景" target="_blank"><div class="card-body">AI渲染360全息场景</div></a></div>
+            <div id="RoomGPT" class="flex-item"><a class="card" href="https://www.roomgpt.io" title="RoomGPT" target="_blank"><div class="card-body">RoomGPT</div></a></div>
+            <div id="AILab Tools" class="flex-item"><a class="card" href="https://www.ailabtools.com" title="AILab Tools" target="_blank"><div class="card-body">AILab Tools</div></a></div>
+            <div id="Vega AI" class="flex-item"><a class="card" href="https://rightbrain.art/text2Image" title="Vega AI" target="_blank"><div class="card-body">Vega AI</div></a></div>
+            <div id="BeautifulAI" class="flex-item"><a class="card" href="https://www.beautiful.ai" title="BeautifulAI" target="_blank"><div class="card-body">BeautifulAI</div></a></div>
+            <div id="Easy-Peasy.AI" class="flex-item"><a class="card" href="https://easy-peasy.ai" title="Easy-Peasy.AI" target="_blank"><div class="card-body">Easy-Peasy.AI</div></a></div>
+            <div id="Getimg" class="flex-item"><a class="card" href="https://getimg.ai" title="Getimg" target="_blank"><div class="card-body">Getimg</div></a></div>
+            <div id="PhotorRoom" class="flex-item"><a class="card" href="https://www.photoroom.com" title="PhotorRoom" target="_blank"><div class="card-body">PhotorRoom</div></a></div>
+            <div id="文心一格" class="flex-item"><a class="card" href="https://yige.baidu.com/#" title="文心一格" target="_blank"><div class="card-body">文心一格</div></a></div>
+            <div id="Arc图片增强" class="flex-item"><a class="card" href="https://arc.tencent.com/zh/ai-demos/faceRestoration" title="Arc图片增强" target="_blank"><div class="card-body">Arc图片增强</div></a></div>
+            <div id="Niji Journey" class="flex-item"><a class="card" href="https://nijijourney.com/zh" title="Niji Journey" target="_blank"><div class="card-body">Niji Journey</div></a></div>
+            <div id="LeiaPix" class="flex-item"><a class="card" href="https://convert.leiapix.com" title="LeiaPix" target="_blank"><div class="card-body">LeiaPix</div></a></div>
+            <div id="Phygital+" class="flex-item"><a class="card" href="https://phygital.plus" title="Phygital+" target="_blank"><div class="card-body">Phygital+</div></a></div>
+            <div id="scenario" class="flex-item"><a class="card" href="https://app.scenario.gg" title="scenario" target="_blank"><div class="card-body">scenario</div></a></div>
+            <div id="lexica" class="flex-item"><a class="card" href="https://lexica.art" title="lexica" target="_blank"><div class="card-body">lexica</div></a></div>
+            <div id="Waifulabs" class="flex-item"><a class="card" href="https://waifulabs.com" title="Waifulabs" target="_blank"><div class="card-body">Waifulabs</div></a></div>
+            <div id="Piggy To" class="flex-item"><a class="card" href="https://piggy.to/magic" title="Piggy To" target="_blank"><div class="card-body">Piggy To</div></a></div>
+            <div id="VisualHound" class="flex-item"><a class="card" href="https://visualhound.com" title="VisualHound" target="_blank"><div class="card-body">VisualHound</div></a></div>
+            <div id="SolidGrids" class="flex-item"><a class="card" href="https://solidgrids.com" title="SolidGrids" target="_blank"><div class="card-body">SolidGrids</div></a></div>
+            <div id="GET3D (Nvidia)" class="flex-item"><a class="card" href="https://nv-tlabs.github.io/GET3D" title="GET3D (Nvidia)" target="_blank"><div class="card-body">GET3D (Nvidia)</div></a></div>
+            <div id="Generated Photos" class="flex-item"><a class="card" href="https://generated.photos" title="Generated Photos" target="_blank"><div class="card-body">Generated Photos</div></a></div>
+            <div id="视频AI" class="column"><a class="card" href="#视频AI" title="视频AI" target="_self"><div class="card-body">视频AI</div></a></div>
+            <div id="芦笋电脑提词器" class="flex-item"><a class="card" href="https://tcq.lusun.com/?utm_source=nav" title="芦笋电脑提词器" target="_blank"><div class="card-body">芦笋电脑提词器</div></a></div>
+            <div id="BiliGPT视频内容一键总结" class="flex-item"><a class="card" href="https://b.jimmylv.cn" title="BiliGPT视频内容一键总结" target="_blank"><div class="card-body">BiliGPT视频内容一键总结</div></a></div>
+            <div id="Rephrase AI" class="flex-item"><a class="card" href="https://www.rephrase.ai" title="Rephrase AI" target="_blank"><div class="card-body">Rephrase AI</div></a></div>
+            <div id="Tavus" class="flex-item"><a class="card" href="https://www.tavus.io" title="Tavus" target="_blank"><div class="card-body">Tavus</div></a></div>
+            <div id="Synthesia" class="flex-item"><a class="card" href="https://www.synthesia.io" title="Synthesia" target="_blank"><div class="card-body">Synthesia</div></a></div>
+            <div id="Vidyo" class="flex-item"><a class="card" href="https://vidyo.ai" title="Vidyo" target="_blank"><div class="card-body">Vidyo</div></a></div>
+            <div id="Fliki" class="flex-item"><a class="card" href="http://fliki.ai" title="Fliki" target="_blank"><div class="card-body">Fliki</div></a></div>
+            <div id="Colossyan" class="flex-item"><a class="card" href="https://www.colossyan.com" title="Colossyan" target="_blank"><div class="card-body">Colossyan</div></a></div>
+            <div id="Munch" class="flex-item"><a class="card" href="https://www.getmunch.com" title="Munch" target="_blank"><div class="card-body">Munch</div></a></div>
+            <div id="芦笋录屏官网" class="flex-item"><a class="card" href="https://lusun.com/invite/703491" title="芦笋录屏官网" target="_blank"><div class="card-body">芦笋录屏官网</div></a></div>
+            <div id="invideo" class="flex-item"><a class="card" href="https://invideo.io" title="invideo" target="_blank"><div class="card-body">invideo</div></a></div>
+            <div id="Runway" class="flex-item"><a class="card" href="https://runwayml.com" title="Runway" target="_blank"><div class="card-body">Runway</div></a></div>
+            <div id="Windsor" class="flex-item"><a class="card" href="https://www.windsor.io" title="Windsor" target="_blank"><div class="card-body">Windsor</div></a></div>
+            <div id="Flawless" class="flex-item"><a class="card" href="https://www.flawlessai.com" title="Flawless" target="_blank"><div class="card-body">Flawless</div></a></div>
+            <div id="Translate.Video" class="flex-item"><a class="card" href="https://www.translate.video" title="Translate.Video" target="_blank"><div class="card-body">Translate.Video</div></a></div>
+            <div id="Latte Social" class="flex-item"><a class="card" href="https://www.latte.social" title="Latte Social" target="_blank"><div class="card-body">Latte Social</div></a></div>
+            <div id="Zeemo" class="flex-item"><a class="card" href="https://zeemo.ai" title="Zeemo" target="_blank"><div class="card-body">Zeemo</div></a></div>
+            <div id="BHuman" class="flex-item"><a class="card" href="https://www.bhuman.ai" title="BHuman" target="_blank"><div class="card-body">BHuman</div></a></div>
+            <div id="Captions" class="flex-item"><a class="card" href="https://www.captions.ai" title="Captions" target="_blank"><div class="card-body">Captions</div></a></div>
+            <div id="FineShare" class="flex-item"><a class="card" href="https://www.fineshare.com" title="FineShare" target="_blank"><div class="card-body">FineShare</div></a></div>
+            <div id="Vizard" class="flex-item"><a class="card" href="https://vizard.ai" title="Vizard" target="_blank"><div class="card-body">Vizard</div></a></div>
+            <div id="Maverick" class="flex-item"><a class="card" href="https://www.trymaverick.com" title="Maverick" target="_blank"><div class="card-body">Maverick</div></a></div>
+            <div id="rephrase.ai" class="flex-item"><a class="card" href="https://www.rephrase.ai" title="rephrase.ai" target="_blank"><div class="card-body">rephrase.ai</div></a></div>
+            <div id="hourone" class="flex-item"><a class="card" href="https://hourone.ai" title="hourone" target="_blank"><div class="card-body">hourone</div></a></div>
+            <div id="synths.video" class="flex-item"><a class="card" href="https://synths.video" title="synths.video" target="_blank"><div class="card-body">synths.video</div></a></div>
+            <div id="tavus" class="flex-item"><a class="card" href="https://www.tavus.io" title="tavus" target="_blank"><div class="card-body">tavus</div></a></div>
+            <div id="Cascadeur" class="flex-item"><a class="card" href="https://cascadeur.com" title="Cascadeur" target="_blank"><div class="card-body">Cascadeur</div></a></div>
+            <div id="D-ID" class="flex-item"><a class="card" href="https://www.d-id.com" title="D-ID" target="_blank"><div class="card-body">D-ID</div></a></div>
+            <div id="Munch" class="flex-item"><a class="card" href="https://www.getmunch.com" title="Munch" target="_blank"><div class="card-body">Munch</div></a></div>
+            <div id="Pollinations" class="flex-item"><a class="card" href="https://pollinations.ai" title="Pollinations" target="_blank"><div class="card-body">Pollinations</div></a></div>
+            <div id="Runway" class="flex-item"><a class="card" href="https://runwayml.com" title="Runway" target="_blank"><div class="card-body">Runway</div></a></div>
+            <div id="Fliki" class="flex-item"><a class="card" href="https://fliki.ai" title="Fliki" target="_blank"><div class="card-body">Fliki</div></a></div>
+            <div id="Synthesia" class="flex-item"><a class="card" href="https://www.synthesia.io" title="Synthesia" target="_blank"><div class="card-body">Synthesia</div></a></div>
+            <div id="音频AI" class="column"><a class="card" href="#音频AI" title="音频AI" target="_self"><div class="card-body">音频AI</div></a></div>
+            <div id="Voicemod" class="flex-item"><a class="card" href="https://www.voicemod.net" title="Voicemod" target="_blank"><div class="card-body">Voicemod</div></a></div>
+            <div id="Cleanvoice AI" class="flex-item"><a class="card" href="https://cleanvoice.ai" title="Cleanvoice AI" target="_blank"><div class="card-body">Cleanvoice AI</div></a></div>
+            <div id="Altered" class="flex-item"><a class="card" href="https://www.altered.ai" title="Altered" target="_blank"><div class="card-body">Altered</div></a></div>
+            <div id="Voice AI" class="flex-item"><a class="card" href="https://voice.ai" title="Voice AI" target="_blank"><div class="card-body">Voice AI</div></a></div>
+            <div id="MotionSound文本转语音" class="flex-item"><a class="card" href="https://motionsound.yoo-ai.com" title="MotionSound文本转语音" target="_blank"><div class="card-body">MotionSound文本转语音</div></a></div>
+            <div id="讯飞开放平台" class="flex-item"><a class="card" href="https://www.xfyun.cn" title="讯飞开放平台" target="_blank"><div class="card-body">讯飞开放平台</div></a></div>
+            <div id="Beatoven.ai" class="flex-item"><a class="card" href="https://sync.beatoven.ai" title="Beatoven.ai" target="_blank"><div class="card-body">Beatoven.ai</div></a></div>
+            <div id="依图语音开放平台" class="flex-item"><a class="card" href="https://speech.yitutech.com" title="依图语音开放平台" target="_blank"><div class="card-body">依图语音开放平台</div></a></div>
+            <div id="Castmagic" class="flex-item"><a class="card" href="https://www.castmagic.io" title="Castmagic" target="_blank"><div class="card-body">Castmagic</div></a></div>
+            <div id="Audyo" class="flex-item"><a class="card" href="https://www.audyo.a" title="Audyo" target="_blank"><div class="card-body">Audyo</div></a></div>
+            <div id="啦啦爱LALAAI" class="flex-item"><a class="card" href="https://www.lalal.ai/?referral=dCVGmQkg&amp;utm_source=referral_promo&amp;utm_medium=link&amp;utm_campaign=dCVGmQkg" title="啦啦爱LALAAI" target="_blank"><div class="card-body">啦啦爱LALAAI</div></a></div>
+            <div id="标贝悦读" class="flex-item"><a class="card" href="https://yuedu.data-baker.com" title="标贝悦读" target="_blank"><div class="card-body">标贝悦读</div></a></div>
+            <div id="koolio.ai" class="flex-item"><a class="card" href="https://www.koolio.ai" title="koolio.ai" target="_blank"><div class="card-body">koolio.ai</div></a></div>
+            <div id="Adobe Podcast" class="flex-item"><a class="card" href="https://podcast.adobe.com" title="Adobe Podcast" target="_blank"><div class="card-body">Adobe Podcast</div></a></div>
+            <div id="TTSLabs" class="flex-item"><a class="card" href="https://ttslabs.ai/home" title="TTSLabs" target="_blank"><div class="card-body">TTSLabs</div></a></div>
+            <div id="Maverick" class="flex-item"><a class="card" href="https://www.trymaverick.com" title="Maverick" target="_blank"><div class="card-body">Maverick</div></a></div>
+            <div id="Noise Eraser" class="flex-item"><a class="card" href="https://eraserapp.dwave.cc" title="Noise Eraser" target="_blank"><div class="card-body">Noise Eraser</div></a></div>
+            <div id="Krisp" class="flex-item"><a class="card" href="https://krisp.ai" title="Krisp" target="_blank"><div class="card-body">Krisp</div></a></div>
+            <div id="PLAUD AI" class="flex-item"><a class="card" href="https://plaud.ai/transcribe" title="PLAUD AI" target="_blank"><div class="card-body">PLAUD AI</div></a></div>
+            <div id="Easy-Peasy.AI" class="flex-item"><a class="card" href="https://easy-peasy.ai" title="Easy-Peasy.AI" target="_blank"><div class="card-body">Easy-Peasy.AI</div></a></div>
+            <div id="LALAL AI" class="flex-item"><a class="card" href="https://www.lalal.ai" title="LALAL AI" target="_blank"><div class="card-body">LALAL AI</div></a></div>
+            <div id="Murf" class="flex-item"><a class="card" href="https://Murf.ai" title="Murf" target="_blank"><div class="card-body">Murf</div></a></div>
+            <div id="Mubert" class="flex-item"><a class="card" href="https://mubert.com" title="Mubert" target="_blank"><div class="card-body">Mubert</div></a></div>
+            <div id="papercup" class="flex-item"><a class="card" href="https://www.papercup.com" title="papercup" target="_blank"><div class="card-body">papercup</div></a></div>
+            <div id="文章AI" class="column"><a class="card" href="#文章AI" title="文章AI" target="_self"><div class="card-body">文章AI</div></a></div>
+            <div id="INSPO 中国版 ChatGPT" class="flex-item"><a class="card" href="https://inspo.vip/ " title="INSPO 中国版 ChatGPT" target="_blank"><div class="card-body">INSPO 中国版 ChatGPT</div></a></div>
+            <div id="ChatGPT个人专用版" class="flex-item"><a class="card" href="https://chat.51buygpt.com" title="ChatGPT个人专用版" target="_blank"><div class="card-body">ChatGPT个人专用版</div></a></div>
+            <div id="Aski" class="flex-item"><a class="card" href="https://aski.ai" title="Aski" target="_blank"><div class="card-body">Aski</div></a></div>
+            <div id="CopydoneAIGC原创文案写作神器，营销内容" class="flex-item"><a class="card" href="https://copyai.cn/?share_code=430096" title="CopydoneAIGC原创文案写作神器，营销内容" target="_blank"><div class="card-body">CopydoneAIGC原创文案写作神器，营销内容</div></a></div>
+            <div id="You" class="flex-item"><a class="card" href="https://you.com" title="You" target="_blank"><div class="card-body">You</div></a></div>
+            <div id="ChatGPT中文版" class="flex-item"><a class="card" href="https://chat35.com" title="ChatGPT中文版" target="_blank"><div class="card-body">ChatGPT中文版</div></a></div>
+            <div id="MagickPen" class="flex-item"><a class="card" href="https://magickpen.com" title="MagickPen" target="_blank"><div class="card-body">MagickPen</div></a></div>
+            <div id="ChatPDF" class="flex-item"><a class="card" href="https://www.chatpdf.com" title="ChatPDF" target="_blank"><div class="card-body">ChatPDF</div></a></div>
+            <div id="酷表ChatExcel" class="flex-item"><a class="card" href="https://chatexcel.com" title="酷表ChatExcel" target="_blank"><div class="card-body">酷表ChatExcel</div></a></div>
+            <div id="Excelformulabot" class="flex-item"><a class="card" href="https://excelformulabot.com" title="Excelformulabot" target="_blank"><div class="card-body">Excelformulabot</div></a></div>
+            <div id="Notion AI" class="flex-item"><a class="card" href="https://www.notion.so/product/ai" title="Notion AI" target="_blank"><div class="card-body">Notion AI</div></a></div>
+            <div id="YOO必优科技-AI写作" class="flex-item"><a class="card" href="https://www.yoo-ai.com" title="YOO必优科技-AI写作" target="_blank"><div class="card-body">YOO必优科技-AI写作</div></a></div>
+            <div id="Explainpaper" class="flex-item"><a class="card" href="https://www.explainpaper.com" title="Explainpaper" target="_blank"><div class="card-body">Explainpaper</div></a></div>
+            <div id="思知机器人" class="flex-item"><a class="card" href="https://www.ownthink.com" title="思知机器人" target="_blank"><div class="card-body">思知机器人</div></a></div>
+            <div id="造物云营销设计" class="flex-item"><a class="card" href="https://www.zaowuyun.com" title="造物云营销设计" target="_blank"><div class="card-body">造物云营销设计</div></a></div>
+            <div id="Shakespeare" class="flex-item"><a class="card" href="https://shakespeare.ai" title="Shakespeare" target="_blank"><div class="card-body">Shakespeare</div></a></div>
+            <div id="MotionGo" class="flex-item"><a class="card" href="http://motion.yoo-ai.com" title="MotionGo" target="_blank"><div class="card-body">MotionGo</div></a></div>
+            <div id="550智慧大脑" class="flex-item"><a class="card" href="http://w.550.ai" title="550智慧大脑" target="_blank"><div class="card-body">550智慧大脑</div></a></div>
+            <div id="Lateral App" class="flex-item"><a class="card" href="https://app.lateral.io" title="Lateral App" target="_blank"><div class="card-body">Lateral App</div></a></div>
+            <div id="Yaara" class="flex-item"><a class="card" href="https://yaara.ai" title="Yaara" target="_blank"><div class="card-body">Yaara</div></a></div>
+            <div id="Post AI" class="flex-item"><a class="card" href="https://www.postai.pro" title="Post AI" target="_blank"><div class="card-body">Post AI</div></a></div>
+            <div id="PDFlux" class="flex-item"><a class="card" href="https://pdflux.com" title="PDFlux" target="_blank"><div class="card-body">PDFlux</div></a></div>
+            <div id="SCISPACE" class="flex-item"><a class="card" href="https://typeset.io" title="SCISPACE" target="_blank"><div class="card-body">SCISPACE</div></a></div>
+            <div id="HARPA AI" class="flex-item"><a class="card" href="https://harpa.ai" title="HARPA AI" target="_blank"><div class="card-body">HARPA AI</div></a></div>
+            <div id="Superflow Rewrite" class="flex-item"><a class="card" href="https://www.usesuperflow.com" title="Superflow Rewrite" target="_blank"><div class="card-body">Superflow Rewrite</div></a></div>
+            <div id="Okaaaay" class="flex-item"><a class="card" href="https://www.okaaaay.com" title="Okaaaay" target="_blank"><div class="card-body">Okaaaay</div></a></div>
+            <div id="意表" class="flex-item"><a class="card" href="https://yibiao.fun" title="意表" target="_blank"><div class="card-body">意表</div></a></div>
+            <div id="Poe" class="flex-item"><a class="card" href="https://poe.com" title="Poe" target="_blank"><div class="card-body">Poe</div></a></div>
+            <div id="Easy-Peasy.AI" class="flex-item"><a class="card" href="https://easy-peasy.ai/?from=4509353d-355c-4f8c-a50d-f967f23fca6a" title="Easy-Peasy.AI" target="_blank"><div class="card-body">Easy-Peasy.AI</div></a></div>
+            <div id="Vondy" class="flex-item"><a class="card" href="https://www.vondy.com" title="Vondy" target="_blank"><div class="card-body">Vondy</div></a></div>
+            <div id="Humata" class="flex-item"><a class="card" href="https://www.humata.ai" title="Humata" target="_blank"><div class="card-body">Humata</div></a></div>
+            <div id="Jasper" class="flex-item"><a class="card" href="https://www.jasper.ai" title="Jasper" target="_blank"><div class="card-body">Jasper</div></a></div>
+            <div id="Peachly AI" class="flex-item"><a class="card" href="https://peachlyai.xyz" title="Peachly AI" target="_blank"><div class="card-body">Peachly AI</div></a></div>
+            <div id="Rytr" class="flex-item"><a class="card" href="https://rytr.me/?via=ainavpro" title="Rytr" target="_blank"><div class="card-body">Rytr</div></a></div>
+            <div id="AI Screenwriter" class="flex-item"><a class="card" href="https://aiscreenwriter.com" title="AI Screenwriter" target="_blank"><div class="card-body">AI Screenwriter</div></a></div>
+            <div id="BilibiliGPT" class="flex-item"><a class="card" href="https://b.jimmylv.cn" title="BilibiliGPT" target="_blank"><div class="card-body">BilibiliGPT</div></a></div>
+            <div id="MagickPen" class="flex-item"><a class="card" href="https://magickpen.com" title="MagickPen" target="_blank"><div class="card-body">MagickPen</div></a></div>
+            <div id="AI帮个忙" class="flex-item"><a class="card" href="https://ai-toolbox.codefuture.top" title="AI帮个忙" target="_blank"><div class="card-body">AI帮个忙</div></a></div>
+            <div id="Glasp" class="flex-item"><a class="card" href="https://glasp.co" title="Glasp" target="_blank"><div class="card-body">Glasp</div></a></div>
+            <div id="Fireflies" class="flex-item"><a class="card" href="https://fireflies.ai" title="Fireflies" target="_blank"><div class="card-body">Fireflies</div></a></div>
+            <div id="Yaara" class="flex-item"><a class="card" href="https://yaara.ai" title="Yaara" target="_blank"><div class="card-body">Yaara</div></a></div>
+            <div id="HoppyCopy" class="flex-item"><a class="card" href="https://www.hoppycopy.co" title="HoppyCopy" target="_blank"><div class="card-body">HoppyCopy</div></a></div>
+            <div id="Cowriter" class="flex-item"><a class="card" href="https://cowriter.org" title="Cowriter" target="_blank"><div class="card-body">Cowriter</div></a></div>
+            <div id="Jasper" class="flex-item"><a class="card" href="https://www.jasper.ai" title="Jasper" target="_blank"><div class="card-body">Jasper</div></a></div>
+            <div id="LongShot" class="flex-item"><a class="card" href="https://www.longshot.ai" title="LongShot" target="_blank"><div class="card-body">LongShot</div></a></div>
+            <div id="Tome" class="flex-item"><a class="card" href="https://beta.tome.app/tomeforedu" title="Tome" target="_blank"><div class="card-body">Tome</div></a></div>
+            <div id="Easy-Peasy.AI" class="flex-item"><a class="card" href="https://easy-peasy.ai" title="Easy-Peasy.AI" target="_blank"><div class="card-body">Easy-Peasy.AI</div></a></div>
+            <div id="Copy.ai" class="flex-item"><a class="card" href="https://www.copy.ai" title="Copy.ai" target="_blank"><div class="card-body">Copy.ai</div></a></div>
+            <div id="Notion AI" class="flex-item"><a class="card" href="https://www.notion.so/product/ai?wr=a7d32b88d723dd1e&amp;utm_source=notionClient&amp;utm_medium=copyButton&amp;utm_campaign=ai-beta&amp;utm_content=share" title="Notion AI" target="_blank"><div class="card-body">Notion AI</div></a></div>
+            <div id="Writesonic" class="flex-item"><a class="card" href="https://writesonic.com" title="Writesonic" target="_blank"><div class="card-body">Writesonic</div></a></div>
+            <div id="Article Fiesta" class="flex-item"><a class="card" href="https://articlefiesta.com" title="Article Fiesta" target="_blank"><div class="card-body">Article Fiesta</div></a></div>
+            <div id="Rytr" class="flex-item"><a class="card" href="https://rytr.me" title="Rytr" target="_blank"><div class="card-body">Rytr</div></a></div>
+            <div id="Jenni AI" class="flex-item"><a class="card" href="https://jenni.ai" title="Jenni AI" target="_blank"><div class="card-body">Jenni AI</div></a></div>
+            <div id="ChatGPT" class="flex-item"><a class="card" href="https://chat.openai.com" title="ChatGPT" target="_blank"><div class="card-body">ChatGPT</div></a></div>
+            <div id="聊天AI" class="column"><a class="card" href="#聊天AI" title="聊天AI" target="_self"><div class="card-body">聊天AI</div></a></div>
+            <div id="Inspo" class="flex-item"><a class="card" href="https://inspo.vip" title="Inspo" target="_blank"><div class="card-body">Inspo</div></a></div>
+            <div id="AI口语 Online" class="flex-item"><a class="card" href="https://open.weixin.qq.com/qr/code?username=ChatGPT_Oral" title="AI口语 Online" target="_blank"><div class="card-body">AI口语 Online</div></a></div>
+            <div id="Chat AI助手" class="flex-item"><a class="card" href="https://17yongai-1300108438.cos.ap-beijing.myqcloud.com/2023/03/chat_ai.png" title="Chat AI助手" target="_blank"><div class="card-body">Chat AI助手</div></a></div>
+            <div id="CharactorAI" class="flex-item"><a class="card" href="https://beta.character.ai" title="CharactorAI" target="_blank"><div class="card-body">CharactorAI</div></a></div>
+            <div id="charactorGPT" class="flex-item"><a class="card" href="https://alethea.ai/characterGPT.html" title="charactorGPT" target="_blank"><div class="card-body">charactorGPT</div></a></div>
+            <div id="Cody" class="flex-item"><a class="card" href="https://www.meetcody.ai" title="Cody" target="_blank"><div class="card-body">Cody</div></a></div>
+            <div id="Soofy" class="flex-item"><a class="card" href="https://soofy.io" title="Soofy" target="_blank"><div class="card-body">Soofy</div></a></div>
+            <div id="编程AI" class="column"><a class="card" href="#编程AI" title="编程AI" target="_self"><div class="card-body">编程AI</div></a></div>
+            <div id="You" class="flex-item"><a class="card" href="https://you.com" title="You" target="_blank"><div class="card-body">You</div></a></div>
+            <div id="Excelformulabot" class="flex-item"><a class="card" href="https://excelformulabot.com" title="Excelformulabot" target="_blank"><div class="card-body">Excelformulabot</div></a></div>
+            <div id="GitHub Copilot" class="flex-item"><a class="card" href="https://github.com/features/copilot" title="GitHub Copilot" target="_blank"><div class="card-body">GitHub Copilot</div></a></div>
+            <div id="Phind" class="flex-item"><a class="card" href="https://phind.com" title="Phind" target="_blank"><div class="card-body">Phind</div></a></div>
+            <div id="Safurai" class="flex-item"><a class="card" href="https://www.safurai.com" title="Safurai" target="_blank"><div class="card-body">Safurai</div></a></div>
+            <div id="Codeium" class="flex-item"><a class="card" href="https://www.codeium.com" title="Codeium" target="_blank"><div class="card-body">Codeium</div></a></div>
+            <div id="Transpose" class="flex-item"><a class="card" href="https://www.transpose.io" title="Transpose" target="_blank"><div class="card-body">Transpose</div></a></div>
+            <div id="Replit" class="flex-item"><a class="card" href="https://replit.com" title="Replit" target="_blank"><div class="card-body">Replit</div></a></div>
+            <div id="AutoRegex" class="flex-item"><a class="card" href="https://www.autoregex.xyz" title="AutoRegex" target="_blank"><div class="card-body">AutoRegex</div></a></div>
+            <div id="Amazon CodeWhisperer" class="flex-item"><a class="card" href="https://aws.amazon.com/cn/codewhisperer" title="Amazon CodeWhisperer" target="_blank"><div class="card-body">Amazon CodeWhisperer</div></a></div>
+            <div id="Lookup" class="flex-item"><a class="card" href="https://www.uselookup.com" title="Lookup" target="_blank"><div class="card-body">Lookup</div></a></div>
+            <div id="SpellBox" class="flex-item"><a class="card" href="https://spellbox.app" title="SpellBox" target="_blank"><div class="card-body">SpellBox</div></a></div>
+            <div id="Tabnine" class="flex-item"><a class="card" href="https://www.tabnine.com" title="Tabnine" target="_blank"><div class="card-body">Tabnine</div></a></div>
+            <div id="Codium" class="flex-item"><a class="card" href="https://www.codium.ai" title="Codium" target="_blank"><div class="card-body">Codium</div></a></div>
+            <div id="AI Code Snippets" class="flex-item"><a class="card" href="https://codesnippets.ai" title="AI Code Snippets" target="_blank"><div class="card-body">AI Code Snippets</div></a></div>
+            <div id="Raycast" class="flex-item"><a class="card" href="https://www.raycast.com" title="Raycast" target="_blank"><div class="card-body">Raycast</div></a></div>
+            <div id="AI Reality" class="flex-item"><a class="card" href="https://aireality.tech" title="AI Reality" target="_blank"><div class="card-body">AI Reality</div></a></div>
+            <div id="GitFluence" class="flex-item"><a class="card" href="https://gitfluence.com" title="GitFluence" target="_blank"><div class="card-body">GitFluence</div></a></div>
+            <div id="Cron AI" class="flex-item"><a class="card" href="https://cron-ai.vercel.app" title="Cron AI" target="_blank"><div class="card-body">Cron AI</div></a></div>
+            <div id="Codeium" class="flex-item"><a class="card" href="https://www.codeium.com" title="Codeium" target="_blank"><div class="card-body">Codeium</div></a></div>
+            <div id="AI Data Sidekick" class="flex-item"><a class="card" href="https://www.airops.com" title="AI Data Sidekick" target="_blank"><div class="card-body">AI Data Sidekick</div></a></div>
+            <div id="3D" class="column"><a class="card" href="#3D" title="3D" target="_self"><div class="card-body">3D</div></a></div>
+            <div id="Kaedim" class="flex-item"><a class="card" href="https://www.kaedim3d.com" title="Kaedim" target="_blank"><div class="card-body">Kaedim</div></a></div>
+            <div id="VisualizeAI" class="flex-item"><a class="card" href="https://visualizeai.pro" title="VisualizeAI" target="_blank"><div class="card-body">VisualizeAI</div></a></div>
+            <div id="RoomGPT" class="flex-item"><a class="card" href="https://www.roomgpt.io" title="RoomGPT" target="_blank"><div class="card-body">RoomGPT</div></a></div>
+            <div id="Scenario" class="flex-item"><a class="card" href="https://www.scenario.gg" title="Scenario" target="_blank"><div class="card-body">Scenario</div></a></div>
+            <div id="Kinetix" class="flex-item"><a class="card" href="https://www.kinetix.tech" title="Kinetix" target="_blank"><div class="card-body">Kinetix</div></a></div>
+            <div id="Mirage" class="flex-item"><a class="card" href="https://www.mirageml.com" title="Mirage" target="_blank"><div class="card-body">Mirage</div></a></div>
+            <div id="G3D.AI" class="flex-item"><a class="card" href="https://g3d.ai" title="G3D.AI" target="_blank"><div class="card-body">G3D.AI</div></a></div>
+            <div id="Latent Labs" class="flex-item"><a class="card" href="https://www.latentlabs.art" title="Latent Labs" target="_blank"><div class="card-body">Latent Labs</div></a></div>
+            <div id="Masterpiece Studio" class="flex-item"><a class="card" href="https://masterpiecestudio.com" title="Masterpiece Studio" target="_blank"><div class="card-body">Masterpiece Studio</div></a></div>
+            <div id="Sloyd.ai" class="flex-item"><a class="card" href="https://app.sloyd.ai" title="Sloyd.ai" target="_blank"><div class="card-body">Sloyd.ai</div></a></div>
+            <div id="Leonardo.ai" class="flex-item"><a class="card" href="https://leonardo.ai" title="Leonardo.ai" target="_blank"><div class="card-body">Leonardo.ai</div></a></div>
+            <div id="NVIDIA Toronto AI Lab" class="flex-item"><a class="card" href="https://nv-tlabs.github.io/GET3D" title="NVIDIA Toronto AI Lab" target="_blank"><div class="card-body">NVIDIA Toronto AI Lab</div></a></div>
+            <div id="Poly" class="flex-item"><a class="card" href="https://withpoly.com" title="Poly" target="_blank"><div class="card-body">Poly</div></a></div>
+            <div id="Luma AI" class="flex-item"><a class="card" href="https://captures.lumalabs.ai" title="Luma AI" target="_blank"><div class="card-body">Luma AI</div></a></div>
+            <div id="GetFloorPlan" class="flex-item"><a class="card" href="https://getfloorplan.com" title="GetFloorPlan" target="_blank"><div class="card-body">GetFloorPlan</div></a></div>
+            <div id="DeepMotion" class="flex-item"><a class="card" href="https://www.deepmotion.com" title="DeepMotion" target="_blank"><div class="card-body">DeepMotion</div></a></div>
+            <div id="CSM 3D Viewer" class="flex-item"><a class="card" href="https://3d.csm.ai" title="CSM 3D Viewer" target="_blank"><div class="card-body">CSM 3D Viewer</div></a></div>
+            <div id="Promethean AI" class="flex-item"><a class="card" href="https://www.prometheanai.com" title="Promethean AI" target="_blank"><div class="card-body">Promethean AI</div></a></div>
+            <div id="Krikey AI" class="flex-item"><a class="card" href="https://www.krikey.ai" title="Krikey AI" target="_blank"><div class="card-body">Krikey AI</div></a></div>
+            <div id="Plask" class="flex-item"><a class="card" href="https://plask.ai" title="Plask" target="_blank"><div class="card-body">Plask</div></a></div>
+            <div id="Ponzu" class="flex-item"><a class="card" href="https://www.ponzu.gg" title="Ponzu" target="_blank"><div class="card-body">Ponzu</div></a></div>
+            <div id="Texture Lab" class="flex-item"><a class="card" href="https://www.texturelab.xyz" title="Texture Lab" target="_blank"><div class="card-body">Texture Lab</div></a></div>
+            <div id="Pixela.ai" class="flex-item"><a class="card" href="https://pixela.ai" title="Pixela.ai" target="_blank"><div class="card-body">Pixela.ai</div></a></div>
+            <div id="The Simulation" class="flex-item"><a class="card" href="https://fablesimulation.com" title="The Simulation" target="_blank"><div class="card-body">The Simulation</div></a></div>
+            <div id="NEWInterior AI:室内设计灵感" class="flex-item"><a class="card" href="https://interiorai.com" title="NEWInterior AI:室内设计灵感" target="_blank"><div class="card-body">NEWInterior AI:室内设计灵感</div></a></div>
+            <div id="NEWREimagine Home: AI" class="flex-item"><a class="card" href="https://www.reimaginehome.ai" title="NEWREimagine Home: AI" target="_blank"><div class="card-body">NEWREimagine Home: AI</div></a></div>
+            <div id="NEWDreamhouse AI" class="flex-item"><a class="card" href="https://dreamhouseai.com" title="NEWDreamhouse AI" target="_blank"><div class="card-body">NEWDreamhouse AI</div></a></div>
+            <div id="商业" class="column"><a class="card" href="#商业" title="商业" target="_self"><div class="card-body">商业</div></a></div>
+            <div id="换脸科技" class="flex-item"><a class="card" href="http://huanlian.com" title="换脸科技" target="_blank"><div class="card-body">换脸科技</div></a></div>
+            <div id="辨证云 中医AI辨证系统" class="flex-item"><a class="card" href="https://c.zydsoft.cn" title="辨证云 中医AI辨证系统" target="_blank"><div class="card-body">辨证云 中医AI辨证系统</div></a></div>
+            <div id="Face⁺⁺" class="flex-item"><a class="card" href="https://www.faceplusplus.com.cn" title="Face⁺⁺" target="_blank"><div class="card-body">Face⁺⁺</div></a></div>
+            <div id="美图AI开放平台" class="flex-item"><a class="card" href="https://ai.meitu.com/index" title="美图AI开放平台" target="_blank"><div class="card-body">美图AI开放平台</div></a></div>
+            <div id="有道智云AI开放平台" class="flex-item"><a class="card" href="https://ai.youdao.com/#" title="有道智云AI开放平台" target="_blank"><div class="card-body">有道智云AI开放平台</div></a></div>
+            <div id="北京庖丁科技有限公司" class="flex-item"><a class="card" href="https://paodingai.com" title="北京庖丁科技有限公司" target="_blank"><div class="card-body">北京庖丁科技有限公司</div></a></div>
+            <div id="腾讯 AI 开放平台" class="flex-item"><a class="card" href="https://ai.qq.com" title="腾讯 AI 开放平台" target="_blank"><div class="card-body">腾讯 AI 开放平台</div></a></div>
+            <div id="讯飞开放平台" class="flex-item"><a class="card" href="https://www.xfyun.cn" title="讯飞开放平台" target="_blank"><div class="card-body">讯飞开放平台</div></a></div>
+            <div id="Amazon CodeWhisperer" class="flex-item"><a class="card" href="https://aws.amazon.com/cn/codewhisperer" title="Amazon CodeWhisperer" target="_blank"><div class="card-body">Amazon CodeWhisperer</div></a></div>
+            <div id="医真" class="flex-item"><a class="card" href="http://aistore.yizhen.cn/yizhen-aistore/index.jsp" title="医真" target="_blank"><div class="card-body">医真</div></a></div>
+            <div id="百度AI开放平台" class="flex-item"><a class="card" href="https://ai.baidu.com" title="百度AI开放平台" target="_blank"><div class="card-body">百度AI开放平台</div></a></div>
+            <div id="依图语音开放平台" class="flex-item"><a class="card" href="https://speech.yitutech.com" title="依图语音开放平台" target="_blank"><div class="card-body">依图语音开放平台</div></a></div>
+            <div id="滴滴Ai实验室" class="flex-item"><a class="card" href="https://www.didiglobal.com/science/ailabs" title="滴滴Ai实验室" target="_blank"><div class="card-body">滴滴Ai实验室</div></a></div>
+            <div id="OLAMI 欧拉蜜人工智能开放平台" class="flex-item"><a class="card" href="https://cn.olami.ai/open/website/home/home_show" title="OLAMI 欧拉蜜人工智能开放平台" target="_blank"><div class="card-body">OLAMI 欧拉蜜人工智能开放平台</div></a></div>
+            <div id="左手医生开放平台" class="flex-item"><a class="card" href="https://open.zuoshouyisheng.com" title="左手医生开放平台" target="_blank"><div class="card-body">左手医生开放平台</div></a></div>
+            <div id="小米小爱开放平台" class="flex-item"><a class="card" href="https://developers.xiaoai.mi.com" title="小米小爱开放平台" target="_blank"><div class="card-body">小米小爱开放平台</div></a></div>
+            <div id="Craft.ai" class="flex-item"><a class="card" href="https://en.craft.ai" title="Craft.ai" target="_blank"><div class="card-body">Craft.ai</div></a></div>
+            <div id="网易数帆" class="flex-item"><a class="card" href="https://sf.163.com/product/yz" title="网易数帆" target="_blank"><div class="card-body">网易数帆</div></a></div>
+            <div id="和鲸社区" class="flex-item"><a class="card" href="https://www.heywhale.com" title="和鲸社区" target="_blank"><div class="card-body">和鲸社区</div></a></div>
+            <div id="Google Colab" class="flex-item"><a class="card" href="https://colab.research.google.com" title="Google Colab" target="_blank"><div class="card-body">Google Colab</div></a></div>
+            <div id="灵云" class="flex-item"><a class="card" href="https://www.aicloud.com/dev/index/index" title="灵云" target="_blank"><div class="card-body">灵云</div></a></div>
+            <div id="360人工智能研究院" class="flex-item"><a class="card" href="http://ai.360.cn" title="360人工智能研究院" target="_blank"><div class="card-body">360人工智能研究院</div></a></div>
+            <div id="飞桨AI Studio" class="flex-item"><a class="card" href="https://aistudio.baidu.com" title="飞桨AI Studio" target="_blank"><div class="card-body">飞桨AI Studio</div></a></div>
+            <div id="Google Ai" class="flex-item"><a class="card" href="https://ai.google" title="Google Ai" target="_blank"><div class="card-body">Google Ai</div></a></div>
+            <div id="Openbayes" class="flex-item"><a class="card" href="https://openbayes.com" title="Openbayes" target="_blank"><div class="card-body">Openbayes</div></a></div>
+            <div id="云从科技" class="flex-item"><a class="card" href="https://ai.cloudwalk.cn/cloudwalk/#/index" title="云从科技" target="_blank"><div class="card-body">云从科技</div></a></div>
+            <div id="萤石开放平台" class="flex-item"><a class="card" href="https://open.ys7.com/cn/s/index" title="萤石开放平台" target="_blank"><div class="card-body">萤石开放平台</div></a></div>
+            <div id="天猫精灵开放平台" class="flex-item"><a class="card" href="https://www.aligenie.com" title="天猫精灵开放平台" target="_blank"><div class="card-body">天猫精灵开放平台</div></a></div>
+            <div id="四维时代-人工智能技术开放平台" class="flex-item"><a class="card" href="https://developer.4dage.com/#" title="四维时代-人工智能技术开放平台" target="_blank"><div class="card-body">四维时代-人工智能技术开放平台</div></a></div>
+            <div id="矩池云" class="flex-item"><a class="card" href="https://www.matpool.com" title="矩池云" target="_blank"><div class="card-body">矩池云</div></a></div>
+            <div id="标贝科技" class="flex-item"><a class="card" href="https://www.data-baker.com" title="标贝科技" target="_blank"><div class="card-body">标贝科技</div></a></div>
+            <div id="昇腾社区Ai应用" class="flex-item"><a class="card" href="https://www.hiascend.com/developer/case-studies" title="昇腾社区Ai应用" target="_blank"><div class="card-body">昇腾社区Ai应用</div></a></div>
+            <div id="NeuHub京东人工智能开放平台" class="flex-item"><a class="card" href="http://neuhub.jd.com" title="NeuHub京东人工智能开放平台" target="_blank"><div class="card-body">NeuHub京东人工智能开放平台</div></a></div>
+            <div id="AutoDL" class="flex-item"><a class="card" href="https://www.autodl.com/home" title="AutoDL" target="_blank"><div class="card-body">AutoDL</div></a></div>
+            <div id="BitaHub" class="flex-item"><a class="card" href="https://www.bitahub.com" title="BitaHub" target="_blank"><div class="card-body">BitaHub</div></a></div>
+            <div id="Kaggle" class="flex-item"><a class="card" href="https://www.kaggle.com/code" title="Kaggle" target="_blank"><div class="card-body">Kaggle</div></a></div>
+            <div id="其他" class="column"><a class="card" href="#其他" title="其他" target="_self"><div class="card-body">其他</div></a></div>
+            <div id="唤醒食物" class="flex-item"><a class="card" href="https://www.foodwake.com" title="唤醒食物" target="_blank"><div class="card-body">唤醒食物</div></a></div>
+            <div id="Copilot Hub" class="flex-item"><a class="card" href="https://app.copilothub.co" title="Copilot Hub" target="_blank"><div class="card-body">Copilot Hub</div></a></div>
+            <div id="Replicate" class="flex-item"><a class="card" href="https://replicate.com" title="Replicate" target="_blank"><div class="card-body">Replicate</div></a></div>
+            <div id="BoredHumans.com" class="flex-item"><a class="card" href="https://boredhumans.com" title="BoredHumans.com" target="_blank"><div class="card-body">BoredHumans.com</div></a></div>
+            <div id="Hugging Face" class="flex-item"><a class="card" href="https://huggingface.co" title="Hugging Face" target="_blank"><div class="card-body">Hugging Face</div></a></div>
+            <div id="DataLearner 数据学习" class="flex-item"><a class="card" href="https://www.datalearner.com/ai-resources/pretrained-models" title="DataLearner 数据学习" target="_blank"><div class="card-body">DataLearner 数据学习</div></a></div>
+            <div id="modelscope" class="flex-item"><a class="card" href="https://modelscope.cn" title="modelscope" target="_blank"><div class="card-body">modelscope</div></a></div>
+            <div id="AI口语 Online" class="flex-item"><a class="card" href="https://www.ainavpro.com/wp-content/uploads/2023/03/481678003535_.pic_.jpg" title="AI口语 Online" target="_blank"><div class="card-body">AI口语 Online</div></a></div>
+            <div id="庖丁科技" class="flex-item"><a class="card" href="https://www.ainavpro.com/wp-content/uploads/2023/03/291678074627_.pic_.png" title="庖丁科技" target="_blank"><div class="card-body">庖丁科技</div></a></div>
+            <div id="ainavpro" class="flex-item"><a class="card" href="https://www.ainavpro.com/" title="ainavpro" target="_blank"><div class="card-body">ainavpro</div></a></div>
+            <div id="aifure" class="flex-item"><a class="card" href="https://aifure.com/" title="aifure" target="_blank"><div class="card-body">aifure</div></a></div>
+            <div id="aigc" class="flex-item"><a class="card" href="https://aigc.cn/" title="aigc" target="_blank"><div class="card-body">aigc</div></a></div>
+            <div id="haiheyun" class="flex-item"><a class="card" href="https://haiheyun.com/" title="haiheyun" target="_blank"><div class="card-body">haiheyun</div></a></div>
+            <div id="missu" class="flex-item"><a class="card" href="https://www.missu.fun/" title="missu" target="_blank"><div class="card-body">missu</div></a></div>
+            <div id="kxxue" class="flex-item"><a class="card" href="https://www.kxxue.com/" title="kxxue" target="_blank"><div class="card-body">kxxue</div></a></div>
+            <div id="chenmoyidaohang" class="flex-item"><a class="card" href="https://www.chenmoyidaohang.com/" title="chenmoyidaohang" target="_blank"><div class="card-body">chenmoyidaohang</div></a></div>
+            <div id="mxkj1688" class="flex-item"><a class="card" href="https://www.mxkj1688.vip/" title="mxkj1688" target="_blank"><div class="card-body">mxkj1688</div></a></div>
+            <div id="lengcat" class="flex-item"><a class="card" href="http://www.lengcat.cn/" title="lengcat" target="_blank"><div class="card-body">lengcat</div></a></div>
+            <div id="kulayu" class="flex-item"><a class="card" href="https://www.kulayu.com/" title="kulayu" target="_blank"><div class="card-body">kulayu</div></a></div>
+            <div id="anee" class="flex-item"><a class="card" href="https://anee.cc/" title="anee" target="_blank"><div class="card-body">anee</div></a></div>
+            <div id="007la" class="flex-item"><a class="card" href="https://www.007la.com/" title="007la" target="_blank"><div class="card-body">007la</div></a></div>
+            <div id="nbwz" class="flex-item"><a class="card" href="https://www.nbwz.com/" title="nbwz" target="_blank"><div class="card-body">nbwz</div></a></div>
+            <div id="jmdh" class="flex-item"><a class="card" href="https://jmdh.cc/" title="jmdh" target="_blank"><div class="card-body">jmdh</div></a></div>
+            <div id="9bdh" class="flex-item"><a class="card" href="https://www.9bdh.com/" title="9bdh" target="_blank"><div class="card-body">9bdh</div></a></div>
+            <div id="1100dh" class="flex-item"><a class="card" href="https://1100dh.com/" title="1100dh" target="_blank"><div class="card-body">1100dh</div></a></div>
+            <div id="hifast" class="flex-item"><a class="card" href="https://www.hifast.cn/" title="hifast" target="_blank"><div class="card-body">hifast</div></a></div>
+            <div id="lanrenao" class="flex-item"><a class="card" href="https://lanrenao.com/" title="lanrenao" target="_blank"><div class="card-body">lanrenao</div></a></div>
+            <div id="bestcyt" class="flex-item"><a class="card" href="https://bestcyt.com/" title="bestcyt" target="_blank"><div class="card-body">bestcyt</div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

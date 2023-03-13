@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>求职</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="求职" />
+    <meta name="description" content="求职" />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        vertical-align: baseline;
+        word-wrap: break-word;
+        color: #282a2d;
+        background: #f9f9f9;
+      }
+
+      a {
+        color: #282a2d;
+        outline: 0 !important;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #e94041;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1080;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .mt24 {
+        margin-top: 24px
+      }
+      .border-top {
+        border-top: 1px solid #dee2e6;
+      }
+
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        font-size: 14px;
+        width: 200px;
+        height: 100vh;
+        z-index: 1081;
+        background: #f0f2f4;
+        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+      }
+      .sidebar-logo {
+        height: 74px;
+        border-bottom: 1px solid #dee2e6;
+        background: #fff;
+        text-align: center;
+        line-height: 74px;
+        font-size: 22px;
+      }
+      .sidebar-nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      .sidebar-item {
+        position: relative;
+        display: block;
+      }
+      .sidebar-item > a:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        color: #e94041;
+      }
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {
+        display: flex;
+        overflow: hidden;
+        padding: 8px 10px;
+        margin: 1.5px 8px;
+        color: #515c6b;
+        font-size: 16px;
+        align-items: center;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+      .sidebar-menu ul:first-child > li > a {
+        padding: 12px 10px;
+      }
+      .sidebar-nav-inner {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .sidebar-nav-inner .flex-fill {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .header-nav {
+        position: fixed;
+        right: 0;
+        left: 200px;
+        background: rgb(255 255 255 / 77%);
+      }
+
+      .main-content {
+        flex-direction: column;
+        display: flex;
+      }
+
+      .flex-fill {
+        flex: 1 1 auto;
+      }
+
+      .container {
+        margin: auto;
+      }
+      .main-content {
+        margin-left: 200px;
+      }
+      .content {
+        margin-left: 12px;
+      }
+
+      .customize-width {
+        min-width: 1140px;
+        max-width: 1900px;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .flex-item {
+        flex: 0 0 20%;
+        border: 1px solid transparent;
+        padding: 0 12px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        background-color: #eee;
+        margin-bottom: 12px;
+      }
+      .card-body {
+        position: relative;
+        padding: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .column {
+        flex: 1 1 100%;
+        padding: 0 12px;
+        margin-top: 24px;
+      }
+      .column .card {
+        border-left: 4px solid #e94041;
+        background: transparent;
+      }
+      .column .card-body {
+        padding: 0 0 0 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar-nav sticky">
+      <div class="sidebar-nav-inner">
+        <div class="sidebar-logo">
+          <div class="logo overflow-hidden">求职</div>
+        </div>
+        <div class="sidebar-menu flex-fill">
+          <div class="sidebar-scroll">
+            <div class="sidebar-menu-inner">
+              <ul>
+                <li class="sidebar-item">
+                  <a href="#就业"><span>就业</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#技能培训"><span>技能培训</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#其他"><span>其他</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top">
+          <div class="flex-bottom">
+            <ul>
+              <li class="sidebar-item">
+                <a href="#"><span>网站提交</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content flex-fill">
+      <div class="container customize-width">
+        <div class="header-nav"></div>
+        <div class="content">
+          <div class="flex">
+            <div id="就业" class="column"><a class="card" href="#就业" title="就业" target="_self"><div class="card-body">就业</div></a></div>
+            <div id="国聘官方网站" class="flex-item"><a class="card" href="https://www.iguopin.com/" title="国聘官方网站" target="_blank"><div class="card-body">国聘官方网站</div></a></div>
+            <div id="国家大学生就业服务平台" class="flex-item"><a class="card" href="https://www.ncss.cn/" title="国家大学生就业服务平台" target="_blank"><div class="card-body">国家大学生就业服务平台</div></a></div>
+            <div id="中国公共招聘网" class="flex-item"><a class="card" href="http://job.mohrss.gov.cn/" title="中国公共招聘网" target="_blank"><div class="card-body">中国公共招聘网</div></a></div>
+            <div id="人力资源社会保障部事业单位公开招聘服务平台" class="flex-item"><a class="card" href="http://www.gjzhaopin.cn" title="人力资源社会保障部事业单位公开招聘服务平台" target="_blank"><div class="card-body">人力资源社会保障部事业单位公开招聘服务平台</div></a></div>
+            <div id="国管局人才招聘网站" class="flex-item"><a class="card" href="https://gkzp.ggj.gov.cn/" title="国管局人才招聘网站" target="_blank"><div class="card-body">国管局人才招聘网站</div></a></div>
+            <div id="中国社会科学院公开招聘平台" class="flex-item"><a class="card" href="http://cass.gjzhaopin.cn/LPSC/LEAP/zgshkxy/html/index.html" title="中国社会科学院公开招聘平台" target="_blank"><div class="card-body">中国社会科学院公开招聘平台</div></a></div>
+            <div id="气象人才招聘网站" class="flex-item"><a class="card" href="http://zp.cmatec.cn" title="气象人才招聘网站" target="_blank"><div class="card-body">气象人才招聘网站</div></a></div>
+            <div id="全国事业单位招聘网" class="flex-item"><a class="card" href="https://www.qgsydw.com/qgsydw/index.html" title="全国事业单位招聘网" target="_blank"><div class="card-body">全国事业单位招聘网</div></a></div>
+            <div id="长沙星沙人才网" class="flex-item"><a class="card" href="http://www.csxsrcw.com/" title="长沙星沙人才网" target="_blank"><div class="card-body">长沙星沙人才网</div></a></div>
+            <div id="中国就业在线" class="flex-item"><a class="card" href="https://www.jobonline.cn/" title="中国就业在线" target="_blank"><div class="card-body">中国就业在线</div></a></div>
+            <div id="技能培训" class="column"><a class="card" href="#技能培训" title="技能培训" target="_self"><div class="card-body">技能培训</div></a></div>
+            <div id="职业技能提升培训服务平台" class="flex-item"><a class="card" href="http://jntspx.rsbsyzx.cn/" title="职业技能提升培训服务平台" target="_blank"><div class="card-body">职业技能提升培训服务平台</div></a></div>
+            <div id="中国继续工程教育协会" class="flex-item"><a class="card" href="https://www.cacee.org.cn/" title="中国继续工程教育协会" target="_blank"><div class="card-body">中国继续工程教育协会</div></a></div>
+            <div id="中国国家人事人才培训网" class="flex-item"><a class="card" href="http://px.rsbsyzx.cn/" title="中国国家人事人才培训网" target="_blank"><div class="card-body">中国国家人事人才培训网</div></a></div>
+            <div id="中国干部网络学院门户" class="flex-item"><a class="card" href="https://www.cela.gov.cn/home/" title="中国干部网络学院门户" target="_blank"><div class="card-body">中国干部网络学院门户</div></a></div>
+            <div id="其他" class="column"><a class="card" href="#其他" title="其他" target="_self"><div class="card-body">其他</div></a></div>
+            <div id="国家专业技术人才知识更新工程" class="flex-item"><a class="card" href="http://zsgx.mohrss.gov.cn/" title="国家专业技术人才知识更新工程" target="_blank"><div class="card-body">国家专业技术人才知识更新工程</div></a></div>
+            <div id="事业单位人事服务中心" class="flex-item"><a class="card" href="https://www.rsbsyzx.cn/index.html" title="事业单位人事服务中心" target="_blank"><div class="card-body">事业单位人事服务中心</div></a></div>
+            <div id="中国国家人才网" class="flex-item"><a class="card" href="https://www.newjobs.com.cn/" title="中国国家人才网" target="_blank"><div class="card-body">中国国家人才网</div></a></div>
+            <div id="九三学社中央委员会" class="flex-item"><a class="card" href="http://www.93.gov.cn/" title="九三学社中央委员会" target="_blank"><div class="card-body">九三学社中央委员会</div></a></div>
+            <div id="中共中央网络安全和信息化委员会办公室" class="flex-item"><a class="card" href="http://www.cac.gov.cn/" title="中共中央网络安全和信息化委员会办公室" target="_blank"><div class="card-body">中共中央网络安全和信息化委员会办公室</div></a></div>
+            <div id="中华人民共和国人力资源和社会保障部" class="flex-item"><a class="card" href="http://www.mohrss.gov.cn/" title="中华人民共和国人力资源和社会保障部" target="_blank"><div class="card-body">中华人民共和国人力资源和社会保障部</div></a></div>
+            <div id="学苑出版社官网" class="flex-item"><a class="card" href="http://www.book001.com/" title="学苑出版社官网" target="_blank"><div class="card-body">学苑出版社官网</div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

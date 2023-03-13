@@ -118,7 +118,7 @@ def get_data(num):
         else:
             print(f'已存在:{num},{date},{info_code},{title}')
 
-    if num == 1:
+    if num == 2:
         return []
     else:
         return get_data(num+1)

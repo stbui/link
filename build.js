@@ -1,5 +1,5 @@
-const ejs = require('ejs')
-const fs = require('fs')
+const ejs = require('ejs');
+const fs = require('fs');
 
 const html = `
 <!DOCTYPE html>
@@ -8,8 +8,8 @@ const html = `
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title><%= title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta name="keywords" content="<%= title %>" />
+    <meta name="description" content="<%= title %>" />
     <style>
       *,
       ::after,
@@ -195,12 +195,10 @@ const html = `
         <div class="sidebar-menu flex-fill">
           <div class="sidebar-scroll">
             <div class="sidebar-menu-inner">
-              <ul>
-                <% for (var i=0;i<column.length;i++)  { %>
+              <ul><% for (var i=0;i<column.length;i++)  { %>
                 <li class="sidebar-item">
                   <a href="#<%= column[i] %>"><span><%= column[i] %></span></a>
-                </li>
-                <% } %>
+                </li><% } %>
               </ul>
             </div>
           </div>
@@ -221,10 +219,8 @@ const html = `
       <div class="container customize-width">
         <div class="header-nav"></div>
         <div class="content">
-          <div class="flex">
-            <% for (var i=0;i<data.length;i++)  { %>
-            <div id="<%= data[i].name %>" class="<%= data[i].url?'flex-item':'column' %>"><a class="card" href="<%= data[i].url ? data[i].url : '#'+data[i].name %>" title="<%= data[i].name %>" target="<%= data[i].url ? '_blank' : '_self' %>" ><div class="card-body"><%= data[i].name %></div></a></div>
-            <% } %>
+          <div class="flex"><% for (var i=0;i<data.length;i++)  { %>
+            <div id="<%= data[i].name %>" class="<%= data[i].url?'flex-item':'column' %>"><a class="card" href="<%= data[i].url ? data[i].url : '#'+data[i].name %>" title="<%= data[i].name %>" target="<%= data[i].url ? '_blank' : '_self' %>"><div class="card-body"><%= data[i].name %></div></a></div><% } %>
           </div>
         </div>
       </div>
@@ -232,42 +228,46 @@ const html = `
   </body>
 </html>
 
-`
-
-
+`;
 
 function toJSON(text) {
   const column = [];
-  const list = text.split('\n').filter(item => item.length).map(item => {
-    const [name, url] = item.split(',');
+  const list = text
+    .split('\n')
+    .filter((item) => item.length)
+    .map((item) => {
+      const [name, url] = item.split(',');
 
-    if (!url) {
-      column.push(name)
-    }
+      if (!url) {
+        column.push(name);
+      }
 
-    return {
-      name: name,
-      url: url
-    }
-  });
+      return {
+        name: name,
+        url: url,
+      };
+    });
 
   return {
     list: list,
-    column: column
-  }
+    column: column,
+  };
 }
 
 function main(topic) {
-  topic.map(t => {
+  topic.map((t) => {
     const source = './csv/' + t.type + '.csv';
     const target = './html/' + t.type + '.html';
     const title = t.title;
 
-
     const data = fs.readFileSync(source, { encoding: 'utf-8' });
     const d = toJSON(data);
 
-    const res = ejs.render(html, { title: title, data: d.list, column: d.column });
+    const res = ejs.render(html, {
+      title: title,
+      data: d.list,
+      column: d.column,
+    });
     fs.writeFileSync(target, res);
     console.log('完成', title, target);
   });
@@ -280,7 +280,10 @@ function renderHome(data) {
   const target = './index.html';
   const title = '导航主页';
 
-  const list = data.map(item => ({ name: item.title, url: './html/' + item.type + '.html' }))
+  const list = data.map((item) => ({
+    name: item.title,
+    url: './html/' + item.type + '.html',
+  }));
 
   const res = ejs.render(html, { title: title, data: list, column: [] });
   fs.writeFileSync(target, res);
@@ -289,89 +292,101 @@ function renderHome(data) {
 
 const topic = [
   {
-    title: "股市财经",
+    title: '人工智能',
+    type: 'ai',
+  },
+  {
+    title: '股市财经',
     type: 'broker',
   },
   {
-    title: "基金公司",
+    title: '基金公司',
     type: 'fund',
   },
   {
-    title: "银行",
+    title: '银行',
     type: 'bank',
-  }, 
+  },
   {
-    title: "上市公司",
+    title: '上市公司',
     type: 'ssgs',
-  }, 
+  },
   {
-    title: "房产",
+    title: '房产',
     type: 'fangchan',
   },
   {
-    title: "汽车",
-    type: 'fangchan',
+    title: '汽车',
+    type: 'qiche',
   },
   {
-    title: "电视直播",
-    type: 'iptv',
+    title: '求职',
+    type: 'qzjy',
   },
   {
-    title: "政府网站",
+    title: '政府网站',
     type: 'office',
   },
   {
-    title: "院校导航",
+    title: '院校导航',
     type: 'school',
   },
   {
-    title: "电商美工",
+    title: '电商美工',
     type: 'meigong',
   },
   {
-    title: "电商运营",
+    title: '电商运营',
     type: 'coonav',
   },
   {
-    title: "生活娱乐",
+    title: '生活娱乐',
     type: 'shenghuo',
   },
   {
-    title: "新媒体",
+    title: '新媒体',
     type: 'xinmeiti',
   },
   {
-    title: "coonav",
-    type: 'coonav',
-  },
-  {
-    title: "dyqu",
-    type: 'dyqu',
-  },
-  {
-    title: "law",
-    type: 'law',
-  },
-  {
-    title: "science",
+    title: '科学学术',
     type: 'science',
   },
   {
-    title: "shenghuo",
+    title: '电视直播',
+    type: 'iptv',
+  },
+  {
+    title: '生活',
     type: 'shenghuo',
   },
   {
-    title: "study",
+    title: '学习',
     type: 'study',
   },
   {
-    title: "ycnav",
+    title: '银行',
+    type: 'bank',
+  },
+  {
+    title: 'coonav',
+    type: 'coonav',
+  },
+  {
+    title: 'dyqu',
+    type: 'dyqu',
+  },
+  {
+    title: 'law',
+    type: 'law',
+  },
+  {
+    title: 'ycnav',
     type: 'ycnav',
   },
   {
-    title: "xxx",
+    title: 'xxx',
     type: 'xxx',
-  }
-]
+  },
+];
 
 main(topic);
