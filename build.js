@@ -368,6 +368,146 @@ const topic = [
     type: 'bank',
   },
   {
+    title: '行业',
+    type: 'industry',
+  },
+  {
+    title: '品牌官网',
+    type: 'pinpaiguanwang',
+  },
+  {
+    title: '饰品',
+    type: 'shipin',
+  },
+  {
+    title: '居家',
+    type: 'jujia',
+  },
+  {
+    title: '媒体',
+    type: 'meiti',
+  },
+  {
+    title: '休闲',
+    type: 'xiuxian',
+  },
+  {
+    title: '办公',
+    type: 'bangong',
+  },
+  {
+    title: '家电',
+    type: 'jaidian',
+  },
+  {
+    title: '服饰',
+    type: 'fushi',
+  },
+  {
+    title: '玩具',
+    type: 'wanju',
+  },
+  {
+    title: '数码',
+    type: 'shuma',
+  },
+  {
+    title: '食品',
+    type: 'shiping',
+  },
+  {
+    title: '照明',
+    type: 'zhaoming',
+  },
+  {
+    title: '安防',
+    type: 'anfang',
+  },
+  {
+    title: '环保',
+    type: 'huanbao',
+  },
+  {
+    title: '机械',
+    type: 'jixie',
+  },
+  {
+    title: '五金',
+    type: 'wujin',
+  },
+  {
+    title: '交通',
+    type: 'jiaotong',
+  },
+  {
+    title: '汽车',
+    type: 'qichebaoyang',
+  },
+  {
+    title: '印刷',
+    type: 'yinshua',
+  },
+  {
+    title: '包装',
+    type: 'baozhuang',
+  },
+  {
+    title: '纸业',
+    type: 'zhiye',
+  },
+  {
+    title: '仪器',
+    type: 'yiqi',
+  },
+  {
+    title: '电子',
+    type: 'dianzi',
+  },
+  {
+    title: '建材',
+    type: 'jiancai',
+  },
+  {
+    title: '冶金',
+    type: 'yanjin',
+  },
+  {
+    title: '医药',
+    type: 'yiyao',
+  },
+  {
+    title: '纺织',
+    type: 'fangzhi',
+  },
+  {
+    title: '农业',
+    type: 'nongye',
+  },
+  {
+    title: '能源',
+    type: 'nengyuan',
+  },
+  {
+    title: '精化',
+    type: 'jignhua',
+  },
+  {
+    title: '化工',
+    type: 'huagong',
+  },
+  {
+    title: '商务',
+    type: 'shangwu',
+  },
+  {
+    title: '物流',
+    type: 'wuliu',
+  },
+  {
+    title: '招聘',
+    type: 'zhaopin',
+  },
+  {
     title: 'coonav',
     type: 'coonav',
   },

@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>行业</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="行业" />
+    <meta name="description" content="行业" />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        vertical-align: baseline;
+        word-wrap: break-word;
+        color: #282a2d;
+        background: #f9f9f9;
+      }
+
+      a {
+        color: #282a2d;
+        outline: 0 !important;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #e94041;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1080;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .mt24 {
+        margin-top: 24px
+      }
+      .border-top {
+        border-top: 1px solid #dee2e6;
+      }
+
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        font-size: 14px;
+        width: 200px;
+        height: 100vh;
+        z-index: 1081;
+        background: #f0f2f4;
+        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+      }
+      .sidebar-logo {
+        height: 74px;
+        border-bottom: 1px solid #dee2e6;
+        background: #fff;
+        text-align: center;
+        line-height: 74px;
+        font-size: 22px;
+      }
+      .sidebar-nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      .sidebar-item {
+        position: relative;
+        display: block;
+      }
+      .sidebar-item > a:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        color: #e94041;
+      }
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {
+        display: flex;
+        overflow: hidden;
+        padding: 8px 10px;
+        margin: 1.5px 8px;
+        color: #515c6b;
+        font-size: 16px;
+        align-items: center;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+      .sidebar-menu ul:first-child > li > a {
+        padding: 12px 10px;
+      }
+      .sidebar-nav-inner {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .sidebar-nav-inner .flex-fill {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .header-nav {
+        position: fixed;
+        right: 0;
+        left: 200px;
+        background: rgb(255 255 255 / 77%);
+      }
+
+      .main-content {
+        flex-direction: column;
+        display: flex;
+      }
+
+      .flex-fill {
+        flex: 1 1 auto;
+      }
+
+      .container {
+        margin: auto;
+      }
+      .main-content {
+        margin-left: 200px;
+      }
+      .content {
+        margin-left: 12px;
+      }
+
+      .customize-width {
+        min-width: 1140px;
+        max-width: 1900px;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .flex-item {
+        flex: 0 0 20%;
+        border: 1px solid transparent;
+        padding: 0 12px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        background-color: #eee;
+        margin-bottom: 12px;
+      }
+      .card-body {
+        position: relative;
+        padding: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .column {
+        flex: 1 1 100%;
+        padding: 0 12px;
+        margin-top: 24px;
+      }
+      .column .card {
+        border-left: 4px solid #e94041;
+        background: transparent;
+      }
+      .column .card-body {
+        padding: 0 0 0 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar-nav sticky">
+      <div class="sidebar-nav-inner">
+        <div class="sidebar-logo">
+          <div class="logo overflow-hidden">行业</div>
+        </div>
+        <div class="sidebar-menu flex-fill">
+          <div class="sidebar-scroll">
+            <div class="sidebar-menu-inner">
+              <ul>
+                <li class="sidebar-item">
+                  <a href="#行业资讯"><span>行业资讯</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top">
+          <div class="flex-bottom">
+            <ul>
+              <li class="sidebar-item">
+                <a href="#"><span>网站提交</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content flex-fill">
+      <div class="container customize-width">
+        <div class="header-nav"></div>
+        <div class="content">
+          <div class="flex">
+            <div id="行业资讯" class="column"><a class="card" href="#行业资讯" title="行业资讯" target="_self"><div class="card-body">行业资讯</div></a></div>
+            <div id="鑫椤资讯" class="flex-item"><a class="card" href="http://www.iccarbon.com/" title="鑫椤资讯" target="_blank"><div class="card-body">鑫椤资讯</div></a></div>
+            <div id="鑫椤锂电" class="flex-item"><a class="card" href="http://www.icbattery.com/" title="鑫椤锂电" target="_blank"><div class="card-body">鑫椤锂电</div></a></div>
+            <div id="光伏材料网" class="flex-item"><a class="card" href="http://www.iccarbon.com/" title="光伏材料网" target="_blank"><div class="card-body">光伏材料网</div></a></div>
+            <div id="耐火材料" class="flex-item"><a class="card" href="http://www.znhcl.com/" title="耐火材料" target="_blank"><div class="card-body">耐火材料</div></a></div>
+            <div id="中国储能网" class="flex-item"><a class="card" href="http://www.escn.com.cn/" title="中国储能网" target="_blank"><div class="card-body">中国储能网</div></a></div>
+            <div id="上海有色" class="flex-item"><a class="card" href="https://www.smm.cn/" title="上海有色" target="_blank"><div class="card-body">上海有色</div></a></div>
+            <div id="中国化工制造网" class="flex-item"><a class="card" href="http://www.chemmade.com/" title="中国化工制造网" target="_blank"><div class="card-body">中国化工制造网</div></a></div>
+            <div id="粉体网" class="flex-item"><a class="card" href="https://www.cnpowder.com.cn/" title="粉体网" target="_blank"><div class="card-body">粉体网</div></a></div>
+            <div id="超硬材料网" class="flex-item"><a class="card" href="http://www.idacn.org/" title="超硬材料网" target="_blank"><div class="card-body">超硬材料网</div></a></div>
+            <div id="木材网" class="flex-item"><a class="card" href="http://www.chinatimber.org/" title="木材网" target="_blank"><div class="card-body">木材网</div></a></div>
+            <div id="中国瓷砖网" class="flex-item"><a class="card" href="https://www.xbcd.cn/" title="中国瓷砖网" target="_blank"><div class="card-body">中国瓷砖网</div></a></div>
+            <div id="中国工控网" class="flex-item"><a class="card" href="http://www.gongkong.com/" title="中国工控网" target="_blank"><div class="card-body">中国工控网</div></a></div>
+            <div id="中国水泥网" class="flex-item"><a class="card" href="https://www.ccement.com/" title="中国水泥网" target="_blank"><div class="card-body">中国水泥网</div></a></div>
+            <div id="全屋定制网" class="flex-item"><a class="card" href="https://www.cnyigui.com/" title="全屋定制网" target="_blank"><div class="card-body">全屋定制网</div></a></div>
+            <div id="煤矿安全网" class="flex-item"><a class="card" href="http://www.mkaq.org/" title="煤矿安全网" target="_blank"><div class="card-body">煤矿安全网</div></a></div>
+            <div id="中国抗菌产业网" class="flex-item"><a class="card" href="https://www.kjj.com.cn/" title="中国抗菌产业网" target="_blank"><div class="card-body">中国抗菌产业网</div></a></div>
+            <div id="环保在线" class="flex-item"><a class="card" href="https://www.hbzhan.com/" title="环保在线" target="_blank"><div class="card-body">环保在线</div></a></div>
+            <div id="招标网" class="flex-item"><a class="card" href="http://www.bidizhaobiao.com/" title="招标网" target="_blank"><div class="card-body">招标网</div></a></div>
+            <div id="国际能源网" class="flex-item"><a class="card" href="https://data.in-en.com/" title="国际能源网" target="_blank"><div class="card-body">国际能源网</div></a></div>
+            <div id="中国有色金属工业协会硅业分会" class="flex-item"><a class="card" href="http://www.siliconchina.org/" title="中国有色金属工业协会硅业分会" target="_blank"><div class="card-body">中国有色金属工业协会硅业分会</div></a></div>
+            <div id="中国冶金网" class="flex-item"><a class="card" href="https://www.metal.net.cn/" title="中国冶金网" target="_blank"><div class="card-body">中国冶金网</div></a></div>
+            <div id="煤炭资源网" class="flex-item"><a class="card" href="http://www.sxcoal.com/" title="煤炭资源网" target="_blank"><div class="card-body">煤炭资源网</div></a></div>
+            <div id="电力-北极星电力网-电力门户网站" class="flex-item"><a class="card" href="https://www.bjx.com.cn/" title="电力-北极星电力网-电力门户网站" target="_blank"><div class="card-body">电力-北极星电力网-电力门户网站</div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

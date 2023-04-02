@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>品牌官网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="品牌官网" />
+    <meta name="description" content="品牌官网" />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        vertical-align: baseline;
+        word-wrap: break-word;
+        color: #282a2d;
+        background: #f9f9f9;
+      }
+
+      a {
+        color: #282a2d;
+        outline: 0 !important;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #e94041;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1080;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .mt24 {
+        margin-top: 24px
+      }
+      .border-top {
+        border-top: 1px solid #dee2e6;
+      }
+
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        font-size: 14px;
+        width: 200px;
+        height: 100vh;
+        z-index: 1081;
+        background: #f0f2f4;
+        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+      }
+      .sidebar-logo {
+        height: 74px;
+        border-bottom: 1px solid #dee2e6;
+        background: #fff;
+        text-align: center;
+        line-height: 74px;
+        font-size: 22px;
+      }
+      .sidebar-nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      .sidebar-item {
+        position: relative;
+        display: block;
+      }
+      .sidebar-item > a:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        color: #e94041;
+      }
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {
+        display: flex;
+        overflow: hidden;
+        padding: 8px 10px;
+        margin: 1.5px 8px;
+        color: #515c6b;
+        font-size: 16px;
+        align-items: center;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+      .sidebar-menu ul:first-child > li > a {
+        padding: 12px 10px;
+      }
+      .sidebar-nav-inner {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .sidebar-nav-inner .flex-fill {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .header-nav {
+        position: fixed;
+        right: 0;
+        left: 200px;
+        background: rgb(255 255 255 / 77%);
+      }
+
+      .main-content {
+        flex-direction: column;
+        display: flex;
+      }
+
+      .flex-fill {
+        flex: 1 1 auto;
+      }
+
+      .container {
+        margin: auto;
+      }
+      .main-content {
+        margin-left: 200px;
+      }
+      .content {
+        margin-left: 12px;
+      }
+
+      .customize-width {
+        min-width: 1140px;
+        max-width: 1900px;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .flex-item {
+        flex: 0 0 20%;
+        border: 1px solid transparent;
+        padding: 0 12px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        background-color: #eee;
+        margin-bottom: 12px;
+      }
+      .card-body {
+        position: relative;
+        padding: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .column {
+        flex: 1 1 100%;
+        padding: 0 12px;
+        margin-top: 24px;
+      }
+      .column .card {
+        border-left: 4px solid #e94041;
+        background: transparent;
+      }
+      .column .card-body {
+        padding: 0 0 0 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar-nav sticky">
+      <div class="sidebar-nav-inner">
+        <div class="sidebar-logo">
+          <div class="logo overflow-hidden">品牌官网</div>
+        </div>
+        <div class="sidebar-menu flex-fill">
+          <div class="sidebar-scroll">
+            <div class="sidebar-menu-inner">
+              <ul>
+                <li class="sidebar-item">
+                  <a href="#热门品牌"><span>热门品牌</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#奢侈品牌"><span>奢侈品牌</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#手机数码"><span>手机数码</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#服装鞋帽"><span>服装鞋帽</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#美妆个护"><span>美妆个护</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#家电厨卫"><span>家电厨卫</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#箱包首饰"><span>箱包首饰</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#母婴玩具"><span>母婴玩具</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#运动户外"><span>运动户外</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#学习办公"><span>学习办公</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#食品饮料"><span>食品饮料</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top">
+          <div class="flex-bottom">
+            <ul>
+              <li class="sidebar-item">
+                <a href="#"><span>网站提交</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content flex-fill">
+      <div class="container customize-width">
+        <div class="header-nav"></div>
+        <div class="content">
+          <div class="flex">
+            <div id="热门品牌" class="column"><a class="card" href="#热门品牌" title="热门品牌" target="_self"><div class="card-body">热门品牌</div></a></div>
+            <div id="Ferragamo 菲拉格慕" class="flex-item"><a class="card" href="https://www.ferragamo.com/" title="Ferragamo 菲拉格慕" target="_blank"><div class="card-body">Ferragamo 菲拉格慕</div></a></div>
+            <div id="Dyson 戴森" class="flex-item"><a class="card" href="http://www.dyson.com/" title="Dyson 戴森" target="_blank"><div class="card-body">Dyson 戴森</div></a></div>
+            <div id="茅台" class="flex-item"><a class="card" href="#" title="茅台" target="_blank"><div class="card-body">茅台</div></a></div>
+            <div id="小米" class="flex-item"><a class="card" href="https://www.mi.com/" title="小米" target="_blank"><div class="card-body">小米</div></a></div>
+            <div id="Apple 苹果" class="flex-item"><a class="card" href="https://www.apple.com/" title="Apple 苹果" target="_blank"><div class="card-body">Apple 苹果</div></a></div>
+            <div id="Adidas 阿迪达斯" class="flex-item"><a class="card" href="http://www.adidas.com/" title="Adidas 阿迪达斯" target="_blank"><div class="card-body">Adidas 阿迪达斯</div></a></div>
+            <div id="格力 Gree" class="flex-item"><a class="card" href="https://www.gree.com/" title="格力 Gree" target="_blank"><div class="card-body">格力 Gree</div></a></div>
+            <div id="华为" class="flex-item"><a class="card" href="https://www.huawei.com/" title="华为" target="_blank"><div class="card-body">华为</div></a></div>
+            <div id="奢侈品牌" class="column"><a class="card" href="#奢侈品牌" title="奢侈品牌" target="_self"><div class="card-body">奢侈品牌</div></a></div>
+            <div id="Tiffany&amp;Co.蒂芙尼" class="flex-item"><a class="card" href="https://www.tiffany.com/" title="Tiffany&amp;Co.蒂芙尼" target="_blank"><div class="card-body">Tiffany&amp;Co.蒂芙尼</div></a></div>
+            <div id="Chanel 香奈儿" class="flex-item"><a class="card" href="https://www.chanel.com/" title="Chanel 香奈儿" target="_blank"><div class="card-body">Chanel 香奈儿</div></a></div>
+            <div id="Gucci 古驰" class="flex-item"><a class="card" href="https://www.gucci.com/" title="Gucci 古驰" target="_blank"><div class="card-body">Gucci 古驰</div></a></div>
+            <div id="Rolex 劳力士" class="flex-item"><a class="card" href="https://www.rolex.com/" title="Rolex 劳力士" target="_blank"><div class="card-body">Rolex 劳力士</div></a></div>
+            <div id="Cartier 卡地亚" class="flex-item"><a class="card" href="https://www.cartier.com/" title="Cartier 卡地亚" target="_blank"><div class="card-body">Cartier 卡地亚</div></a></div>
+            <div id="Hermes 爱马仕" class="flex-item"><a class="card" href="https://www.hermes.com/" title="Hermes 爱马仕" target="_blank"><div class="card-body">Hermes 爱马仕</div></a></div>
+            <div id="LV 路易威登" class="flex-item"><a class="card" href="https://www.louisvuitton.com/" title="LV 路易威登" target="_blank"><div class="card-body">LV 路易威登</div></a></div>
+            <div id="Vertu 威图" class="flex-item"><a class="card" href="https://www.vertu.com/" title="Vertu 威图" target="_blank"><div class="card-body">Vertu 威图</div></a></div>
+            <div id="手机数码" class="column"><a class="card" href="#手机数码" title="手机数码" target="_self"><div class="card-body">手机数码</div></a></div>
+            <div id="SAMSUNG 三星" class="flex-item"><a class="card" href="https://www.samsung.com/" title="SAMSUNG 三星" target="_blank"><div class="card-body">SAMSUNG 三星</div></a></div>
+            <div id="ZTE 中兴" class="flex-item"><a class="card" href="https://www.zte.com.cn/" title="ZTE 中兴" target="_blank"><div class="card-body">ZTE 中兴</div></a></div>
+            <div id="Lenovo 联想" class="flex-item"><a class="card" href="https://www.lenovo.com.cn/" title="Lenovo 联想" target="_blank"><div class="card-body">Lenovo 联想</div></a></div>
+            <div id="MEIZU 魅族" class="flex-item"><a class="card" href="https://www.meizu.com/" title="MEIZU 魅族" target="_blank"><div class="card-body">MEIZU 魅族</div></a></div>
+            <div id="HP 惠普" class="flex-item"><a class="card" href="https://www.hp.com/" title="HP 惠普" target="_blank"><div class="card-body">HP 惠普</div></a></div>
+            <div id="一加手机" class="flex-item"><a class="card" href="https://www.oneplus.com/" title="一加手机" target="_blank"><div class="card-body">一加手机</div></a></div>
+            <div id="OPPO" class="flex-item"><a class="card" href="https://www.oppo.com/" title="OPPO" target="_blank"><div class="card-body">OPPO</div></a></div>
+            <div id="vivo" class="flex-item"><a class="card" href="https://www.vivo.com.cn/" title="vivo" target="_blank"><div class="card-body">vivo</div></a></div>
+            <div id="服装鞋帽" class="column"><a class="card" href="#服装鞋帽" title="服装鞋帽" target="_self"><div class="card-body">服装鞋帽</div></a></div>
+            <div id="NIKE 耐克" class="flex-item"><a class="card" href="https://www.nike.com.cn/" title="NIKE 耐克" target="_blank"><div class="card-body">NIKE 耐克</div></a></div>
+            <div id="Li-Ning 李宁" class="flex-item"><a class="card" href="https://www.lining.com/" title="Li-Ning 李宁" target="_blank"><div class="card-body">Li-Ning 李宁</div></a></div>
+            <div id="Champion 冠军" class="flex-item"><a class="card" href="https://www.champion.com/" title="Champion 冠军" target="_blank"><div class="card-body">Champion 冠军</div></a></div>
+            <div id="CONVERSE 匡威" class="flex-item"><a class="card" href="https://www.converse.com.cn/" title="CONVERSE 匡威" target="_blank"><div class="card-body">CONVERSE 匡威</div></a></div>
+            <div id="PUMA 彪马" class="flex-item"><a class="card" href="https://puma.com/" title="PUMA 彪马" target="_blank"><div class="card-body">PUMA 彪马</div></a></div>
+            <div id="MLB" class="flex-item"><a class="card" href="https://www.mlb.com/" title="MLB" target="_blank"><div class="card-body">MLB</div></a></div>
+            <div id="H&amp;M" class="flex-item"><a class="card" href="http://www.hm.com/" title="H&amp;M" target="_blank"><div class="card-body">H&amp;M</div></a></div>
+            <div id="Uniqlo 优衣库" class="flex-item"><a class="card" href="http://www.uniqlo.com/" title="Uniqlo 优衣库" target="_blank"><div class="card-body">Uniqlo 优衣库</div></a></div>
+            <div id="美妆个护" class="column"><a class="card" href="#美妆个护" title="美妆个护" target="_self"><div class="card-body">美妆个护</div></a></div>
+            <div id="HR 赫莲娜" class="flex-item"><a class="card" href="https://www.helenarubinstein.com/" title="HR 赫莲娜" target="_blank"><div class="card-body">HR 赫莲娜</div></a></div>
+            <div id="GIVENCHY 纪梵希" class="flex-item"><a class="card" href="https://www.givenchy.com/" title="GIVENCHY 纪梵希" target="_blank"><div class="card-body">GIVENCHY 纪梵希</div></a></div>
+            <div id="DIOR 迪奥" class="flex-item"><a class="card" href="https://www.dior.com/" title="DIOR 迪奥" target="_blank"><div class="card-body">DIOR 迪奥</div></a></div>
+            <div id="Lancome 兰蔻" class="flex-item"><a class="card" href="https://www.lancome.com/" title="Lancome 兰蔻" target="_blank"><div class="card-body">Lancome 兰蔻</div></a></div>
+            <div id="Estee Lauder 雅诗兰黛" class="flex-item"><a class="card" href="https://www.esteelauder.com/" title="Estee Lauder 雅诗兰黛" target="_blank"><div class="card-body">Estee Lauder 雅诗兰黛</div></a></div>
+            <div id="SK-II" class="flex-item"><a class="card" href="https://www.skii.com.cn/" title="SK-II" target="_blank"><div class="card-body">SK-II</div></a></div>
+            <div id="YSL 圣罗兰" class="flex-item"><a class="card" href="https://www.ysl.com/" title="YSL 圣罗兰" target="_blank"><div class="card-body">YSL 圣罗兰</div></a></div>
+            <div id="Shiseido 资生堂" class="flex-item"><a class="card" href="https://www.shiseido.co.jp/" title="Shiseido 资生堂" target="_blank"><div class="card-body">Shiseido 资生堂</div></a></div>
+            <div id="家电厨卫" class="column"><a class="card" href="#家电厨卫" title="家电厨卫" target="_self"><div class="card-body">家电厨卫</div></a></div>
+            <div id="Haier 海尔" class="flex-item"><a class="card" href="https://www.haier.com/" title="Haier 海尔" target="_blank"><div class="card-body">Haier 海尔</div></a></div>
+            <div id="SIEMENS 西门子" class="flex-item"><a class="card" href="https://siemens.com/" title="SIEMENS 西门子" target="_blank"><div class="card-body">SIEMENS 西门子</div></a></div>
+            <div id="Hisense 海信" class="flex-item"><a class="card" href="http://www.hisense.cn/" title="Hisense 海信" target="_blank"><div class="card-body">Hisense 海信</div></a></div>
+            <div id="BOSCH 博世" class="flex-item"><a class="card" href="https://www.bosch.com/" title="BOSCH 博世" target="_blank"><div class="card-body">BOSCH 博世</div></a></div>
+            <div id="ROBAM 老板" class="flex-item"><a class="card" href="http://www.robam.com/" title="ROBAM 老板" target="_blank"><div class="card-body">ROBAM 老板</div></a></div>
+            <div id="KOHLER 科勒" class="flex-item"><a class="card" href="http://www.kohler.com.cn/" title="KOHLER 科勒" target="_blank"><div class="card-body">KOHLER 科勒</div></a></div>
+            <div id="OPPLE 欧普照明" class="flex-item"><a class="card" href="http://www.opple.com.cn/" title="OPPLE 欧普照明" target="_blank"><div class="card-body">OPPLE 欧普照明</div></a></div>
+            <div id="TCL" class="flex-item"><a class="card" href="http://www.tcl.com/" title="TCL" target="_blank"><div class="card-body">TCL</div></a></div>
+            <div id="箱包首饰" class="column"><a class="card" href="#箱包首饰" title="箱包首饰" target="_self"><div class="card-body">箱包首饰</div></a></div>
+            <div id="Diplomat 外交官" class="flex-item"><a class="card" href="http://www.idiplomat.com.cn/" title="Diplomat 外交官" target="_blank"><div class="card-body">Diplomat 外交官</div></a></div>
+            <div id="FENDI 芬迪" class="flex-item"><a class="card" href="https://www.fendi.com/" title="FENDI 芬迪" target="_blank"><div class="card-body">FENDI 芬迪</div></a></div>
+            <div id="Samsonite 新秀丽" class="flex-item"><a class="card" href="http://www.samsonite.com/" title="Samsonite 新秀丽" target="_blank"><div class="card-body">Samsonite 新秀丽</div></a></div>
+            <div id="Swarovski 施华洛世奇" class="flex-item"><a class="card" href="http://www.swarovski.com/" title="Swarovski 施华洛世奇" target="_blank"><div class="card-body">Swarovski 施华洛世奇</div></a></div>
+            <div id="Chow Tai Fook 周大福" class="flex-item"><a class="card" href="https://www.ctf.com.cn/" title="Chow Tai Fook 周大福" target="_blank"><div class="card-body">Chow Tai Fook 周大福</div></a></div>
+            <div id="Daisy London" class="flex-item"><a class="card" href="http://www.daisylondon.cn/" title="Daisy London" target="_blank"><div class="card-body">Daisy London</div></a></div>
+            <div id="TUMI 途明" class="flex-item"><a class="card" href="https://www.tumi.com/" title="TUMI 途明" target="_blank"><div class="card-body">TUMI 途明</div></a></div>
+            <div id="Pierre Cardin皮尔卡丹" class="flex-item"><a class="card" href="https://pierrecardin.com/" title="Pierre Cardin皮尔卡丹" target="_blank"><div class="card-body">Pierre Cardin皮尔卡丹</div></a></div>
+            <div id="母婴玩具" class="column"><a class="card" href="#母婴玩具" title="母婴玩具" target="_self"><div class="card-body">母婴玩具</div></a></div>
+            <div id="LEGO 乐高" class="flex-item"><a class="card" href="https://www.lego.com/" title="LEGO 乐高" target="_blank"><div class="card-body">LEGO 乐高</div></a></div>
+            <div id="Disney 迪士尼" class="flex-item"><a class="card" href="https://www.disney.com/" title="Disney 迪士尼" target="_blank"><div class="card-body">Disney 迪士尼</div></a></div>
+            <div id="peppa pig 小猪佩奇" class="flex-item"><a class="card" href="https://www.peppapig.com/" title="peppa pig 小猪佩奇" target="_blank"><div class="card-body">peppa pig 小猪佩奇</div></a></div>
+            <div id="gb 好孩子" class="flex-item"><a class="card" href="http://www.haohaizi.com/" title="gb 好孩子" target="_blank"><div class="card-body">gb 好孩子</div></a></div>
+            <div id="KAO 花王" class="flex-item"><a class="card" href="https://www.kao.com/" title="KAO 花王" target="_blank"><div class="card-body">KAO 花王</div></a></div>
+            <div id="Gerber 嘉宝" class="flex-item"><a class="card" href="https://www.gerber.com/" title="Gerber 嘉宝" target="_blank"><div class="card-body">Gerber 嘉宝</div></a></div>
+            <div id="Wyeth 惠氏" class="flex-item"><a class="card" href="http://www.wyethnutrition.com.cn/" title="Wyeth 惠氏" target="_blank"><div class="card-body">Wyeth 惠氏</div></a></div>
+            <div id="Pigeon 贝亲" class="flex-item"><a class="card" href="https://www.pigeon.com/" title="Pigeon 贝亲" target="_blank"><div class="card-body">Pigeon 贝亲</div></a></div>
+            <div id="运动户外" class="column"><a class="card" href="#运动户外" title="运动户外" target="_self"><div class="card-body">运动户外</div></a></div>
+            <div id="New Balance" class="flex-item"><a class="card" href="http://www.newbalance.com/" title="New Balance" target="_blank"><div class="card-body">New Balance</div></a></div>
+            <div id="Decathlon 迪卡侬" class="flex-item"><a class="card" href="http://www.decathlon.com.cn/" title="Decathlon 迪卡侬" target="_blank"><div class="card-body">Decathlon 迪卡侬</div></a></div>
+            <div id="SANFO 三夫户外" class="flex-item"><a class="card" href="http://www.sanfo.com/" title="SANFO 三夫户外" target="_blank"><div class="card-body">SANFO 三夫户外</div></a></div>
+            <div id="TOREAD 探路者" class="flex-item"><a class="card" href="https://www.toread.com.cn/" title="TOREAD 探路者" target="_blank"><div class="card-body">TOREAD 探路者</div></a></div>
+            <div id="Under Armour 安德玛" class="flex-item"><a class="card" href="http://www.underarmour.cn/" title="Under Armour 安德玛" target="_blank"><div class="card-body">Under Armour 安德玛</div></a></div>
+            <div id="Camel 骆驼" class="flex-item"><a class="card" href="http://www.camel.com.cn/" title="Camel 骆驼" target="_blank"><div class="card-body">Camel 骆驼</div></a></div>
+            <div id="Forever 永久" class="flex-item"><a class="card" href="http://www.cnforever.com/" title="Forever 永久" target="_blank"><div class="card-body">Forever 永久</div></a></div>
+            <div id="Keep" class="flex-item"><a class="card" href="https://www.gotokeep.com/" title="Keep" target="_blank"><div class="card-body">Keep</div></a></div>
+            <div id="学习办公" class="column"><a class="card" href="#学习办公" title="学习办公" target="_self"><div class="card-body">学习办公</div></a></div>
+            <div id="Canon 佳能" class="flex-item"><a class="card" href="http://www.canon.com.cn/" title="Canon 佳能" target="_blank"><div class="card-body">Canon 佳能</div></a></div>
+            <div id="广博" class="flex-item"><a class="card" href="http://www.guangbo.net/" title="广博" target="_blank"><div class="card-body">广博</div></a></div>
+            <div id="CASIO 卡西欧" class="flex-item"><a class="card" href="https://www.casio.com/" title="CASIO 卡西欧" target="_blank"><div class="card-body">CASIO 卡西欧</div></a></div>
+            <div id="Comix 齐心" class="flex-item"><a class="card" href="https://www.comix.com.cn/" title="Comix 齐心" target="_blank"><div class="card-body">Comix 齐心</div></a></div>
+            <div id="Kindle" class="flex-item"><a class="card" href="http://www.kindle.com/" title="Kindle" target="_blank"><div class="card-body">Kindle</div></a></div>
+            <div id="Epson 爱普生" class="flex-item"><a class="card" href="https://epson.com/" title="Epson 爱普生" target="_blank"><div class="card-body">Epson 爱普生</div></a></div>
+            <div id="M&amp;G 晨光" class="flex-item"><a class="card" href="http://www.mg-pen.com/" title="M&amp;G 晨光" target="_blank"><div class="card-body">M&amp;G 晨光</div></a></div>
+            <div id="得力 Deli" class="flex-item"><a class="card" href="http://www.deli.com/" title="得力 Deli" target="_blank"><div class="card-body">得力 Deli</div></a></div>
+            <div id="食品饮料" class="column"><a class="card" href="#食品饮料" title="食品饮料" target="_self"><div class="card-body">食品饮料</div></a></div>
+            <div id="农夫山泉" class="flex-item"><a class="card" href="http://www.nongfuspring.com/" title="农夫山泉" target="_blank"><div class="card-body">农夫山泉</div></a></div>
+            <div id="Coca-Cola 可口可乐" class="flex-item"><a class="card" href="https://www.coca-cola.com/" title="Coca-Cola 可口可乐" target="_blank"><div class="card-body">Coca-Cola 可口可乐</div></a></div>
+            <div id="Wahaha 娃哈哈" class="flex-item"><a class="card" href="https://www.wahaha.com.cn/" title="Wahaha 娃哈哈" target="_blank"><div class="card-body">Wahaha 娃哈哈</div></a></div>
+            <div id="康师傅" class="flex-item"><a class="card" href="http://www.masterkong.com.cn/" title="康师傅" target="_blank"><div class="card-body">康师傅</div></a></div>
+            <div id="蒙牛" class="flex-item"><a class="card" href="http://www.mengniu.com.cn/" title="蒙牛" target="_blank"><div class="card-body">蒙牛</div></a></div>
+            <div id="Ferrero 费列罗" class="flex-item"><a class="card" href="http://www.ferrero.com.cn/" title="Ferrero 费列罗" target="_blank"><div class="card-body">Ferrero 费列罗</div></a></div>
+            <div id="盼盼食品" class="flex-item"><a class="card" href="http://www.panpanfood.com/" title="盼盼食品" target="_blank"><div class="card-body">盼盼食品</div></a></div>
+            <div id="三只松鼠" class="flex-item"><a class="card" href="http://www.3songshu.com/" title="三只松鼠" target="_blank"><div class="card-body">三只松鼠</div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
