@@ -64,11 +64,9 @@
 聚焦涨停,https://data.hexin.cn/change/
 涨停解读,https://sec.gushi.com/limitUpIntroduce.html
 行情K图,https://xuangubao.cn/tools/chart-widget/ashares/000001.SS
-行情K图,https://money.sina.cn/h5chart/apptkchartleju.html?direction=vertical&symbol=sh113591
+行情K图,https://money.sina.cn/h5chart/apptkchartleju.html?direction=vertical&symbol=sh000001
 集思录,https://www.jisilu.cn/web/data/cb/list
 外汇牌价,https://www.boc.cn/sourcedb/whpj/
-中信证券,https://weixin.citicsinfo.com/tztweb/hq/index.html#!/hq/quotesinterface.html
-巨潮资讯网,http://www.cninfo.com.cn/
 
 券商
 国泰君安,https://www.gtja.com/
@@ -149,6 +147,7 @@
 中国证券监督管理委员会,http://www.csrc.gov.cn/
 
 研报
+行业研究研究报告,http://stock.finance.sina.com.cn/stock/go.php/vReport_List/kind/industry/index.phtml
 见微数据,https://www.jianweidata.com/
 研报酷,https://yanbaocool.com/
 洞见研报,https://www.djyanbao.com/
