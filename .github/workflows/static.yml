@@ -9,10 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
-
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+          with:
+            node-version: 16
       - name: Build and Deploy
-        run: npm install && npm run build
+        run: |
+          npm install
+          npm run build
 
       - name: 'commit'
         run: |
@@ -20,6 +24,7 @@ jobs:
           git config --local user.name "stbui"
           git add .
           git commit -m "render template"
+
       - name: 'push'
         uses: ad-m/github-push-action@master
         with:
