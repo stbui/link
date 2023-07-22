@@ -1,5 +1,5 @@
+name: deploy
 
-name: main
 on:
   push:
     branches:
@@ -8,20 +8,20 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
 
-    - name: Build and Deploy
-      run: npm install && npm run build
-      
-    - name: 'commit'
-      run: |
+      - name: Build and Deploy
+        run: npm install && npm run build
+
+      - name: 'commit'
+        run: |
           git config --local user.email "w431106@163.com" 
           git config --local user.name "stbui"
           git add .
-          git commit -m "render template" 
-    - name: 'push'
-      uses: ad-m/github-push-action@master
-      with: 
+          git commit -m "render template"
+      - name: 'push'
+        uses: ad-m/github-push-action@master
+        with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
