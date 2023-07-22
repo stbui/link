@@ -1,4 +1,14 @@
 
+var a =''
+$('.gg-list').find('a').each((_,item)=>{
+var link = $(item).attr('href');
+    var text = $(item).text();
+    a+=text+','+link+'\r'
+});
+copy(a)
+
+
+
 https://www.coonav.com/
 https://www.meigong8.com/
 https://www.coonav.com/shenghuo
