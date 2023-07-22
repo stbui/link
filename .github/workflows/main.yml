@@ -11,24 +11,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: node18
+      - name: Node18
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Build and Deploy
+      - name: Build
         run: |
           npm install
           npm run build
 
-      - name: 'commit'
+      - name: 'Commit'
         run: |
           git config --local user.email "w431106@163.com" 
           git config --local user.name "stbui"
           git add .
-          git commit -m "render template"
+          git commit -m "chore: publish"
 
-      - name: 'push'
+      - name: 'Push'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
