@@ -2,7 +2,8 @@
   "name": "link",
   "version": "0.0.0",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "tools": "node tools.js"
   },
   "dependencies": {
     "ejs": "^3.1.8"
