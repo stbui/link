@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>孕婴童导航</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="孕婴童导航" />
+    <meta name="description" content="孕婴童导航" />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        vertical-align: baseline;
+        word-wrap: break-word;
+        color: #282a2d;
+        background: #f9f9f9;
+      }
+
+      a {
+        color: #282a2d;
+        outline: 0 !important;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #e94041;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1080;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .mt24 {
+        margin-top: 24px
+      }
+      .border-top {
+        border-top: 1px solid #dee2e6;
+      }
+
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        font-size: 14px;
+        width: 200px;
+        height: 100vh;
+        z-index: 1081;
+        background: #f0f2f4;
+        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+      }
+      .sidebar-logo {
+        height: 74px;
+        border-bottom: 1px solid #dee2e6;
+        background: #fff;
+        text-align: center;
+        line-height: 74px;
+        font-size: 22px;
+      }
+      .sidebar-nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      .sidebar-item {
+        position: relative;
+        display: block;
+      }
+      .sidebar-item > a:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        color: #e94041;
+      }
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {
+        display: flex;
+        overflow: hidden;
+        padding: 8px 10px;
+        margin: 1.5px 8px;
+        color: #515c6b;
+        font-size: 16px;
+        align-items: center;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+      .sidebar-menu ul:first-child > li > a {
+        padding: 12px 10px;
+      }
+      .sidebar-nav-inner {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .sidebar-nav-inner .flex-fill {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .header-nav {
+        position: fixed;
+        right: 0;
+        left: 200px;
+        background: rgb(255 255 255 / 77%);
+      }
+
+      .main-content {
+        flex-direction: column;
+        display: flex;
+      }
+
+      .flex-fill {
+        flex: 1 1 auto;
+      }
+
+      .container {
+        margin: auto;
+      }
+      .main-content {
+        margin-left: 200px;
+      }
+      .content {
+        margin-left: 12px;
+      }
+
+      .customize-width {
+        min-width: 1140px;
+        max-width: 1900px;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .flex-item {
+        flex: 0 0 20%;
+        border: 1px solid transparent;
+        padding: 0 6px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        background-color: #eee;
+        margin-bottom: 12px;
+      }
+      .card-body {
+        position: relative;
+        padding: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .column {
+        flex: 1 1 100%;
+        padding: 0 12px;
+        margin-top: 24px;
+      }
+      .column .card {
+        border-left: 4px solid #e94041;
+        background: transparent;
+      }
+      .column .card-body {
+        padding: 0 0 0 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar-nav sticky">
+      <div class="sidebar-nav-inner">
+        <div class="sidebar-logo">
+          <div class="logo overflow-hidden">孕婴童导航</div>
+        </div>
+        <div class="sidebar-menu flex-fill">
+          <div class="sidebar-scroll">
+            <div class="sidebar-menu-inner">
+              <ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top">
+          <div class="flex-bottom">
+            <ul>
+              <li class="sidebar-item">
+                <a href="#"><span>网站提交</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content flex-fill">
+      <div class="container customize-width">
+        <div class="header-nav"></div>
+        <div class="content">
+          <div class="flex">
+            <div id="母婴街" class="flex-item"><a class="card" href="https://www.muyingjie.com/" title="母婴街" target="_blank"><div class="card-body">母婴街</div></a></div>
+            <div id="三优亲子网" class="flex-item"><a class="card" href="https://www.3uol.com/" title="三优亲子网" target="_blank"><div class="card-body">三优亲子网</div></a></div>
+            <div id="太平洋亲子网" class="flex-item"><a class="card" href="https://www.pcbaby.com.cn/" title="太平洋亲子网" target="_blank"><div class="card-body">太平洋亲子网</div></a></div>
+            <div id="妈妈网" class="flex-item"><a class="card" href="https://www.mama.cn/" title="妈妈网" target="_blank"><div class="card-body">妈妈网</div></a></div>
+            <div id="铅笔俱乐部童装" class="flex-item"><a class="card" href="http://www.pencilclub.com/" title="铅笔俱乐部童装" target="_blank"><div class="card-body">铅笔俱乐部童装</div></a></div>
+            <div id="水孩儿" class="flex-item"><a class="card" href="https://shuihaier.tmall.com/" title="水孩儿" target="_blank"><div class="card-body">水孩儿</div></a></div>
+            <div id="balabala" class="flex-item"><a class="card" href="https://www.balabala.com/cn/" title="balabala" target="_blank"><div class="card-body">balabala</div></a></div>
+            <div id="英氏YeeHoO童装官方网站" class="flex-item"><a class="card" href="http://www.yeehoo.com.cn/" title="英氏YeeHoO童装官方网站" target="_blank"><div class="card-body">英氏YeeHoO童装官方网站</div></a></div>
+            <div id="美素佳儿Friso官网-荷兰自家牧场，100%原装进口奶粉" class="flex-item"><a class="card" href="https://www.frisobaby.com/" title="美素佳儿Friso官网-荷兰自家牧场，100%原装进口奶粉" target="_blank"><div class="card-body">美素佳儿Friso官网-荷兰自家牧场，100%原装进口奶粉</div></a></div>
+            <div id="美赞臣中国官方网站" class="flex-item"><a class="card" href="https://www.meadjohnson.com.cn/" title="美赞臣中国官方网站" target="_blank"><div class="card-body">美赞臣中国官方网站</div></a></div>
+            <div id="惠氏启赋3（Illuma3）奶粉品牌官方网站" class="flex-item"><a class="card" href="https://www.illuminate.com.cn/" title="惠氏启赋3（Illuma3）奶粉品牌官方网站" target="_blank"><div class="card-body">惠氏启赋3（Illuma3）奶粉品牌官方网站</div></a></div>
+            <div id="飞鹤乳业" class="flex-item"><a class="card" href="https://www.feihe.com/" title="飞鹤乳业" target="_blank"><div class="card-body">飞鹤乳业</div></a></div>
+            <div id="全屋定制-儿童房装修设计-环保儿童家具品牌厂家-七彩人生" class="flex-item"><a class="card" href="https://www.7cjj.com/" title="全屋定制-儿童房装修设计-环保儿童家具品牌厂家-七彩人生" target="_blank"><div class="card-body">全屋定制-儿童房装修设计-环保儿童家具品牌厂家-七彩人生</div></a></div>
+            <div id="上海芙儿优官方网站" class="flex-item"><a class="card" href="http://www.for-u.cn/" title="上海芙儿优官方网站" target="_blank"><div class="card-body">上海芙儿优官方网站</div></a></div>
+            <div id="喜梦宝儿童衣柜家具-旗舰店优客居商城" class="flex-item"><a class="card" href="http://www.musehome.cn/" title="喜梦宝儿童衣柜家具-旗舰店优客居商城" target="_blank"><div class="card-body">喜梦宝儿童衣柜家具-旗舰店优客居商城</div></a></div>
+            <div id="逸乐途" class="flex-item"><a class="card" href="https://elittile.tmall.com/" title="逸乐途" target="_blank"><div class="card-body">逸乐途</div></a></div>
+            <div id="康贝（上海）有限公司" class="flex-item"><a class="card" href="https://www.combi.com.cn/" title="康贝（上海）有限公司" target="_blank"><div class="card-body">康贝（上海）有限公司</div></a></div>
+            <div id="好孩子" class="flex-item"><a class="card" href="https://www.haohaizi.com/" title="好孩子" target="_blank"><div class="card-body">好孩子</div></a></div>
+            <div id="孩之宝中国" class="flex-item"><a class="card" href="http://www.hasbro.cn/" title="孩之宝中国" target="_blank"><div class="card-body">孩之宝中国</div></a></div>
+            <div id="乐高" class="flex-item"><a class="card" href="https://www.lego.com/zh-cn" title="乐高" target="_blank"><div class="card-body">乐高</div></a></div>
+            <div id="雀氏（福建）实业发展有限公司" class="flex-item"><a class="card" href="https://www.chiaus.cn/" title="雀氏（福建）实业发展有限公司" target="_blank"><div class="card-body">雀氏（福建）实业发展有限公司</div></a></div>
+            <div id="红色小象" class="flex-item"><a class="card" href="https://hsxx.tmall.com/" title="红色小象" target="_blank"><div class="card-body">红色小象</div></a></div>
+            <div id="MAM美安萌 Baby：奶嘴、奶瓶、鸭嘴杯等等" class="flex-item"><a class="card" href="https://www.mambaby.com.cn/cn/" title="MAM美安萌 Baby：奶嘴、奶瓶、鸭嘴杯等等" target="_blank"><div class="card-body">MAM美安萌 Baby：奶嘴、奶瓶、鸭嘴杯等等</div></a></div>
+            <div id="婴童招商网" class="flex-item"><a class="card" href="http://www.zgytzs.com/" title="婴童招商网" target="_blank"><div class="card-body">婴童招商网</div></a></div>
+            <div id="保健品招商" class="flex-item"><a class="card" href="https://www.bjp868.com/" title="保健品招商" target="_blank"><div class="card-body">保健品招商</div></a></div>
+            <div id="孕婴童招商" class="flex-item"><a class="card" href="http://zs.ytpp.com.cn/" title="孕婴童招商" target="_blank"><div class="card-body">孕婴童招商</div></a></div>
+            <div id="第一宝宝" class="flex-item"><a class="card" href="http://www.baobao001.com/" title="第一宝宝" target="_blank"><div class="card-body">第一宝宝</div></a></div>
+            <div id="火爆孕婴童招商网" class="flex-item"><a class="card" href="http://www.1288.tv/" title="火爆孕婴童招商网" target="_blank"><div class="card-body">火爆孕婴童招商网</div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
