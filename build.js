@@ -508,6 +508,10 @@ const topic = [
     type: 'zhaopin',
   },
   {
+    title: '湖南',
+    type: 'hunan',
+  },
+  {
     title: 'coonav',
     type: 'coonav',
   },
