@@ -2,13 +2,10 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>导航主页</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="<%= title %>" />
+    <meta name="description" content="<%= title %>" />
     <style>
       *,
       ::after,
@@ -42,27 +39,6 @@
         color: #e94041;
       }
 
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        border: solid #ccc 1px;
-      }
-      table td,
-      table,
-      th {
-        border-left: 1px solid #ccc;
-        border-top: 1px solid #ccc;
-        padding: 4px 8px;
-        white-space: nowrap;
-      }
-      table tr:hover {
-        background: #eee;
-        color: #e94041;
-      }
-      table tr:nth-child(odd) {
-        background-color: #f3f3f3;
-      }
-
       .sticky {
         position: sticky;
         top: 0;
@@ -72,7 +48,7 @@
         overflow: hidden;
       }
       .mt24 {
-        margin-top: 24px;
+        margin-top: 24px
       }
       .border-top {
         border-top: 1px solid #dee2e6;
@@ -86,7 +62,7 @@
         height: 100vh;
         z-index: 1081;
         background: #f0f2f4;
-        box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
       }
       .sidebar-logo {
         height: 74px;
@@ -184,7 +160,7 @@
         flex-direction: column;
         word-wrap: break-word;
         background-color: #eee;
-        margin-bottom: 6px;
+        margin-bottom: 12px;
       }
       .card-body {
         position: relative;
@@ -204,22 +180,22 @@
       .column .card-body {
         padding: 0 0 0 12px;
       }
-      .title {
-        text-align: center;
-        font-size: 18px;
-      }
     </style>
   </head>
   <body>
     <div class="sidebar-nav sticky">
       <div class="sidebar-nav-inner">
         <div class="sidebar-logo">
-          <div class="logo overflow-hidden">银行利率</div>
+          <div class="logo overflow-hidden"><%= title %></div>
         </div>
         <div class="sidebar-menu flex-fill">
           <div class="sidebar-scroll">
             <div class="sidebar-menu-inner">
-              <ul></ul>
+              <ul><% for (var i=0;i<column.length;i++)  { %>
+                <li class="sidebar-item">
+                  <a href="#<%= column[i] %>"><span><%= column[i] %></span></a>
+                </li><% } %>
+              </ul>
             </div>
           </div>
         </div>
@@ -239,8 +215,9 @@
       <div class="container customize-width">
         <div class="header-nav"></div>
         <div class="content">
-          <div class="title">银行利率一览表</div>
-          xxx
+          <div class="flex"><% for (var i=0;i<data.length;i++)  { %>
+            <div id="<%= data[i].name %>" class="<%= data[i].url?'flex-item':'column' %>"><a class="card" href="<%= data[i].url ? data[i].url : '#'+data[i].name %>" title="<%= data[i].name %>" target="<%= data[i].url ? '_blank' : '_self' %>"><div class="card-body"><%= data[i].name %></div></a></div><% } %>
+          </div>
         </div>
       </div>
     </div>
