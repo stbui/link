@@ -20,6 +20,10 @@
     "type": "ssgs"
   },
   {
+    "title": "保险",
+    "type": "baoxian"
+  },
+  {
     "title": "房产",
     "type": "fangchan"
   },
