@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>保险</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="保险" />
+    <meta name="description" content="保险" />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        vertical-align: baseline;
+        word-wrap: break-word;
+        color: #282a2d;
+        background: #f9f9f9;
+      }
+
+      a {
+        color: #282a2d;
+        outline: 0 !important;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #e94041;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1080;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .mt24 {
+        margin-top: 24px
+      }
+      .border-top {
+        border-top: 1px solid #dee2e6;
+      }
+
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        font-size: 14px;
+        width: 200px;
+        height: 100vh;
+        z-index: 1081;
+        background: #f0f2f4;
+        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+      }
+      .sidebar-logo {
+        height: 74px;
+        border-bottom: 1px solid #dee2e6;
+        background: #fff;
+        text-align: center;
+        line-height: 74px;
+        font-size: 22px;
+      }
+      .sidebar-nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      .sidebar-item {
+        position: relative;
+        display: block;
+      }
+      .sidebar-item > a:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        color: #e94041;
+      }
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {
+        display: flex;
+        overflow: hidden;
+        padding: 8px 10px;
+        margin: 1.5px 8px;
+        color: #515c6b;
+        font-size: 16px;
+        align-items: center;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+      .sidebar-menu ul:first-child > li > a {
+        padding: 12px 10px;
+      }
+      .sidebar-nav-inner {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .sidebar-nav-inner .flex-fill {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .header-nav {
+        position: fixed;
+        right: 0;
+        left: 200px;
+        background: rgb(255 255 255 / 77%);
+      }
+
+      .main-content {
+        flex-direction: column;
+        display: flex;
+      }
+
+      .flex-fill {
+        flex: 1 1 auto;
+      }
+
+      .container {
+        margin: auto;
+      }
+      .main-content {
+        margin-left: 200px;
+      }
+      .content {
+        margin-left: 12px;
+      }
+
+      .customize-width {
+        min-width: 1140px;
+        max-width: 1900px;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .flex-item {
+        flex: 0 0 20%;
+        border: 1px solid transparent;
+        padding: 0 6px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        background-color: #eee;
+        margin-bottom: 12px;
+      }
+      .card-body {
+        position: relative;
+        padding: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .column {
+        flex: 1 1 100%;
+        padding: 0 12px;
+        margin-top: 24px;
+      }
+      .column .card {
+        border-left: 4px solid #e94041;
+        background: transparent;
+      }
+      .column .card-body {
+        padding: 0 0 0 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar-nav sticky">
+      <div class="sidebar-nav-inner">
+        <div class="sidebar-logo">
+          <div class="logo overflow-hidden">保险</div>
+        </div>
+        <div class="sidebar-menu flex-fill">
+          <div class="sidebar-scroll">
+            <div class="sidebar-menu-inner">
+              <ul>
+                <li class="sidebar-item">
+                  <a href="#保险大全"><span>保险大全</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top">
+          <div class="flex-bottom">
+            <ul>
+              <li class="sidebar-item">
+                <a href="#"><span>网站提交</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content flex-fill">
+      <div class="container customize-width">
+        <div class="header-nav"></div>
+        <div class="content">
+          <div class="flex">
+            <div id="保险大全" class="column"><a class="card" href="#保险大全" title="保险大全" target="_self"><div class="card-body">保险大全</div></a></div>
+            <div id="爱和谊日生同和财产保险(中国)有限公司" class="flex-item"><a class="card" href="www.aioinissaydowa.cn" title="爱和谊日生同和财产保险(中国)有限公司" target="_blank"><div class="card-body">爱和谊日生同和财产保险(中国)有限公司</div></a></div>
+            <div id="爱心人寿保险股份有限公司" class="flex-item"><a class="card" href="-" title="爱心人寿保险股份有限公司" target="_blank"><div class="card-body">爱心人寿保险股份有限公司</div></a></div>
+            <div id="安邦保险集团股份有限公司" class="flex-item"><a class="card" href="www.anbanggroup.com" title="安邦保险集团股份有限公司" target="_blank"><div class="card-body">安邦保险集团股份有限公司</div></a></div>
+            <div id="安邦财产保险股份有限公司" class="flex-item"><a class="card" href="www.ab-insurance.com" title="安邦财产保险股份有限公司" target="_blank"><div class="card-body">安邦财产保险股份有限公司</div></a></div>
+            <div id="安诚财产保险股份有限公司" class="flex-item"><a class="card" href="www.e-acic.com" title="安诚财产保险股份有限公司" target="_blank"><div class="card-body">安诚财产保险股份有限公司</div></a></div>
+            <div id="安达保险有限公司" class="flex-item"><a class="card" href="www.chubb.com.cn" title="安达保险有限公司" target="_blank"><div class="card-body">安达保险有限公司</div></a></div>
+            <div id="安华农业保险股份有限公司" class="flex-item"><a class="card" href="www.ahic.com.cn" title="安华农业保险股份有限公司" target="_blank"><div class="card-body">安华农业保险股份有限公司</div></a></div>
+            <div id="安联(中国)保险控股有限公司" class="flex-item"><a class="card" href="www.allianzholding.cn" title="安联(中国)保险控股有限公司" target="_blank"><div class="card-body">安联(中国)保险控股有限公司</div></a></div>
+            <div id="安联保险资产管理有限公司" class="flex-item"><a class="card" href="www.allianziamc.com.cn" title="安联保险资产管理有限公司" target="_blank"><div class="card-body">安联保险资产管理有限公司</div></a></div>
+            <div id="安联人寿保险有限公司" class="flex-item"><a class="card" href="www.allianz.com.cn" title="安联人寿保险有限公司" target="_blank"><div class="card-body">安联人寿保险有限公司</div></a></div>
+            <div id="安盟财产保险有限公司" class="flex-item"><a class="card" href="www.groupama.com.cn" title="安盟财产保险有限公司" target="_blank"><div class="card-body">安盟财产保险有限公司</div></a></div>
+            <div id="安盛天平财产保险有限公司" class="flex-item"><a class="card" href="www.axatp.com" title="安盛天平财产保险有限公司" target="_blank"><div class="card-body">安盛天平财产保险有限公司</div></a></div>
+            <div id="安心财产保险有限责任公司" class="flex-item"><a class="card" href="www.answern.com" title="安心财产保险有限责任公司" target="_blank"><div class="card-body">安心财产保险有限责任公司</div></a></div>
+            <div id="百年保险资产管理有限责任公司" class="flex-item"><a class="card" href="www.aeoniamc.com" title="百年保险资产管理有限责任公司" target="_blank"><div class="card-body">百年保险资产管理有限责任公司</div></a></div>
+            <div id="百年人寿保险股份有限公司" class="flex-item"><a class="card" href="www.aeonlife.com.cn" title="百年人寿保险股份有限公司" target="_blank"><div class="card-body">百年人寿保险股份有限公司</div></a></div>
+            <div id="北部湾财产保险股份有限公司" class="flex-item"><a class="card" href="www.bgic.com" title="北部湾财产保险股份有限公司" target="_blank"><div class="card-body">北部湾财产保险股份有限公司</div></a></div>
+            <div id="北大方正人寿保险有限公司" class="flex-item"><a class="card" href="www.pkufi.com" title="北大方正人寿保险有限公司" target="_blank"><div class="card-body">北大方正人寿保险有限公司</div></a></div>
+            <div id="北京人寿保险股份有限公司" class="flex-item"><a class="card" href="www.beijinglife.com.cn" title="北京人寿保险股份有限公司" target="_blank"><div class="card-body">北京人寿保险股份有限公司</div></a></div>
+            <div id="渤海财产保险股份有限公司" class="flex-item"><a class="card" href="www.bpic.com.cn" title="渤海财产保险股份有限公司" target="_blank"><div class="card-body">渤海财产保险股份有限公司</div></a></div>
+            <div id="渤海人寿保险股份有限公司" class="flex-item"><a class="card" href="www.bohailife.net" title="渤海人寿保险股份有限公司" target="_blank"><div class="card-body">渤海人寿保险股份有限公司</div></a></div>
+            <div id="财信吉祥人寿保险股份有限公司" class="flex-item"><a class="card" href="www.jxlife.com.cn" title="财信吉祥人寿保险股份有限公司" target="_blank"><div class="card-body">财信吉祥人寿保险股份有限公司</div></a></div>
+            <div id="长安责任保险股份有限公司" class="flex-item"><a class="card" href="www.capli.com.cn" title="长安责任保险股份有限公司" target="_blank"><div class="card-body">长安责任保险股份有限公司</div></a></div>
+            <div id="长城财富保险资产管理股份有限公司" class="flex-item"><a class="card" href="www.greatwealthamc.com" title="长城财富保险资产管理股份有限公司" target="_blank"><div class="card-body">长城财富保险资产管理股份有限公司</div></a></div>
+            <div id="长城人寿保险股份有限公司" class="flex-item"><a class="card" href="www.greatlife.cn" title="长城人寿保险股份有限公司" target="_blank"><div class="card-body">长城人寿保险股份有限公司</div></a></div>
+            <div id="长江财产保险股份有限公司" class="flex-item"><a class="card" href="www.cjbx.com.cn" title="长江财产保险股份有限公司" target="_blank"><div class="card-body">长江财产保险股份有限公司</div></a></div>
+            <div id="长江养老保险股份有限公司" class="flex-item"><a class="card" href="www.cj-pension.com.cn" title="长江养老保险股份有限公司" target="_blank"><div class="card-body">长江养老保险股份有限公司</div></a></div>
+            <div id="长生人寿保险有限公司" class="flex-item"><a class="card" href="www.gwcslife.com" title="长生人寿保险有限公司" target="_blank"><div class="card-body">长生人寿保险有限公司</div></a></div>
+            <div id="诚泰财产保险股份有限公司" class="flex-item"><a class="card" href="www.champion-ic.com" title="诚泰财产保险股份有限公司" target="_blank"><div class="card-body">诚泰财产保险股份有限公司</div></a></div>
+            <div id="慈溪市龙山农村保险互助联社" class="flex-item"><a class="card" href="-" title="慈溪市龙山农村保险互助联社" target="_blank"><div class="card-body">慈溪市龙山农村保险互助联社</div></a></div>
+            <div id="慈溪市龙山镇伏龙农村保险互助社" class="flex-item"><a class="card" href="-" title="慈溪市龙山镇伏龙农村保险互助社" target="_blank"><div class="card-body">慈溪市龙山镇伏龙农村保险互助社</div></a></div>
+            <div id="大家保险集团有限责任公司" class="flex-item"><a class="card" href="-" title="大家保险集团有限责任公司" target="_blank"><div class="card-body">大家保险集团有限责任公司</div></a></div>
+            <div id="大家财产保险有限责任公司" class="flex-item"><a class="card" href="-" title="大家财产保险有限责任公司" target="_blank"><div class="card-body">大家财产保险有限责任公司</div></a></div>
+            <div id="大家人寿保险股份有限公司" class="flex-item"><a class="card" href="life.djbx.com" title="大家人寿保险股份有限公司" target="_blank"><div class="card-body">大家人寿保险股份有限公司</div></a></div>
+            <div id="大家养老保险股份有限公司" class="flex-item"><a class="card" href="www.anbangannuity.com" title="大家养老保险股份有限公司" target="_blank"><div class="card-body">大家养老保险股份有限公司</div></a></div>
+            <div id="大家资产管理有限责任公司" class="flex-item"><a class="card" href="www.abzc.com.cn" title="大家资产管理有限责任公司" target="_blank"><div class="card-body">大家资产管理有限责任公司</div></a></div>
+            <div id="德华安顾人寿保险有限公司" class="flex-item"><a class="card" href="www.ergo-life.cn" title="德华安顾人寿保险有限公司" target="_blank"><div class="card-body">德华安顾人寿保险有限公司</div></a></div>
+            <div id="鼎诚人寿保险有限责任公司" class="flex-item"><a class="card" href="www.dingchenglife.com.cn" title="鼎诚人寿保险有限责任公司" target="_blank"><div class="card-body">鼎诚人寿保险有限责任公司</div></a></div>
+            <div id="鼎和财产保险股份有限公司" class="flex-item"><a class="card" href="www.edhic.com" title="鼎和财产保险股份有限公司" target="_blank"><div class="card-body">鼎和财产保险股份有限公司</div></a></div>
+            <div id="东方人寿保险股份有限公司" class="flex-item"><a class="card" href="-" title="东方人寿保险股份有限公司" target="_blank"><div class="card-body">东方人寿保险股份有限公司</div></a></div>
+            <div id="东海航运保险股份有限公司" class="flex-item"><a class="card" href="www.dic-china.com" title="东海航运保险股份有限公司" target="_blank"><div class="card-body">东海航运保险股份有限公司</div></a></div>
+            <div id="东京海上日动火灾保险（中国）有限公司" class="flex-item"><a class="card" href="www.tokiomarine.com.cn/cn" title="东京海上日动火灾保险（中国）有限公司" target="_blank"><div class="card-body">东京海上日动火灾保险（中国）有限公司</div></a></div>
+            <div id="东吴人寿保险股份有限公司" class="flex-item"><a class="card" href="www.soochowlife.net" title="东吴人寿保险股份有限公司" target="_blank"><div class="card-body">东吴人寿保险股份有限公司</div></a></div>
+            <div id="都邦财产保险股份有限公司" class="flex-item"><a class="card" href="www.dbic.com.cn" title="都邦财产保险股份有限公司" target="_blank"><div class="card-body">都邦财产保险股份有限公司</div></a></div>
+            <div id="复星保德信人寿保险有限公司" class="flex-item"><a class="card" href="www.pflife.com.cn" title="复星保德信人寿保险有限公司" target="_blank"><div class="card-body">复星保德信人寿保险有限公司</div></a></div>
+            <div id="复星联合健康保险股份有限公司" class="flex-item"><a class="card" href="www.fosun-uhi.com" title="复星联合健康保险股份有限公司" target="_blank"><div class="card-body">复星联合健康保险股份有限公司</div></a></div>
+            <div id="富邦财产保险有限公司" class="flex-item"><a class="card" href="www.fubon.com.cn" title="富邦财产保险有限公司" target="_blank"><div class="card-body">富邦财产保险有限公司</div></a></div>
+            <div id="富德财产保险股份有限公司" class="flex-item"><a class="card" href="www.fundins.com" title="富德财产保险股份有限公司" target="_blank"><div class="card-body">富德财产保险股份有限公司</div></a></div>
+            <div id="富德生命人寿保险股份有限公司" class="flex-item"><a class="card" href="www.sino-life.com" title="富德生命人寿保险股份有限公司" target="_blank"><div class="card-body">富德生命人寿保险股份有限公司</div></a></div>
+            <div id="工银安盛人寿保险有限公司" class="flex-item"><a class="card" href="www.icbc-axa.com" title="工银安盛人寿保险有限公司" target="_blank"><div class="card-body">工银安盛人寿保险有限公司</div></a></div>
+            <div id="工银安盛资产管理有限公司" class="flex-item"><a class="card" href="-" title="工银安盛资产管理有限公司" target="_blank"><div class="card-body">工银安盛资产管理有限公司</div></a></div>
+            <div id="光大永明人寿保险有限公司" class="flex-item"><a class="card" href="www.sunlife-everbright.com" title="光大永明人寿保险有限公司" target="_blank"><div class="card-body">光大永明人寿保险有限公司</div></a></div>
+            <div id="光大永明资产管理股份有限公司" class="flex-item"><a class="card" href="www.slebam.com" title="光大永明资产管理股份有限公司" target="_blank"><div class="card-body">光大永明资产管理股份有限公司</div></a></div>
+            <div id="广东能源财产保险自保有限公司" class="flex-item"><a class="card" href="www.gdydci.com" title="广东能源财产保险自保有限公司" target="_blank"><div class="card-body">广东能源财产保险自保有限公司</div></a></div>
+            <div id="国宝人寿保险股份有限公司" class="flex-item"><a class="card" href="-" title="国宝人寿保险股份有限公司" target="_blank"><div class="card-body">国宝人寿保险股份有限公司</div></a></div>
+            <div id="国富人寿保险股份有限公司" class="flex-item"><a class="card" href="www.e-guofu.com" title="国富人寿保险股份有限公司" target="_blank"><div class="card-body">国富人寿保险股份有限公司</div></a></div>
+            <div id="国华人寿保险股份有限公司" class="flex-item"><a class="card" href="www.95549.cn" title="国华人寿保险股份有限公司" target="_blank"><div class="card-body">国华人寿保险股份有限公司</div></a></div>
+            <div id="国华兴益保险资产管理有限公司" class="flex-item"><a class="card" href="www.ghshining.com" title="国华兴益保险资产管理有限公司" target="_blank"><div class="card-body">国华兴益保险资产管理有限公司</div></a></div>
+            <div id="国联人寿保险股份有限公司" class="flex-item"><a class="card" href="www.guolian-life.com" title="国联人寿保险股份有限公司" target="_blank"><div class="card-body">国联人寿保险股份有限公司</div></a></div>
+            <div id="国民养老保险股份有限公司" class="flex-item"><a class="card" href="-" title="国民养老保险股份有限公司" target="_blank"><div class="card-body">国民养老保险股份有限公司</div></a></div>
+            <div id="国任财产保险股份有限公司" class="flex-item"><a class="card" href="www.cindapcic.com" title="国任财产保险股份有限公司" target="_blank"><div class="card-body">国任财产保险股份有限公司</div></a></div>
+            <div id="国寿投资保险资产管理有限公司" class="flex-item"><a class="card" href="www.chinalife-i.com.cn" title="国寿投资保险资产管理有限公司" target="_blank"><div class="card-body">国寿投资保险资产管理有限公司</div></a></div>
+            <div id="国泰财产保险有限责任公司" class="flex-item"><a class="card" href="www.cathay-ins.com.cn" title="国泰财产保险有限责任公司" target="_blank"><div class="card-body">国泰财产保险有限责任公司</div></a></div>
+            <div id="国元农业保险股份有限公司" class="flex-item"><a class="card" href="www.gybx.com.cn" title="国元农业保险股份有限公司" target="_blank"><div class="card-body">国元农业保险股份有限公司</div></a></div>
+            <div id="海保人寿保险股份有限公司" class="flex-item"><a class="card" href="-" title="海保人寿保险股份有限公司" target="_blank"><div class="card-body">海保人寿保险股份有限公司</div></a></div>
+            <div id="海港人寿保险股份有限公司" class="flex-item"><a class="card" href="-" title="海港人寿保险股份有限公司" target="_blank"><div class="card-body">海港人寿保险股份有限公司</div></a></div>
+            <div id="海峡金桥财产保险股份有限公司" class="flex-item"><a class="card" href="www.chgic.com" title="海峡金桥财产保险股份有限公司" target="_blank"><div class="card-body">海峡金桥财产保险股份有限公司</div></a></div>
+            <div id="合众财产保险股份有限公司" class="flex-item"><a class="card" href="www.union-ins.cn" title="合众财产保险股份有限公司" target="_blank"><div class="card-body">合众财产保险股份有限公司</div></a></div>
+            <div id="合众人寿保险股份有限公司" class="flex-item"><a class="card" href="www.unionlife.com.cn" title="合众人寿保险股份有限公司" target="_blank"><div class="card-body">合众人寿保险股份有限公司</div></a></div>
+            <div id="合众资产管理股份有限公司" class="flex-item"><a class="card" href="www.unionasset.com.cn" title="合众资产管理股份有限公司" target="_blank"><div class="card-body">合众资产管理股份有限公司</div></a></div>
+            <div id="和泰人寿保险股份有限公司" class="flex-item"><a class="card" href="www.htlic.com" title="和泰人寿保险股份有限公司" target="_blank"><div class="card-body">和泰人寿保险股份有限公司</div></a></div>
+            <div id="和谐健康保险股份有限公司" class="flex-item"><a class="card" href="www.hexiehealth.com" title="和谐健康保险股份有限公司" target="_blank"><div class="card-body">和谐健康保险股份有限公司</div></a></div>
+            <div id="恒安标准人寿保险有限公司" class="flex-item"><a class="card" href="www.hengansl.com" title="恒安标准人寿保险有限公司" target="_blank"><div class="card-body">恒安标准人寿保险有限公司</div></a></div>
+            <div id="恒安标准养老保险有限责任公司" class="flex-item"><a class="card" href="-" title="恒安标准养老保险有限责任公司" target="_blank"><div class="card-body">恒安标准养老保险有限责任公司</div></a></div>
+            <div id="恒邦财产保险股份有限公司" class="flex-item"><a class="card" href="www.hbins.com.cn" title="恒邦财产保险股份有限公司" target="_blank"><div class="card-body">恒邦财产保险股份有限公司</div></a></div>
+            <div id="恒大人寿保险有限公司" class="flex-item"><a class="card" href="www.lifeisgreat.com.cn" title="恒大人寿保险有限公司" target="_blank"><div class="card-body">恒大人寿保险有限公司</div></a></div>
+            <div id="横琴人寿保险有限公司" class="flex-item"><a class="card" href="www.hqins.cn" title="横琴人寿保险有限公司" target="_blank"><div class="card-body">横琴人寿保险有限公司</div></a></div>
+            <div id="弘康人寿保险股份有限公司" class="flex-item"><a class="card" href="www.hongkang-life.com" title="弘康人寿保险股份有限公司" target="_blank"><div class="card-body">弘康人寿保险股份有限公司</div></a></div>
+            <div id="华安财保资产管理有限责任公司" class="flex-item"><a class="card" href="www.hacbzc.com" title="华安财保资产管理有限责任公司" target="_blank"><div class="card-body">华安财保资产管理有限责任公司</div></a></div>
+            <div id="华安财产保险股份有限公司" class="flex-item"><a class="card" href="www.sinosafe.com.cn" title="华安财产保险股份有限公司" target="_blank"><div class="card-body">华安财产保险股份有限公司</div></a></div>
+            <div id="华贵人寿保险股份有限公司" class="flex-item"><a class="card" href="www.huaguilife.cn" title="华贵人寿保险股份有限公司" target="_blank"><div class="card-body">华贵人寿保险股份有限公司</div></a></div>
+            <div id="华海财产保险股份有限公司" class="flex-item"><a class="card" href="www.cnoic.com" title="华海财产保险股份有限公司" target="_blank"><div class="card-body">华海财产保险股份有限公司</div></a></div>
+            <div id="华汇人寿保险股份有限公司" class="flex-item"><a class="card" href="www.sciclife.com" title="华汇人寿保险股份有限公司" target="_blank"><div class="card-body">华汇人寿保险股份有限公司</div></a></div>
+            <div id="华农财产保险股份有限公司" class="flex-item"><a class="card" href="www.chinahuanong.com.cn" title="华农财产保险股份有限公司" target="_blank"><div class="card-body">华农财产保险股份有限公司</div></a></div>
+            <div id="华泰保险集团股份有限公司" class="flex-item"><a class="card" href="www.ehuatai.com" title="华泰保险集团股份有限公司" target="_blank"><div class="card-body">华泰保险集团股份有限公司</div></a></div>
+            <div id="华泰财产保险有限公司" class="flex-item"><a class="card" href="pc.ehuatai.com" title="华泰财产保险有限公司" target="_blank"><div class="card-body">华泰财产保险有限公司</div></a></div>
+            <div id="华泰人寿保险股份有限公司" class="flex-item"><a class="card" href="life.ehuatai.com" title="华泰人寿保险股份有限公司" target="_blank"><div class="card-body">华泰人寿保险股份有限公司</div></a></div>
+            <div id="华泰资产管理有限公司" class="flex-item"><a class="card" href="www.htam.com.cn" title="华泰资产管理有限公司" target="_blank"><div class="card-body">华泰资产管理有限公司</div></a></div>
+            <div id="华夏久盈资产管理有限责任公司" class="flex-item"><a class="card" href="www.hxjyam.com" title="华夏久盈资产管理有限责任公司" target="_blank"><div class="card-body">华夏久盈资产管理有限责任公司</div></a></div>
+            <div id="华夏人寿保险股份有限公司" class="flex-item"><a class="card" href="www.hxlife.com" title="华夏人寿保险股份有限公司" target="_blank"><div class="card-body">华夏人寿保险股份有限公司</div></a></div>
+            <div id="黄河财产保险股份有限公司" class="flex-item"><a class="card" href="www.ypic.cn" title="黄河财产保险股份有限公司" target="_blank"><div class="card-body">黄河财产保险股份有限公司</div></a></div>
+            <div id="汇丰人寿保险有限公司" class="flex-item"><a class="card" href="www.hsbcinsurance.com.cn" title="汇丰人寿保险有限公司" target="_blank"><div class="card-body">汇丰人寿保险有限公司</div></a></div>
+            <div id="汇友财产相互保险社" class="flex-item"><a class="card" href="-" title="汇友财产相互保险社" target="_blank"><div class="card-body">汇友财产相互保险社</div></a></div>
+            <div id="建信保险资产管理有限公司" class="flex-item"><a class="card" href="www.ccblifeamc.com" title="建信保险资产管理有限公司" target="_blank"><div class="card-body">建信保险资产管理有限公司</div></a></div>
+            <div id="建信财产保险有限公司" class="flex-item"><a class="card" href="www.ccbpi.com.cn" title="建信财产保险有限公司" target="_blank"><div class="card-body">建信财产保险有限公司</div></a></div>
+            <div id="建信人寿保险股份有限公司" class="flex-item"><a class="card" href="www.ccb-life.com.cn" title="建信人寿保险股份有限公司" target="_blank"><div class="card-body">建信人寿保险股份有限公司</div></a></div>
+            <div id="交银保险资产管理有限公司" class="flex-item"><a class="card" href="-" title="交银保险资产管理有限公司" target="_blank"><div class="card-body">交银保险资产管理有限公司</div></a></div>
+            <div id="交银人寿保险有限公司" class="flex-item"><a class="card" href="www.bocommlife.com" title="交银人寿保险有限公司" target="_blank"><div class="card-body">交银人寿保险有限公司</div></a></div>
+            <div id="锦泰财产保险股份有限公司" class="flex-item"><a class="card" href="www.ejintai.com" title="锦泰财产保险股份有限公司" target="_blank"><div class="card-body">锦泰财产保险股份有限公司</div></a></div>
+            <div id="京东安联财产保险有限公司" class="flex-item"><a class="card" href="www.allianz.cn" title="京东安联财产保险有限公司" target="_blank"><div class="card-body">京东安联财产保险有限公司</div></a></div>
+            <div id="久隆财产保险有限公司" class="flex-item"><a class="card" href="www.9longic.com" title="久隆财产保险有限公司" target="_blank"><div class="card-body">久隆财产保险有限公司</div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
