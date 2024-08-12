@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>国务院部门导航</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="国务院部门网站导航" />
+    <meta name="description" content="国务院部门网站导航" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+</head>
+
+<body>
+    <div id="table"></div>
+    <script type="text/javascript">
+        const container = document.querySelector('#table');
+        const hot = new Handsontable(container, {
+            data: [
+                // ['', "北京", "天津", "河北", "山西", "内蒙古", "辽宁", "吉林", "黑龙江", "上海", "江苏", "浙江", "安徽", "福建", "江西", "山东", "河南", "湖北", "湖南", "广东", "广西", "海南", "重庆", "四川", "贵州", "云南", "西藏", "陕西", "甘肃", "青海", "宁夏", "新疆", "香港", "澳门", "台湾", "新疆生产建设兵团"],
+                ["外交部", "https://www.fmprc.gov.cn/web/"],
+                ["国防部", "http://www.mod.gov.cn/"],
+                ["国家发展和改革委员会", "https://www.ndrc.gov.cn/"],
+                ["教育部", "http://www.moe.gov.cn/"],
+                ["科学技术部", "https://www.most.gov.cn/index.html"],
+                ["工业和信息化部", "https://www.miit.gov.cn/"],
+                ["国家民族事务委员会", "https://www.neac.gov.cn/"],
+                ["公安部", "https://www.mps.gov.cn/"],
+                ["国家安全部", "undefined"],
+                ["民政部", "https://www.mca.gov.cn/"],
+                ["司法部", "http://www.moj.gov.cn/"],
+                ["财政部", "http://www.mof.gov.cn/index.htm"],
+                ["人力资源和社会保障部", "http://www.mohrss.gov.cn/"],
+                ["自然资源部", "https://www.mnr.gov.cn/"],
+                ["生态环境部", "https://www.mee.gov.cn/"],
+                ["住房和城乡建设部", "https://www.mohurd.gov.cn/"],
+                ["交通运输部", "https://www.mot.gov.cn/"],
+                ["水利部", "http://www.mwr.gov.cn/"],
+                ["农业农村部", "http://www.moa.gov.cn/"],
+                ["商务部", "http://www.mofcom.gov.cn/"],
+                ["文化和旅游部", "https://www.mct.gov.cn/"],
+                ["国家卫生健康委员会", "http://www.nhc.gov.cn/"],
+                ["退役军人事务部", "http://www.mva.gov.cn/"],
+                ["应急管理部", "https://www.mem.gov.cn/"],
+                ["中国人民银行", "http://www.pbc.gov.cn/"],
+                ["审计署", "https://www.audit.gov.cn/"],
+                ["国家语言文字工作委员会", "http://www.moe.gov.cn/jyb_sy/China_Language/"],
+                ["国家航天局", "http://www.cnsa.gov.cn/"],
+                ["国家原子能机构", "http://www.caea.gov.cn/"],
+                ["国家外国专家局", "undefined"],
+                ["国家海洋局", "undefined"],
+                ["国家核安全局", "https://nnsa.mee.gov.cn/"],
+                ["国家乡村振兴局", "undefined"],
+                ["国务院国有资产监督管理委员会", "http://www.sasac.gov.cn/"],
+                ["海关总署", "http://www.customs.gov.cn/"],
+                ["国家税务总局", "http://www.chinatax.gov.cn/"],
+                ["国家市场监督管理总局", "https://www.samr.gov.cn/"],
+                ["国家金融监督管理总局", "http://www.cbirc.gov.cn/cn/view/pages/index/index.html"],
+                ["中国证券监督管理委员会", "http://www.csrc.gov.cn/"],
+                ["国家广播电视总局", "http://www.nrta.gov.cn/"],
+                ["国家体育总局", "https://www.sport.gov.cn/"],
+                ["国家信访局", "https://www.gjxfj.gov.cn/gjxfj/index.htm"],
+                ["国家统计局", "http://www.stats.gov.cn/"],
+                ["国家知识产权局", "https://www.cnipa.gov.cn/"],
+                ["国家国际发展合作署", "http://www.cidca.gov.cn/"],
+                ["国家医疗保障局", "http://www.nhsa.gov.cn/"],
+                ["国务院参事室", "http://www.counsellor.gov.cn/"],
+                ["国家机关事务管理局", "http://www.ggj.gov.cn/"],
+                ["国家反垄断局", "undefined"],
+                ["国家认证认可监督管理委员会", "http://www.cnca.gov.cn/"],
+                ["国家标准化管理委员会", "http://www.sac.gov.cn/"],
+                ["国家新闻出版署", "https://www.nppa.gov.cn/"],
+                ["（国家版权局）", "https://www.ncac.gov.cn/"],
+                ["国家宗教事务局", "https://www.sara.gov.cn/"],
+                ["国务院研究室", "https://www.gov.cn/guoqing/2018-06/22/content_5300522.htm"],
+                ["国务院侨务办公室", "https://www.gqb.gov.cn/"],
+                ["国务院港澳事务办公室", "https://www.hmo.gov.cn/"],
+                ["国务院台湾事务办公室", "http://www.gwytb.gov.cn/"],
+                ["国家互联网信息办公室", "http://www.cac.gov.cn/"],
+                ["国务院新闻办公室", "http://www.scio.gov.cn/index.htm"],
+                ["新华通讯社", "http://www.news.cn/xinhuashe/"],
+                ["中国科学院", "https://www.cas.cn/"],
+                ["中国社会科学院", "http://www.cass.cn/"],
+                ["中国工程院", "https://www.cae.cn/"],
+                ["国务院发展研究中心", "https://www.drc.gov.cn/default.aspx"],
+                ["中央广播电视总台", "undefined"],
+                ["中国气象局", "https://www.cma.gov.cn/"],
+                ["国家行政学院", "https://www.ccps.gov.cn/"],
+                ["国家粮食和物资储备局", "http://www.lswz.gov.cn/"],
+                ["国家能源局", "http://www.nea.gov.cn/"],
+                ["国家数据局", "undefined"],
+                ["国家国防科技工业局", "http://www.sastind.gov.cn/"],
+                ["国家烟草专卖局", "http://www.tobacco.gov.cn/gjyc/index.shtml"],
+                ["国家移民管理局", "https://www.nia.gov.cn/"],
+                ["国家林业和草原局", "http://www.forestry.gov.cn/"],
+                ["国家铁路局", "https://www.nra.gov.cn/"],
+                ["中国民用航空局", "http://www.caac.gov.cn/index.html"],
+                ["国家邮政局", "https://www.spb.gov.cn/"],
+                ["国家文物局", "http://www.ncha.gov.cn/"],
+                ["国家中医药管理局", "http://www.natcm.gov.cn/"],
+                ["国家疾病预防控制局", "https://www.ndcpa.gov.cn/"],
+                ["国家矿山安全监察局", "https://www.chinamine-safety.gov.cn/"],
+                ["国家消防救援局", "https://www.119.gov.cn/"],
+                ["国家外汇管理局", "http://www.safe.gov.cn/"],
+                ["国家药品监督管理局", "https://www.nmpa.gov.cn/"],
+            ],
+            rowHeaders: true,
+            colHeaders: true,
+            colHeaders: ["", "全国", "北京", "天津", "河北", "山西", "内蒙古", "辽宁", "吉林", "黑龙江", "上海", "江苏", "浙江", "安徽", "福建", "江西", "山东", "河南", "湖北", "湖南", "广东", "广西", "海南", "重庆", "四川", "贵州", "云南", "西藏", "陕西", "甘肃", "青海", "宁夏", "新疆", "香港", "澳门", "台湾", "新疆生产建设兵团",],
+            fixedColumnsStart: 1,
+            width: '100%',
+            columns: [{}, {
+                renderer(instance, td, row, col, prop, value, cellProperties) {
+                    if (value) {
+                        const a = document.createElement('a');
+                        a.href = value;
+                        a.target = "_blank";
+                        a.innerText = '查看'
+                        td.innerText = ''
+                        td.appendChild(a);
+                    }
+                    return td;
+                }
+            }],
+            licenseKey: 'non-commercial-and-evaluation' // for non-commercial use only
+        });
+    </script>
+</body>
+
+</html>
