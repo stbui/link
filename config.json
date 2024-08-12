@@ -1,7 +1,19 @@
 [
+    {
+    "title": "政府网站",
+    "type": "office"
+  },
+  {
+    "title": "政府站群",
+    "type": "gov"
+  },
   {
     "title": "上海导航",
     "type": "shanghai"
+  },
+    {
+    "title": "院校导航",
+    "type": "school"
   },
   {
     "title": "人工智能",
@@ -38,14 +50,6 @@
   {
     "title": "求职",
     "type": "qzjy"
-  },
-  {
-    "title": "政府网站",
-    "type": "office"
-  },
-  {
-    "title": "院校导航",
-    "type": "school"
   },
   {
     "title": "电商美工",
