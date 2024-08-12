@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>政府站群</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="政府站群" />
+    <meta name="description" content="政府站群" />
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      body {
+        width: 100%;
+        min-height: 100vh;
+        vertical-align: baseline;
+        word-wrap: break-word;
+        color: #282a2d;
+        background: #f9f9f9;
+      }
+
+      a {
+        color: #282a2d;
+        outline: 0 !important;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: #e94041;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1080;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .mt24 {
+        margin-top: 24px
+      }
+      .border-top {
+        border-top: 1px solid #dee2e6;
+      }
+
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        font-size: 14px;
+        width: 200px;
+        height: 100vh;
+        z-index: 1081;
+        background: #f0f2f4;
+        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
+      }
+      .sidebar-logo {
+        height: 74px;
+        border-bottom: 1px solid #dee2e6;
+        background: #fff;
+        text-align: center;
+        line-height: 74px;
+        font-size: 22px;
+      }
+      .sidebar-nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      .sidebar-item {
+        position: relative;
+        display: block;
+      }
+      .sidebar-item > a:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        color: #e94041;
+      }
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {
+        display: flex;
+        overflow: hidden;
+        padding: 8px 10px;
+        margin: 1.5px 8px;
+        color: #515c6b;
+        font-size: 16px;
+        align-items: center;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+      .sidebar-menu ul:first-child > li > a {
+        padding: 12px 10px;
+      }
+      .sidebar-nav-inner {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .sidebar-nav-inner .flex-fill {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .header-nav {
+        position: fixed;
+        right: 0;
+        left: 200px;
+        background: rgb(255 255 255 / 77%);
+      }
+
+      .main-content {
+        flex-direction: column;
+        display: flex;
+      }
+
+      .flex-fill {
+        flex: 1 1 auto;
+      }
+
+      .container {
+        margin: auto;
+      }
+      .main-content {
+        margin-left: 200px;
+      }
+      .content {
+        margin-left: 12px;
+      }
+
+      .customize-width {
+        min-width: 1140px;
+        max-width: 1900px;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .flex-item {
+        flex: 0 0 20%;
+        border: 1px solid transparent;
+        padding: 0 6px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        background-color: #eee;
+        margin-bottom: 12px;
+      }
+      .card-body {
+        position: relative;
+        padding: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .column {
+        flex: 1 1 100%;
+        padding: 0 12px;
+        margin-top: 24px;
+      }
+      .column .card {
+        border-left: 4px solid #e94041;
+        background: transparent;
+      }
+      .column .card-body {
+        padding: 0 0 0 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar-nav sticky">
+      <div class="sidebar-nav-inner">
+        <div class="sidebar-logo">
+          <div class="logo overflow-hidden">政府站群</div>
+        </div>
+        <div class="sidebar-menu flex-fill">
+          <div class="sidebar-scroll">
+            <div class="sidebar-menu-inner">
+              <ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top">
+          <div class="flex-bottom">
+            <ul>
+              <li class="sidebar-item">
+                <a href="#"><span>网站提交</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content flex-fill">
+      <div class="container customize-width">
+        <div class="header-nav"></div>
+        <div class="content">
+          <div class="flex">
+            <div id="北京市" class="flex-item"><a class="card" href="http://fgw.beijing.gov.cn/" title="北京市" target="_blank"><div class="card-body">北京市</div></a></div>
+            <div id="天津市" class="flex-item"><a class="card" href="http://fzgg.tj.gov.cn/" title="天津市" target="_blank"><div class="card-body">天津市</div></a></div>
+            <div id="河北省" class="flex-item"><a class="card" href="http://hbdrc.hebei.gov.cn/" title="河北省" target="_blank"><div class="card-body">河北省</div></a></div>
+            <div id="山西省" class="flex-item"><a class="card" href="http://fgw.shanxi.gov.cn/" title="山西省" target="_blank"><div class="card-body">山西省</div></a></div>
+            <div id="内蒙古自治区" class="flex-item"><a class="card" href="http://fgw.nmg.gov.cn/" title="内蒙古自治区" target="_blank"><div class="card-body">内蒙古自治区</div></a></div>
+            <div id="辽宁省" class="flex-item"><a class="card" href="http://fgw.ln.gov.cn/" title="辽宁省" target="_blank"><div class="card-body">辽宁省</div></a></div>
+            <div id="吉林省" class="flex-item"><a class="card" href="http://jldrc.jl.gov.cn/" title="吉林省" target="_blank"><div class="card-body">吉林省</div></a></div>
+            <div id="黑龙江省" class="flex-item"><a class="card" href="http://drc.hlj.gov.cn/" title="黑龙江省" target="_blank"><div class="card-body">黑龙江省</div></a></div>
+            <div id="上海市" class="flex-item"><a class="card" href="http://fgw.sh.gov.cn/" title="上海市" target="_blank"><div class="card-body">上海市</div></a></div>
+            <div id="江苏省" class="flex-item"><a class="card" href="http://fzggw.jiangsu.gov.cn/" title="江苏省" target="_blank"><div class="card-body">江苏省</div></a></div>
+            <div id="浙江省" class="flex-item"><a class="card" href="http://fzggw.zj.gov.cn/" title="浙江省" target="_blank"><div class="card-body">浙江省</div></a></div>
+            <div id="安徽省" class="flex-item"><a class="card" href="http://fzggw.ah.gov.cn/" title="安徽省" target="_blank"><div class="card-body">安徽省</div></a></div>
+            <div id="福建省" class="flex-item"><a class="card" href="http://fgw.fujian.gov.cn/" title="福建省" target="_blank"><div class="card-body">福建省</div></a></div>
+            <div id="江西省" class="flex-item"><a class="card" href="http://drc.jiangxi.gov.cn/" title="江西省" target="_blank"><div class="card-body">江西省</div></a></div>
+            <div id="山东省" class="flex-item"><a class="card" href="http://fgw.shandong.gov.cn/" title="山东省" target="_blank"><div class="card-body">山东省</div></a></div>
+            <div id="河南省" class="flex-item"><a class="card" href="http://fgw.henan.gov.cn/" title="河南省" target="_blank"><div class="card-body">河南省</div></a></div>
+            <div id="湖北省" class="flex-item"><a class="card" href="http://fgw.hubei.gov.cn/" title="湖北省" target="_blank"><div class="card-body">湖北省</div></a></div>
+            <div id="湖南省" class="flex-item"><a class="card" href="http://fgw.hunan.gov.cn/" title="湖南省" target="_blank"><div class="card-body">湖南省</div></a></div>
+            <div id="广东省" class="flex-item"><a class="card" href="http://drc.gd.gov.cn/" title="广东省" target="_blank"><div class="card-body">广东省</div></a></div>
+            <div id="广西壮族自治区" class="flex-item"><a class="card" href="http://fgw.gxzf.gov.cn/" title="广西壮族自治区" target="_blank"><div class="card-body">广西壮族自治区</div></a></div>
+            <div id="海南省" class="flex-item"><a class="card" href="http://plan.hainan.gov.cn/" title="海南省" target="_blank"><div class="card-body">海南省</div></a></div>
+            <div id="重庆市" class="flex-item"><a class="card" href="http://fzggw.cq.gov.cn/" title="重庆市" target="_blank"><div class="card-body">重庆市</div></a></div>
+            <div id="四川省" class="flex-item"><a class="card" href="http://fgw.sc.gov.cn/" title="四川省" target="_blank"><div class="card-body">四川省</div></a></div>
+            <div id="贵州省" class="flex-item"><a class="card" href="http://fgw.guizhou.gov.cn/" title="贵州省" target="_blank"><div class="card-body">贵州省</div></a></div>
+            <div id="云南省" class="flex-item"><a class="card" href="https://yndrc.yn.gov.cn/" title="云南省" target="_blank"><div class="card-body">云南省</div></a></div>
+            <div id="西藏自治区" class="flex-item"><a class="card" href="http://drc.xizang.gov.cn/" title="西藏自治区" target="_blank"><div class="card-body">西藏自治区</div></a></div>
+            <div id="陕西省" class="flex-item"><a class="card" href="http://sndrc.shaanxi.gov.cn/" title="陕西省" target="_blank"><div class="card-body">陕西省</div></a></div>
+            <div id="甘肃省" class="flex-item"><a class="card" href="http://fzgg.gansu.gov.cn/" title="甘肃省" target="_blank"><div class="card-body">甘肃省</div></a></div>
+            <div id="青海省" class="flex-item"><a class="card" href="http://fgw.qinghai.gov.cn/" title="青海省" target="_blank"><div class="card-body">青海省</div></a></div>
+            <div id="宁夏回族自治区" class="flex-item"><a class="card" href="http://fzggw.nx.gov.cn/" title="宁夏回族自治区" target="_blank"><div class="card-body">宁夏回族自治区</div></a></div>
+            <div id="新疆维吾尔自治区" class="flex-item"><a class="card" href="http://xjdrc.xinjiang.gov.cn/" title="新疆维吾尔自治区" target="_blank"><div class="card-body">新疆维吾尔自治区</div></a></div>
+            <div id="新疆生产建设兵团" class="flex-item"><a class="card" href="http://btfgw.xjbt.gov.cn/" title="新疆生产建设兵团" target="_blank"><div class="card-body">新疆生产建设兵团</div></a></div>
+            <div id="北京" class="flex-item"><a class="card" href="http://kw.beijing.gov.cn/" title="北京" target="_blank"><div class="card-body">北京</div></a></div>
+            <div id="天津" class="flex-item"><a class="card" href="http://kxjs.tj.gov.cn/" title="天津" target="_blank"><div class="card-body">天津</div></a></div>
+            <div id="河北" class="flex-item"><a class="card" href="http://kjt.hebei.gov.cn/" title="河北" target="_blank"><div class="card-body">河北</div></a></div>
+            <div id="山西" class="flex-item"><a class="card" href="http://kjt.shanxi.gov.cn/" title="山西" target="_blank"><div class="card-body">山西</div></a></div>
+            <div id="内蒙古" class="flex-item"><a class="card" href="http://kjt.nmg.gov.cn/" title="内蒙古" target="_blank"><div class="card-body">内蒙古</div></a></div>
+            <div id="辽宁" class="flex-item"><a class="card" href="http://kjt.ln.gov.cn/" title="辽宁" target="_blank"><div class="card-body">辽宁</div></a></div>
+            <div id="吉林" class="flex-item"><a class="card" href="http://kjt.jl.gov.cn/" title="吉林" target="_blank"><div class="card-body">吉林</div></a></div>
+            <div id="黑龙江" class="flex-item"><a class="card" href="http://kjt.hlj.gov.cn/" title="黑龙江" target="_blank"><div class="card-body">黑龙江</div></a></div>
+            <div id="上海" class="flex-item"><a class="card" href="http://stcsm.sh.gov.cn/" title="上海" target="_blank"><div class="card-body">上海</div></a></div>
+            <div id="江苏" class="flex-item"><a class="card" href="http://kxjst.jiangsu.gov.cn/" title="江苏" target="_blank"><div class="card-body">江苏</div></a></div>
+            <div id="浙江" class="flex-item"><a class="card" href="http://kjt.zj.gov.cn/" title="浙江" target="_blank"><div class="card-body">浙江</div></a></div>
+            <div id="安徽" class="flex-item"><a class="card" href="http://kjt.ah.gov.cn/" title="安徽" target="_blank"><div class="card-body">安徽</div></a></div>
+            <div id="福建" class="flex-item"><a class="card" href="http://kjt.fujian.gov.cn/" title="福建" target="_blank"><div class="card-body">福建</div></a></div>
+            <div id="江西" class="flex-item"><a class="card" href="http://kjt.jiangxi.gov.cn/" title="江西" target="_blank"><div class="card-body">江西</div></a></div>
+            <div id="山东" class="flex-item"><a class="card" href="http://kjt.shandong.gov.cn/" title="山东" target="_blank"><div class="card-body">山东</div></a></div>
+            <div id="河南" class="flex-item"><a class="card" href="http://kjt.henan.gov.cn/" title="河南" target="_blank"><div class="card-body">河南</div></a></div>
+            <div id="湖北" class="flex-item"><a class="card" href="http://kjt.hubei.gov.cn/" title="湖北" target="_blank"><div class="card-body">湖北</div></a></div>
+            <div id="湖南" class="flex-item"><a class="card" href="http://kjt.hunan.gov.cn/" title="湖南" target="_blank"><div class="card-body">湖南</div></a></div>
+            <div id="广东" class="flex-item"><a class="card" href="http://gdstc.gd.gov.cn/" title="广东" target="_blank"><div class="card-body">广东</div></a></div>
+            <div id="广西" class="flex-item"><a class="card" href="http://kjt.gxzf.gov.cn/" title="广西" target="_blank"><div class="card-body">广西</div></a></div>
+            <div id="海南" class="flex-item"><a class="card" href="http://dost.hainan.gov.cn/" title="海南" target="_blank"><div class="card-body">海南</div></a></div>
+            <div id="重庆" class="flex-item"><a class="card" href="http://kjj.cq.gov.cn/" title="重庆" target="_blank"><div class="card-body">重庆</div></a></div>
+            <div id="四川" class="flex-item"><a class="card" href="http://kjt.sc.gov.cn/" title="四川" target="_blank"><div class="card-body">四川</div></a></div>
+            <div id="贵州" class="flex-item"><a class="card" href="http://kjt.guizhou.gov.cn/" title="贵州" target="_blank"><div class="card-body">贵州</div></a></div>
+            <div id="云南" class="flex-item"><a class="card" href="http://kjt.yn.gov.cn/" title="云南" target="_blank"><div class="card-body">云南</div></a></div>
+            <div id="西藏" class="flex-item"><a class="card" href="http://sti.xizang.gov.cn/" title="西藏" target="_blank"><div class="card-body">西藏</div></a></div>
+            <div id="陕西" class="flex-item"><a class="card" href="http://kjt.shaanxi.gov.cn/" title="陕西" target="_blank"><div class="card-body">陕西</div></a></div>
+            <div id="甘肃" class="flex-item"><a class="card" href="http://kjt.gansu.gov.cn/" title="甘肃" target="_blank"><div class="card-body">甘肃</div></a></div>
+            <div id="青海" class="flex-item"><a class="card" href="http://kjt.qinghai.gov.cn/" title="青海" target="_blank"><div class="card-body">青海</div></a></div>
+            <div id="宁夏" class="flex-item"><a class="card" href="http://kjt.nx.gov.cn/" title="宁夏" target="_blank"><div class="card-body">宁夏</div></a></div>
+            <div id="新疆" class="flex-item"><a class="card" href="http://kjt.xinjiang.gov.cn/" title="新疆" target="_blank"><div class="card-body">新疆</div></a></div>
+            <div id="香港" class="flex-item"><a class="card" href="https://www.itc.gov.hk/" title="香港" target="_blank"><div class="card-body">香港</div></a></div>
+            <div id="澳门" class="flex-item"><a class="card" href="https://www.dsedt.gov.mo/zh_MO/pg_home" title="澳门" target="_blank"><div class="card-body">澳门</div></a></div>
+            <div id="北京市民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzzjw.beijing.gov.cn/" title="北京市民族宗教事务委员会" target="_blank"><div class="card-body">北京市民族宗教事务委员会</div></a></div>
+            <div id="天津市民族和宗教事务委员会" class="flex-item"><a class="card" href="http://mzzj.tj.gov.cn/" title="天津市民族和宗教事务委员会" target="_blank"><div class="card-body">天津市民族和宗教事务委员会</div></a></div>
+            <div id="河北省民族事务委员会" class="flex-item"><a class="card" href="http://mw.hebei.gov.cn/" title="河北省民族事务委员会" target="_blank"><div class="card-body">河北省民族事务委员会</div></a></div>
+            <div id="内蒙古自治区民族事务委员会" class="flex-item"><a class="card" href="http://mw.nmg.gov.cn/" title="内蒙古自治区民族事务委员会" target="_blank"><div class="card-body">内蒙古自治区民族事务委员会</div></a></div>
+            <div id="辽宁省民族和宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.ln.gov.cn/" title="辽宁省民族和宗教事务委员会" target="_blank"><div class="card-body">辽宁省民族和宗教事务委员会</div></a></div>
+            <div id="吉林省民族事务委员会" class="flex-item"><a class="card" href="http://mw.jl.gov.cn " title="吉林省民族事务委员会" target="_blank"><div class="card-body">吉林省民族事务委员会</div></a></div>
+            <div id="黑龙江省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.hlj.gov.cn/" title="黑龙江省民族宗教事务委员会" target="_blank"><div class="card-body">黑龙江省民族宗教事务委员会</div></a></div>
+            <div id="上海市民族和宗教事务局" class="flex-item"><a class="card" href="http://mzzj.sh.gov.cn/" title="上海市民族和宗教事务局" target="_blank"><div class="card-body">上海市民族和宗教事务局</div></a></div>
+            <div id="江苏省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.jiangsu.gov.cn/" title="江苏省民族宗教事务委员会" target="_blank"><div class="card-body">江苏省民族宗教事务委员会</div></a></div>
+            <div id="浙江省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.zj.gov.cn/" title="浙江省民族宗教事务委员会" target="_blank"><div class="card-body">浙江省民族宗教事务委员会</div></a></div>
+            <div id="安徽省民族事务委员会" class="flex-item"><a class="card" href="http://mwzjj.ah.gov.cn/" title="安徽省民族事务委员会" target="_blank"><div class="card-body">安徽省民族事务委员会</div></a></div>
+            <div id="福建省民族与宗教事务厅" class="flex-item"><a class="card" href="http://mzzjt.fujian.gov.cn/" title="福建省民族与宗教事务厅" target="_blank"><div class="card-body">福建省民族与宗教事务厅</div></a></div>
+            <div id="江西省民族宗教事务局" class="flex-item"><a class="card" href="http://mzj.jiangxi.gov.cn/" title="江西省民族宗教事务局" target="_blank"><div class="card-body">江西省民族宗教事务局</div></a></div>
+            <div id="山东省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.shandong.gov.cn/" title="山东省民族宗教事务委员会" target="_blank"><div class="card-body">山东省民族宗教事务委员会</div></a></div>
+            <div id="河南省民族宗教事务委员会" class="flex-item"><a class="card" href="http://hnsmzzjw.henan.gov.cn/" title="河南省民族宗教事务委员会" target="_blank"><div class="card-body">河南省民族宗教事务委员会</div></a></div>
+            <div id="湖北省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.hubei.gov.cn/" title="湖北省民族宗教事务委员会" target="_blank"><div class="card-body">湖北省民族宗教事务委员会</div></a></div>
+            <div id="湖南省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.hunan.gov.cn/" title="湖南省民族宗教事务委员会" target="_blank"><div class="card-body">湖南省民族宗教事务委员会</div></a></div>
+            <div id="广东省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzzjw.gd.gov.cn/" title="广东省民族宗教事务委员会" target="_blank"><div class="card-body">广东省民族宗教事务委员会</div></a></div>
+            <div id="广西壮族自治区民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.gxzf.gov.cn/" title="广西壮族自治区民族宗教事务委员会" target="_blank"><div class="card-body">广西壮族自治区民族宗教事务委员会</div></a></div>
+            <div id="海南省民族宗教事务委员会" class="flex-item"><a class="card" href="http://smzw.hainan.gov.cn/" title="海南省民族宗教事务委员会" target="_blank"><div class="card-body">海南省民族宗教事务委员会</div></a></div>
+            <div id="重庆市民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzzjw.cq.gov.cn/" title="重庆市民族宗教事务委员会" target="_blank"><div class="card-body">重庆市民族宗教事务委员会</div></a></div>
+            <div id="四川省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.sc.gov.cn/" title="四川省民族宗教事务委员会" target="_blank"><div class="card-body">四川省民族宗教事务委员会</div></a></div>
+            <div id="贵州省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.guizhou.gov.cn/" title="贵州省民族宗教事务委员会" target="_blank"><div class="card-body">贵州省民族宗教事务委员会</div></a></div>
+            <div id="云南省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzzj.yn.gov.cn/" title="云南省民族宗教事务委员会" target="_blank"><div class="card-body">云南省民族宗教事务委员会</div></a></div>
+            <div id="西藏自治区民族事务委员会" class="flex-item"><a class="card" href="http://mw.xizang.gov.cn/" title="西藏自治区民族事务委员会" target="_blank"><div class="card-body">西藏自治区民族事务委员会</div></a></div>
+            <div id="陕西省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzzj.shaanxi.gov.cn/" title="陕西省民族宗教事务委员会" target="_blank"><div class="card-body">陕西省民族宗教事务委员会</div></a></div>
+            <div id="甘肃省民族事务委员会" class="flex-item"><a class="card" href="http://mzsw.gansu.gov.cn/" title="甘肃省民族事务委员会" target="_blank"><div class="card-body">甘肃省民族事务委员会</div></a></div>
+            <div id="青海省民族宗教事务委员会" class="flex-item"><a class="card" href="http://mzw.qinghai.gov.cn/" title="青海省民族宗教事务委员会" target="_blank"><div class="card-body">青海省民族宗教事务委员会</div></a></div>
+            <div id="宁夏回族自治区民族事务委员会" class="flex-item"><a class="card" href="http://mzzj.nx.gov.cn/" title="宁夏回族自治区民族事务委员会" target="_blank"><div class="card-body">宁夏回族自治区民族事务委员会</div></a></div>
+            <div id="新疆维吾尔自治区民族事务委员会" class="flex-item"><a class="card" href="https://mwzjswj.xinjiang.gov.cn/" title="新疆维吾尔自治区民族事务委员会" target="_blank"><div class="card-body">新疆维吾尔自治区民族事务委员会</div></a></div>
+            <div id="北京市公安局" class="flex-item"><a class="card" href="http://gaj.beijing.gov.cn" title="北京市公安局" target="_blank"><div class="card-body">北京市公安局</div></a></div>
+            <div id="天津市公安局" class="flex-item"><a class="card" href="http://ga.tj.gov.cn" title="天津市公安局" target="_blank"><div class="card-body">天津市公安局</div></a></div>
+            <div id="河北省公安厅" class="flex-item"><a class="card" href="http://gat.hebei.gov.cn" title="河北省公安厅" target="_blank"><div class="card-body">河北省公安厅</div></a></div>
+            <div id="山西省公安厅" class="flex-item"><a class="card" href="http://gat.shanxi.gov.cn" title="山西省公安厅" target="_blank"><div class="card-body">山西省公安厅</div></a></div>
+            <div id="内蒙古自治区公安厅" class="flex-item"><a class="card" href="http://gat.nmg.gov.cn" title="内蒙古自治区公安厅" target="_blank"><div class="card-body">内蒙古自治区公安厅</div></a></div>
+            <div id="辽宁省公安厅" class="flex-item"><a class="card" href="http://gat.ln.gov.cn" title="辽宁省公安厅" target="_blank"><div class="card-body">辽宁省公安厅</div></a></div>
+            <div id="吉林省公安厅" class="flex-item"><a class="card" href="http://gat.jl.gov.cn" title="吉林省公安厅" target="_blank"><div class="card-body">吉林省公安厅</div></a></div>
+            <div id="黑龙江省公安厅" class="flex-item"><a class="card" href="http://gat.hlj.gov.cn/" title="黑龙江省公安厅" target="_blank"><div class="card-body">黑龙江省公安厅</div></a></div>
+            <div id="上海市公安局" class="flex-item"><a class="card" href="http://gaj.sh.gov.cn" title="上海市公安局" target="_blank"><div class="card-body">上海市公安局</div></a></div>
+            <div id="江苏省公安厅" class="flex-item"><a class="card" href="http://gat.jiangsu.gov.cn/" title="江苏省公安厅" target="_blank"><div class="card-body">江苏省公安厅</div></a></div>
+            <div id="浙江省公安厅" class="flex-item"><a class="card" href="http://gat.zj.gov.cn" title="浙江省公安厅" target="_blank"><div class="card-body">浙江省公安厅</div></a></div>
+            <div id="安徽省公安厅" class="flex-item"><a class="card" href="http://Gat.ah.gov.cn" title="安徽省公安厅" target="_blank"><div class="card-body">安徽省公安厅</div></a></div>
+            <div id="福建省公安厅" class="flex-item"><a class="card" href="http://Gat.fujian.gov.cn" title="福建省公安厅" target="_blank"><div class="card-body">福建省公安厅</div></a></div>
+            <div id="江西省公安厅" class="flex-item"><a class="card" href="http://gat.jiangxi.gov.cn/" title="江西省公安厅" target="_blank"><div class="card-body">江西省公安厅</div></a></div>
+            <div id="山东省公安厅" class="flex-item"><a class="card" href="http://gat.shandong.gov.cn/" title="山东省公安厅" target="_blank"><div class="card-body">山东省公安厅</div></a></div>
+            <div id="河南省公安厅" class="flex-item"><a class="card" href="http://hnga.henan.gov.cn/" title="河南省公安厅" target="_blank"><div class="card-body">河南省公安厅</div></a></div>
+            <div id="湖北省公安厅" class="flex-item"><a class="card" href="http://gat.hubei.gov.cn" title="湖北省公安厅" target="_blank"><div class="card-body">湖北省公安厅</div></a></div>
+            <div id="湖南省公安厅" class="flex-item"><a class="card" href="http://gat.hunan.gov.cn/" title="湖南省公安厅" target="_blank"><div class="card-body">湖南省公安厅</div></a></div>
+            <div id="广东省公安厅" class="flex-item"><a class="card" href="http://gdga.gd.gov.cn/" title="广东省公安厅" target="_blank"><div class="card-body">广东省公安厅</div></a></div>
+            <div id="广西壮族自治区公安厅" class="flex-item"><a class="card" href="http://gat.gxzf.gov.cn/" title="广西壮族自治区公安厅" target="_blank"><div class="card-body">广西壮族自治区公安厅</div></a></div>
+            <div id="海南省公安厅" class="flex-item"><a class="card" href="http://ga.hainan.gov.cn/" title="海南省公安厅" target="_blank"><div class="card-body">海南省公安厅</div></a></div>
+            <div id="重庆市公安局" class="flex-item"><a class="card" href="http://gaj.cq.gov.cn/" title="重庆市公安局" target="_blank"><div class="card-body">重庆市公安局</div></a></div>
+            <div id="四川省公安厅" class="flex-item"><a class="card" href="http://gat.sc.gov.cn/" title="四川省公安厅" target="_blank"><div class="card-body">四川省公安厅</div></a></div>
+            <div id="贵州省公安厅" class="flex-item"><a class="card" href="http://gat.guizhou.gov.cn" title="贵州省公安厅" target="_blank"><div class="card-body">贵州省公安厅</div></a></div>
+            <div id="云南省公安厅" class="flex-item"><a class="card" href="http://gonganting.yn.gov.cn" title="云南省公安厅" target="_blank"><div class="card-body">云南省公安厅</div></a></div>
+            <div id="西藏自治区公安厅" class="flex-item"><a class="card" href="http://gat.xizang.gov.cn/" title="西藏自治区公安厅" target="_blank"><div class="card-body">西藏自治区公安厅</div></a></div>
+            <div id="陕西省公安厅" class="flex-item"><a class="card" href="http://gat.shaanxi.gov.cn/" title="陕西省公安厅" target="_blank"><div class="card-body">陕西省公安厅</div></a></div>
+            <div id="甘肃省公安厅" class="flex-item"><a class="card" href="http://gat.gansu.gov.cn" title="甘肃省公安厅" target="_blank"><div class="card-body">甘肃省公安厅</div></a></div>
+            <div id="青海省公安厅" class="flex-item"><a class="card" href="http://gat.qinghai.gov.cn" title="青海省公安厅" target="_blank"><div class="card-body">青海省公安厅</div></a></div>
+            <div id="宁夏回族自治区公安厅" class="flex-item"><a class="card" href="http://gat.nx.gov.cn/" title="宁夏回族自治区公安厅" target="_blank"><div class="card-body">宁夏回族自治区公安厅</div></a></div>
+            <div id="新疆维吾尔自治区公安厅" class="flex-item"><a class="card" href="http://gat.xinjiang.gov.cn/" title="新疆维吾尔自治区公安厅" target="_blank"><div class="card-body">新疆维吾尔自治区公安厅</div></a></div>
+            <div id="新疆生产建设兵团公安局" class="flex-item"><a class="card" href="http://btgaj.xjbt.gov.cn/" title="新疆生产建设兵团公安局" target="_blank"><div class="card-body">新疆生产建设兵团公安局</div></a></div>
+            <div id="北京民政" class="flex-item"><a class="card" href="http://mzj.beijing.gov.cn/" title="北京民政" target="_blank"><div class="card-body">北京民政</div></a></div>
+            <div id="天津民政" class="flex-item"><a class="card" href="https://mz.tj.gov.cn/" title="天津民政" target="_blank"><div class="card-body">天津民政</div></a></div>
+            <div id="河北民政" class="flex-item"><a class="card" href="https://minzheng.hebei.gov.cn/" title="河北民政" target="_blank"><div class="card-body">河北民政</div></a></div>
+            <div id="山西民政" class="flex-item"><a class="card" href="http://mzt.shanxi.gov.cn/" title="山西民政" target="_blank"><div class="card-body">山西民政</div></a></div>
+            <div id="内蒙古民政" class="flex-item"><a class="card" href="http://mzt.nmg.gov.cn/" title="内蒙古民政" target="_blank"><div class="card-body">内蒙古民政</div></a></div>
+            <div id="辽宁民政" class="flex-item"><a class="card" href="https://mzt.ln.gov.cn/" title="辽宁民政" target="_blank"><div class="card-body">辽宁民政</div></a></div>
+            <div id="吉林民政" class="flex-item"><a class="card" href="http://mzt.jl.gov.cn/" title="吉林民政" target="_blank"><div class="card-body">吉林民政</div></a></div>
+            <div id="黑龙江民政" class="flex-item"><a class="card" href="https://mzt.hlj.gov.cn/" title="黑龙江民政" target="_blank"><div class="card-body">黑龙江民政</div></a></div>
+            <div id="上海民政" class="flex-item"><a class="card" href="https://mzj.sh.gov.cn/" title="上海民政" target="_blank"><div class="card-body">上海民政</div></a></div>
+            <div id="江苏民政" class="flex-item"><a class="card" href="http://mzt.jiangsu.gov.cn/" title="江苏民政" target="_blank"><div class="card-body">江苏民政</div></a></div>
+            <div id="浙江民政" class="flex-item"><a class="card" href="http://mzt.zj.gov.cn/" title="浙江民政" target="_blank"><div class="card-body">浙江民政</div></a></div>
+            <div id="安徽民政" class="flex-item"><a class="card" href="http://mz.ah.gov.cn/" title="安徽民政" target="_blank"><div class="card-body">安徽民政</div></a></div>
+            <div id="福建民政" class="flex-item"><a class="card" href="http://mzt.fujian.gov.cn/" title="福建民政" target="_blank"><div class="card-body">福建民政</div></a></div>
+            <div id="江西民政" class="flex-item"><a class="card" href="http://mzt.jiangxi.gov.cn/" title="江西民政" target="_blank"><div class="card-body">江西民政</div></a></div>
+            <div id="山东民政" class="flex-item"><a class="card" href="http://mzt.shandong.gov.cn/" title="山东民政" target="_blank"><div class="card-body">山东民政</div></a></div>
+            <div id="河南民政" class="flex-item"><a class="card" href="https://mzt.henan.gov.cn/" title="河南民政" target="_blank"><div class="card-body">河南民政</div></a></div>
+            <div id="湖北民政" class="flex-item"><a class="card" href="http://mzt.hubei.gov.cn/" title="湖北民政" target="_blank"><div class="card-body">湖北民政</div></a></div>
+            <div id="湖南民政" class="flex-item"><a class="card" href="http://mzt.hunan.gov.cn/" title="湖南民政" target="_blank"><div class="card-body">湖南民政</div></a></div>
+            <div id="广东民政" class="flex-item"><a class="card" href="http://smzt.gd.gov.cn/" title="广东民政" target="_blank"><div class="card-body">广东民政</div></a></div>
+            <div id="广西民政" class="flex-item"><a class="card" href="http://mzt.gxzf.gov.cn/" title="广西民政" target="_blank"><div class="card-body">广西民政</div></a></div>
+            <div id="海南民政" class="flex-item"><a class="card" href="http://mz.hainan.gov.cn/" title="海南民政" target="_blank"><div class="card-body">海南民政</div></a></div>
+            <div id="重庆民政" class="flex-item"><a class="card" href="http://mzj.cq.gov.cn/" title="重庆民政" target="_blank"><div class="card-body">重庆民政</div></a></div>
+            <div id="四川民政" class="flex-item"><a class="card" href="http://mzt.sc.gov.cn/" title="四川民政" target="_blank"><div class="card-body">四川民政</div></a></div>
+            <div id="贵州民政" class="flex-item"><a class="card" href="http://mzt.guizhou.gov.cn/" title="贵州民政" target="_blank"><div class="card-body">贵州民政</div></a></div>
+            <div id="云南民政" class="flex-item"><a class="card" href="http://ynmz.yn.gov.cn/" title="云南民政" target="_blank"><div class="card-body">云南民政</div></a></div>
+            <div id="西藏民政" class="flex-item"><a class="card" href="http://mzt.xizang.gov.cn/" title="西藏民政" target="_blank"><div class="card-body">西藏民政</div></a></div>
+            <div id="陕西民政" class="flex-item"><a class="card" href="http://mzt.shaanxi.gov.cn/" title="陕西民政" target="_blank"><div class="card-body">陕西民政</div></a></div>
+            <div id="甘肃民政" class="flex-item"><a class="card" href="http://mzt.gansu.gov.cn/" title="甘肃民政" target="_blank"><div class="card-body">甘肃民政</div></a></div>
+            <div id="青海民政" class="flex-item"><a class="card" href="https://mzt.qinghai.gov.cn/" title="青海民政" target="_blank"><div class="card-body">青海民政</div></a></div>
+            <div id="宁夏民政" class="flex-item"><a class="card" href="http://mca.nx.gov.cn/" title="宁夏民政" target="_blank"><div class="card-body">宁夏民政</div></a></div>
+            <div id="新疆民政" class="flex-item"><a class="card" href="http://mzt.xinjiang.gov.cn/" title="新疆民政" target="_blank"><div class="card-body">新疆民政</div></a></div>
+            <div id="北京" class="flex-item"><a class="card" href="http://sfj.beijing.gov.cn/" title="北京" target="_blank"><div class="card-body">北京</div></a></div>
+            <div id="天津" class="flex-item"><a class="card" href="http://sf.tj.gov.cn/" title="天津" target="_blank"><div class="card-body">天津</div></a></div>
+            <div id="河北" class="flex-item"><a class="card" href="http://sft.hebei.gov.cn/" title="河北" target="_blank"><div class="card-body">河北</div></a></div>
+            <div id="山西" class="flex-item"><a class="card" href="http://sft.shanxi.gov.cn/" title="山西" target="_blank"><div class="card-body">山西</div></a></div>
+            <div id="内蒙古" class="flex-item"><a class="card" href="http://sft.nmg.gov.cn/" title="内蒙古" target="_blank"><div class="card-body">内蒙古</div></a></div>
+            <div id="辽宁" class="flex-item"><a class="card" href="http://sft.ln.gov.cn/" title="辽宁" target="_blank"><div class="card-body">辽宁</div></a></div>
+            <div id="吉林" class="flex-item"><a class="card" href="http://sft.jl.gov.cn/" title="吉林" target="_blank"><div class="card-body">吉林</div></a></div>
+            <div id="黑龙江" class="flex-item"><a class="card" href="http://sft.hlj.gov.cn/" title="黑龙江" target="_blank"><div class="card-body">黑龙江</div></a></div>
+            <div id="上海" class="flex-item"><a class="card" href="http://sfj.sh.gov.cn/" title="上海" target="_blank"><div class="card-body">上海</div></a></div>
+            <div id="江苏" class="flex-item"><a class="card" href="http://sft.jiangsu.gov.cn/" title="江苏" target="_blank"><div class="card-body">江苏</div></a></div>
+            <div id="浙江" class="flex-item"><a class="card" href="http://sft.zj.gov.cn/" title="浙江" target="_blank"><div class="card-body">浙江</div></a></div>
+            <div id="安徽" class="flex-item"><a class="card" href="http://sft.ah.gov.cn/" title="安徽" target="_blank"><div class="card-body">安徽</div></a></div>
+            <div id="福建" class="flex-item"><a class="card" href="http://sft.fujian.gov.cn/" title="福建" target="_blank"><div class="card-body">福建</div></a></div>
+            <div id="江西" class="flex-item"><a class="card" href="http://sf.jiangxi.gov.cn/" title="江西" target="_blank"><div class="card-body">江西</div></a></div>
+            <div id="山东" class="flex-item"><a class="card" href="http://sft.shandong.gov.cn/" title="山东" target="_blank"><div class="card-body">山东</div></a></div>
+            <div id="河南" class="flex-item"><a class="card" href="http://sft.henan.gov.cn/" title="河南" target="_blank"><div class="card-body">河南</div></a></div>
+            <div id="湖北" class="flex-item"><a class="card" href="http://sft.hubei.gov.cn/" title="湖北" target="_blank"><div class="card-body">湖北</div></a></div>
+            <div id="湖南" class="flex-item"><a class="card" href="http://sft.hunan.gov.cn/" title="湖南" target="_blank"><div class="card-body">湖南</div></a></div>
+            <div id="广东" class="flex-item"><a class="card" href="http://sft.gd.gov.cn/" title="广东" target="_blank"><div class="card-body">广东</div></a></div>
+            <div id="广西" class="flex-item"><a class="card" href="http://sft.gxzf.gov.cn/" title="广西" target="_blank"><div class="card-body">广西</div></a></div>
+            <div id="海南" class="flex-item"><a class="card" href="http://justice.hainan.gov.cn/" title="海南" target="_blank"><div class="card-body">海南</div></a></div>
+            <div id="重庆" class="flex-item"><a class="card" href="http://sfj.cq.gov.cn/" title="重庆" target="_blank"><div class="card-body">重庆</div></a></div>
+            <div id="四川" class="flex-item"><a class="card" href="http://sft.sc.gov.cn/" title="四川" target="_blank"><div class="card-body">四川</div></a></div>
+            <div id="贵州" class="flex-item"><a class="card" href="http://sft.guizhou.gov.cn/" title="贵州" target="_blank"><div class="card-body">贵州</div></a></div>
+            <div id="云南" class="flex-item"><a class="card" href="http://sft.yn.gov.cn/" title="云南" target="_blank"><div class="card-body">云南</div></a></div>
+            <div id="西藏" class="flex-item"><a class="card" href="http://sft.xizang.gov.cn/" title="西藏" target="_blank"><div class="card-body">西藏</div></a></div>
+            <div id="陕西" class="flex-item"><a class="card" href="http://sft.shaanxi.gov.cn/" title="陕西" target="_blank"><div class="card-body">陕西</div></a></div>
+            <div id="甘肃" class="flex-item"><a class="card" href="http://sft.gansu.gov.cn/" title="甘肃" target="_blank"><div class="card-body">甘肃</div></a></div>
+            <div id="青海" class="flex-item"><a class="card" href="http://sft.qinghai.gov.cn/" title="青海" target="_blank"><div class="card-body">青海</div></a></div>
+            <div id="宁夏" class="flex-item"><a class="card" href="http://sft.nx.gov.cn/" title="宁夏" target="_blank"><div class="card-body">宁夏</div></a></div>
+            <div id="新疆" class="flex-item"><a class="card" href="http://sft.xinjiang.gov.cn/" title="新疆" target="_blank"><div class="card-body">新疆</div></a></div>
+            <div id="北京" class="flex-item"><a class="card" href="http://czj.beijing.gov.cn/" title="北京" target="_blank"><div class="card-body">北京</div></a></div>
+            <div id="天津" class="flex-item"><a class="card" href="http://cz.tj.gov.cn" title="天津" target="_blank"><div class="card-body">天津</div></a></div>
+            <div id="河北" class="flex-item"><a class="card" href="http://czt.hebei.gov.cn/" title="河北" target="_blank"><div class="card-body">河北</div></a></div>
+            <div id="山西" class="flex-item"><a class="card" href="http://czt.shanxi.gov.cn/" title="山西" target="_blank"><div class="card-body">山西</div></a></div>
+            <div id="内蒙古" class="flex-item"><a class="card" href="http://czt.nmg.gov.cn/" title="内蒙古" target="_blank"><div class="card-body">内蒙古</div></a></div>
+            <div id="辽宁" class="flex-item"><a class="card" href="http://czt.ln.gov.cn" title="辽宁" target="_blank"><div class="card-body">辽宁</div></a></div>
+            <div id="大连" class="flex-item"><a class="card" href="http://www.czj.dl.gov.cn/" title="大连" target="_blank"><div class="card-body">大连</div></a></div>
+            <div id="吉林" class="flex-item"><a class="card" href="http://czt.jl.gov.cn/" title="吉林" target="_blank"><div class="card-body">吉林</div></a></div>
+            <div id="黑龙江" class="flex-item"><a class="card" href="http://czt.hlj.gov.cn/" title="黑龙江" target="_blank"><div class="card-body">黑龙江</div></a></div>
+            <div id="上海" class="flex-item"><a class="card" href="http://www.czj.sh.gov.cn/" title="上海" target="_blank"><div class="card-body">上海</div></a></div>
+            <div id="江苏" class="flex-item"><a class="card" href="http://czt.jiangsu.gov.cn/" title="江苏" target="_blank"><div class="card-body">江苏</div></a></div>
+            <div id="浙江" class="flex-item"><a class="card" href="http://czt.zj.gov.cn/" title="浙江" target="_blank"><div class="card-body">浙江</div></a></div>
+            <div id="宁波" class="flex-item"><a class="card" href="http://czj.ningbo.gov.cn/" title="宁波" target="_blank"><div class="card-body">宁波</div></a></div>
+            <div id="安徽" class="flex-item"><a class="card" href="http://czt.ah.gov.cn/" title="安徽" target="_blank"><div class="card-body">安徽</div></a></div>
+            <div id="福建" class="flex-item"><a class="card" href="http://czt.fujian.gov.cn/" title="福建" target="_blank"><div class="card-body">福建</div></a></div>
+            <div id="厦门" class="flex-item"><a class="card" href="http://cz.xm.gov.cn" title="厦门" target="_blank"><div class="card-body">厦门</div></a></div>
+            <div id="江西" class="flex-item"><a class="card" href="http://jxf.jiangxi.gov.cn/" title="江西" target="_blank"><div class="card-body">江西</div></a></div>
+            <div id="山东" class="flex-item"><a class="card" href="http://czt.shandong.gov.cn/" title="山东" target="_blank"><div class="card-body">山东</div></a></div>
+            <div id="青岛" class="flex-item"><a class="card" href="http://qdcz.qingdao.gov.cn/" title="青岛" target="_blank"><div class="card-body">青岛</div></a></div>
+            <div id="河南" class="flex-item"><a class="card" href="https://czt.henan.gov.cn/" title="河南" target="_blank"><div class="card-body">河南</div></a></div>
+            <div id="湖北" class="flex-item"><a class="card" href="http://czt.hubei.gov.cn/" title="湖北" target="_blank"><div class="card-body">湖北</div></a></div>
+            <div id="湖南" class="flex-item"><a class="card" href="http://czt.hunan.gov.cn/" title="湖南" target="_blank"><div class="card-body">湖南</div></a></div>
+            <div id="广东" class="flex-item"><a class="card" href="http://czt.gd.gov.cn" title="广东" target="_blank"><div class="card-body">广东</div></a></div>
+            <div id="深圳" class="flex-item"><a class="card" href="http://szfb.sz.gov.cn/" title="深圳" target="_blank"><div class="card-body">深圳</div></a></div>
+            <div id="广西" class="flex-item"><a class="card" href="http://czt.gxzf.gov.cn/" title="广西" target="_blank"><div class="card-body">广西</div></a></div>
+            <div id="海南" class="flex-item"><a class="card" href="http://mof.hainan.gov.cn/" title="海南" target="_blank"><div class="card-body">海南</div></a></div>
+            <div id="重庆" class="flex-item"><a class="card" href="http://czj.cq.gov.cn/" title="重庆" target="_blank"><div class="card-body">重庆</div></a></div>
+            <div id="四川" class="flex-item"><a class="card" href="http://czt.sc.gov.cn/" title="四川" target="_blank"><div class="card-body">四川</div></a></div>
+            <div id="贵州" class="flex-item"><a class="card" href="http://czt.guizhou.gov.cn/" title="贵州" target="_blank"><div class="card-body">贵州</div></a></div>
+            <div id="云南" class="flex-item"><a class="card" href="http://czt.yn.gov.cn/" title="云南" target="_blank"><div class="card-body">云南</div></a></div>
+            <div id="陕西" class="flex-item"><a class="card" href="http://czt.shaanxi.gov.cn/" title="陕西" target="_blank"><div class="card-body">陕西</div></a></div>
+            <div id="甘肃" class="flex-item"><a class="card" href="http://czt.gansu.gov.cn/" title="甘肃" target="_blank"><div class="card-body">甘肃</div></a></div>
+            <div id="青海" class="flex-item"><a class="card" href="http://czt.qinghai.gov.cn/" title="青海" target="_blank"><div class="card-body">青海</div></a></div>
+            <div id="宁夏" class="flex-item"><a class="card" href="http://czt.nx.gov.cn/" title="宁夏" target="_blank"><div class="card-body">宁夏</div></a></div>
+            <div id="新疆" class="flex-item"><a class="card" href="http://czt.xinjiang.gov.cn/" title="新疆" target="_blank"><div class="card-body">新疆</div></a></div>
+            <div id="西藏" class="flex-item"><a class="card" href="#" title="西藏" target="_blank"><div class="card-body">西藏</div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
