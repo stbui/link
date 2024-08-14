@@ -2,7 +2,7 @@
   "name": "link",
   "version": "0.0.0",
   "scripts": {
-    "build": "node tools.j && node build.js",
+    "build": "node tools.js && node build.js",
     "tools": "node tools.js"
   },
   "dependencies": {
