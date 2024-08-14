@@ -2,8 +2,8 @@ const config = require('./config.json');
 const fs = require('fs')
 
 const column = {
-    "title": "孕婴童导航",
-    "type": "yyt"
+    "title": "地方志",
+    "type": "difangzhi"
 }
 
 function createColunm(column) {
