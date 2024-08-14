@@ -15,6 +15,10 @@
     "title": "院校导航",
     "type": "school"
   },
+    {
+    "title": "公司",
+    "type": "company"
+  },
   {
     "title": "人工智能",
     "type": "ai"
