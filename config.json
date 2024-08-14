@@ -1,5 +1,5 @@
 [
-    {
+  {
     "title": "政府网站",
     "type": "office"
   },
@@ -11,11 +11,11 @@
     "title": "上海导航",
     "type": "shanghai"
   },
-    {
+  {
     "title": "院校导航",
     "type": "school"
   },
-    {
+  {
     "title": "公司",
     "type": "company"
   },
@@ -258,5 +258,9 @@
   {
     "title": "孕婴童导航",
     "type": "yyt"
+  },
+  {
+    "title": "地方志",
+    "type": "difangzhi"
   }
 ]
