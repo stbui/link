@@ -14,13 +14,11 @@
       }
       body,
       html {
-        height: 100%;
         margin: 0;
         padding: 0;
         border: 0;
       }
       body {
-        width: 100%;
         min-height: 100vh;
         vertical-align: baseline;
         word-wrap: break-word;
@@ -38,7 +36,10 @@
         text-decoration: none;
         color: #e94041;
       }
-
+      .size-full {
+        width: 100%;
+        height: 100%;
+      }
       .sticky {
         position: sticky;
         top: 0;
@@ -53,7 +54,6 @@
       .border-top {
         border-top: 1px solid #dee2e6;
       }
-
       .sidebar-nav {
         position: fixed;
         top: 0;
@@ -108,38 +108,29 @@
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
       }
-
       .header-nav {
         position: fixed;
         right: 0;
         left: 200px;
         background: rgb(255 255 255 / 77%);
       }
-
       .main-content {
         flex-direction: column;
         display: flex;
       }
-
       .flex-fill {
         flex: 1 1 auto;
       }
-
       .container {
         margin: auto;
       }
-      .main-content {
-        margin-left: 200px;
-      }
-      .content {
-        margin-left: 12px;
-      }
+      .ml200{ margin-left: 200px; }
+      .ml12{ margin-left: 12px; }
 
       .customize-width {
         min-width: 1140px;
         max-width: 1900px;
       }
-
       .flex {
         display: flex;
         flex-wrap: wrap;
@@ -179,7 +170,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="size-full">
     <div class="sidebar-nav sticky">
       <div class="sidebar-nav-inner">
         <div class="sidebar-logo">
@@ -208,10 +199,10 @@
       </div>
     </div>
 
-    <div class="main-content flex-fill">
+    <div class="ml200 flex-fill">
       <div class="container customize-width">
         <div class="header-nav"></div>
-        <div class="content">
+        <div class="ml12">
           <div class="flex"><% for (var i=0;i<data.length;i++)  { %>
             <div id="<%= data[i].name %>" class="<%= data[i].url?'flex-item':'column' %>"><a class="card" href="<%= data[i].url ? data[i].url : '#'+data[i].name %>" title="<%= data[i].name %>" target="<%= data[i].url ? '_blank' : '_self' %>"><div class="card-body"><%= data[i].name %></div></a></div><% } %>
           </div>
