@@ -2,7 +2,7 @@ const ejs = require('ejs');
 const fs = require('fs');
 const config = require('./config.json');
 
-const html = fs.readFileSync('./template/table.hltml', { encoding: 'utf-8' })
+const html = fs.readFileSync('./template/table.html', { encoding: 'utf-8' })
 
 const html2 = `
 <!DOCTYPE html>
