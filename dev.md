@@ -1,11 +1,39 @@
 
+```js
 var a =''
 $('.gg-list').find('a').each((_,item)=>{
 var link = $(item).attr('href');
     var text = $(item).text();
-    a+=text+','+link+'\r'
+    a+=text+','+link+'\n'
 });
 copy(a)
+```
+
+```js
+function parse(element) {
+  var t = '';
+  $(element)
+    .find('option')
+    .each((_, ele) => {
+      var url = $(ele).attr('value');
+      var text = $(ele).text();
+      t += text + ',' + url + '\n';
+    });
+
+  $(element)
+    .find('a')
+    .each((_, ee) => {
+      var url = $(ee).attr('href');
+      var text = $(ee).text();
+      t += text + ',' + url + '\n';
+    });
+
+  copy(t);
+  return t;
+}
+
+parse('');
+```
 
 
 
