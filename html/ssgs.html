@@ -13,19 +13,22 @@
       a{color:#282a2d;outline:0!important;text-decoration:none}
       a:hover{text-decoration:none;color:#e94041}
       .size-full{width:100%;height:100%}
+      .h-full {height: 100%;}
+      .flex{display: flex;}
+      .flex-col {flex-direction: column;}
       .sticky{position:sticky;top:0;z-index:1080}
       .overflow-hidden{overflow:hidden}
       .mt24{margin-top:24px}
       .border-top{border-top:1px solid #dee2e6}
       .sidebar-nav{position:fixed;top:0;font-size:14px;width:200px;height:100vh;z-index:1081;background:#f0f2f4;box-shadow:0 0 32px 0 rgba(0,0,0,.1)}
-      .sidebar-logo{height:74px;border-bottom:1px solid #dee2e6;background:#fff;text-align:center;line-height:74px;font-size:22px}
+      .sidebar-logo{height:48px;border-bottom:1px solid #dee2e6;background:#fff;text-align:center;line-height:48px;font-size:22px}
       .sidebar-nav ul{margin:0;padding:0}
       .sidebar-item{position:relative;display:block}
       .sidebar-item:hover{background:rgba(0,0,0,.1);color:#e94041}
       .sidebar-item a:hover{color:#e94041}
       .sidebar-menu-inner a,.sidebar-nav .flex-bottom a{display:flex;overflow:hidden;padding:4px;margin:0 4px;color:#515c6b;font-size:16px;align-items:center;white-space:nowrap;transition:all .3s}
-      .sidebar-nav-inner{max-width:200px;display:flex;flex-direction:column;height:100%}
-      .sidebar-nav-inner .flex-fill{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+      .sidebar-nav-inner{max-width:200px;}
+      .sidebar-nav-inner .flex-fill{overflow-y:auto;overflow-x:hidden;}
       .header-nav{position:fixed;right:0;left:200px;background:rgb(255 255 255 / 77%)}
       .main-content{flex-direction:column;display:flex}
       .flex-fill{flex:1 1 auto}
@@ -44,7 +47,7 @@
   </head>
   <body class="size-full">
     <div class="sidebar-nav sticky">
-      <div class="sidebar-nav-inner">
+      <div class="flex flex-col h-full sidebar-nav-inner">
         <div class="sidebar-logo">
           <div class="logo overflow-hidden">上市公司</div>
         </div>
@@ -52,243 +55,85 @@
           <div class="sidebar-scroll">
             <div class="sidebar-menu-inner">
               <ul>
-                <li class="sidebar-item">
-                  <a href="#农业行业"><span>农业行业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#林业行业"><span>林业行业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#畜牧业"><span>畜牧业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#渔业"><span>渔业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#煤炭开采和洗选业"><span>煤炭开采和洗选业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#石油和天然气开采业"><span>石油和天然气开采业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#黑色金属矿采选业"><span>黑色金属矿采选业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#有色金属矿采选业"><span>有色金属矿采选业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#非金属矿采选业"><span>非金属矿采选业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#开采辅助活动"><span>开采辅助活动</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#农副食品加工业"><span>农副食品加工业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#食品制造业"><span>食品制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#酒、饮料和精制茶制造业"><span>酒、饮料和精制茶制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#纺织业"><span>纺织业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#纺织服装、服饰业"><span>纺织服装、服饰业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#皮革、毛皮、羽毛及其制品和制鞋业"><span>皮革、毛皮、羽毛及其制品和制鞋业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#木材加工和木、竹、藤、棕、草制品业"><span>木材加工和木、竹、藤、棕、草制品业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#家具制造业"><span>家具制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#造纸和纸制品业"><span>造纸和纸制品业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#印刷和记录媒介复制业"><span>印刷和记录媒介复制业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#文教、工美、体育和娱乐用品制造业"><span>文教、工美、体育和娱乐用品制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#石油加工、炼焦和核燃料加工业"><span>石油加工、炼焦和核燃料加工业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#化学原料和化学制品制造业"><span>化学原料和化学制品制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#医药制造业"><span>医药制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#化学纤维制造业"><span>化学纤维制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#橡胶和塑料制品业"><span>橡胶和塑料制品业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#非金属矿物制品业"><span>非金属矿物制品业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#黑色金属冶炼和压延加工业"><span>黑色金属冶炼和压延加工业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#有色金属冶炼和压延加工业"><span>有色金属冶炼和压延加工业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#金属制品业"><span>金属制品业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#通用设备制造业"><span>通用设备制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#专用设备制造业"><span>专用设备制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#汽车制造业"><span>汽车制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#铁路、船舶、航空航天和其他运输设备制造业"><span>铁路、船舶、航空航天和其他运输设备制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#电气机械和器材制造业"><span>电气机械和器材制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#计算机、通信和其他电子设备制造业"><span>计算机、通信和其他电子设备制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#仪器仪表制造业"><span>仪器仪表制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#其他制造业"><span>其他制造业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#废弃资源综合利用业"><span>废弃资源综合利用业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#电力、热力生产和供应业"><span>电力、热力生产和供应业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#燃气生产和供应业"><span>燃气生产和供应业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#水的生产和供应业"><span>水的生产和供应业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#房屋建筑业"><span>房屋建筑业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#土木工程建筑业"><span>土木工程建筑业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#建筑安装业"><span>建筑安装业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#建筑装饰和其他建筑业"><span>建筑装饰和其他建筑业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#批发业"><span>批发业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#零售业"><span>零售业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#铁路运输业"><span>铁路运输业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#道路运输业"><span>道路运输业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#水上运输业"><span>水上运输业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#航空运输业"><span>航空运输业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#装卸搬运和运输代理业"><span>装卸搬运和运输代理业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#仓储业"><span>仓储业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#邮政业"><span>邮政业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#住宿业"><span>住宿业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#餐饮业"><span>餐饮业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#电信、广播电视和卫星传输服务"><span>电信、广播电视和卫星传输服务</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#互联网和相关服务"><span>互联网和相关服务</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#软件和信息技术服务业"><span>软件和信息技术服务业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#货币金融服务"><span>货币金融服务</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#资本市场服务"><span>资本市场服务</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#保险业"><span>保险业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#其他金融业"><span>其他金融业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#房地产业"><span>房地产业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#租赁业"><span>租赁业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#商务服务业"><span>商务服务业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#研究和试验发展"><span>研究和试验发展</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#专业技术服务业"><span>专业技术服务业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#科技推广和应用服务业"><span>科技推广和应用服务业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#生态保护和环境治理业"><span>生态保护和环境治理业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#公共设施管理业"><span>公共设施管理业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#教育"><span>教育</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#卫生"><span>卫生</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#新闻和出版业"><span>新闻和出版业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#广播、电视、电影和影视录音制作业"><span>广播、电视、电影和影视录音制作业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#文化艺术业"><span>文化艺术业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#体育"><span>体育</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#综合"><span>综合</span></a>
-                </li>
+                <li class="sidebar-item"><a href="#农业行业"><span>农业行业</span></a></li>
+                <li class="sidebar-item"><a href="#林业行业"><span>林业行业</span></a></li>
+                <li class="sidebar-item"><a href="#畜牧业"><span>畜牧业</span></a></li>
+                <li class="sidebar-item"><a href="#渔业"><span>渔业</span></a></li>
+                <li class="sidebar-item"><a href="#煤炭开采和洗选业"><span>煤炭开采和洗选业</span></a></li>
+                <li class="sidebar-item"><a href="#石油和天然气开采业"><span>石油和天然气开采业</span></a></li>
+                <li class="sidebar-item"><a href="#黑色金属矿采选业"><span>黑色金属矿采选业</span></a></li>
+                <li class="sidebar-item"><a href="#有色金属矿采选业"><span>有色金属矿采选业</span></a></li>
+                <li class="sidebar-item"><a href="#非金属矿采选业"><span>非金属矿采选业</span></a></li>
+                <li class="sidebar-item"><a href="#开采辅助活动"><span>开采辅助活动</span></a></li>
+                <li class="sidebar-item"><a href="#农副食品加工业"><span>农副食品加工业</span></a></li>
+                <li class="sidebar-item"><a href="#食品制造业"><span>食品制造业</span></a></li>
+                <li class="sidebar-item"><a href="#酒、饮料和精制茶制造业"><span>酒、饮料和精制茶制造业</span></a></li>
+                <li class="sidebar-item"><a href="#纺织业"><span>纺织业</span></a></li>
+                <li class="sidebar-item"><a href="#纺织服装、服饰业"><span>纺织服装、服饰业</span></a></li>
+                <li class="sidebar-item"><a href="#皮革、毛皮、羽毛及其制品和制鞋业"><span>皮革、毛皮、羽毛及其制品和制鞋业</span></a></li>
+                <li class="sidebar-item"><a href="#木材加工和木、竹、藤、棕、草制品业"><span>木材加工和木、竹、藤、棕、草制品业</span></a></li>
+                <li class="sidebar-item"><a href="#家具制造业"><span>家具制造业</span></a></li>
+                <li class="sidebar-item"><a href="#造纸和纸制品业"><span>造纸和纸制品业</span></a></li>
+                <li class="sidebar-item"><a href="#印刷和记录媒介复制业"><span>印刷和记录媒介复制业</span></a></li>
+                <li class="sidebar-item"><a href="#文教、工美、体育和娱乐用品制造业"><span>文教、工美、体育和娱乐用品制造业</span></a></li>
+                <li class="sidebar-item"><a href="#石油加工、炼焦和核燃料加工业"><span>石油加工、炼焦和核燃料加工业</span></a></li>
+                <li class="sidebar-item"><a href="#化学原料和化学制品制造业"><span>化学原料和化学制品制造业</span></a></li>
+                <li class="sidebar-item"><a href="#医药制造业"><span>医药制造业</span></a></li>
+                <li class="sidebar-item"><a href="#化学纤维制造业"><span>化学纤维制造业</span></a></li>
+                <li class="sidebar-item"><a href="#橡胶和塑料制品业"><span>橡胶和塑料制品业</span></a></li>
+                <li class="sidebar-item"><a href="#非金属矿物制品业"><span>非金属矿物制品业</span></a></li>
+                <li class="sidebar-item"><a href="#黑色金属冶炼和压延加工业"><span>黑色金属冶炼和压延加工业</span></a></li>
+                <li class="sidebar-item"><a href="#有色金属冶炼和压延加工业"><span>有色金属冶炼和压延加工业</span></a></li>
+                <li class="sidebar-item"><a href="#金属制品业"><span>金属制品业</span></a></li>
+                <li class="sidebar-item"><a href="#通用设备制造业"><span>通用设备制造业</span></a></li>
+                <li class="sidebar-item"><a href="#专用设备制造业"><span>专用设备制造业</span></a></li>
+                <li class="sidebar-item"><a href="#汽车制造业"><span>汽车制造业</span></a></li>
+                <li class="sidebar-item"><a href="#铁路、船舶、航空航天和其他运输设备制造业"><span>铁路、船舶、航空航天和其他运输设备制造业</span></a></li>
+                <li class="sidebar-item"><a href="#电气机械和器材制造业"><span>电气机械和器材制造业</span></a></li>
+                <li class="sidebar-item"><a href="#计算机、通信和其他电子设备制造业"><span>计算机、通信和其他电子设备制造业</span></a></li>
+                <li class="sidebar-item"><a href="#仪器仪表制造业"><span>仪器仪表制造业</span></a></li>
+                <li class="sidebar-item"><a href="#其他制造业"><span>其他制造业</span></a></li>
+                <li class="sidebar-item"><a href="#废弃资源综合利用业"><span>废弃资源综合利用业</span></a></li>
+                <li class="sidebar-item"><a href="#电力、热力生产和供应业"><span>电力、热力生产和供应业</span></a></li>
+                <li class="sidebar-item"><a href="#燃气生产和供应业"><span>燃气生产和供应业</span></a></li>
+                <li class="sidebar-item"><a href="#水的生产和供应业"><span>水的生产和供应业</span></a></li>
+                <li class="sidebar-item"><a href="#房屋建筑业"><span>房屋建筑业</span></a></li>
+                <li class="sidebar-item"><a href="#土木工程建筑业"><span>土木工程建筑业</span></a></li>
+                <li class="sidebar-item"><a href="#建筑安装业"><span>建筑安装业</span></a></li>
+                <li class="sidebar-item"><a href="#建筑装饰和其他建筑业"><span>建筑装饰和其他建筑业</span></a></li>
+                <li class="sidebar-item"><a href="#批发业"><span>批发业</span></a></li>
+                <li class="sidebar-item"><a href="#零售业"><span>零售业</span></a></li>
+                <li class="sidebar-item"><a href="#铁路运输业"><span>铁路运输业</span></a></li>
+                <li class="sidebar-item"><a href="#道路运输业"><span>道路运输业</span></a></li>
+                <li class="sidebar-item"><a href="#水上运输业"><span>水上运输业</span></a></li>
+                <li class="sidebar-item"><a href="#航空运输业"><span>航空运输业</span></a></li>
+                <li class="sidebar-item"><a href="#装卸搬运和运输代理业"><span>装卸搬运和运输代理业</span></a></li>
+                <li class="sidebar-item"><a href="#仓储业"><span>仓储业</span></a></li>
+                <li class="sidebar-item"><a href="#邮政业"><span>邮政业</span></a></li>
+                <li class="sidebar-item"><a href="#住宿业"><span>住宿业</span></a></li>
+                <li class="sidebar-item"><a href="#餐饮业"><span>餐饮业</span></a></li>
+                <li class="sidebar-item"><a href="#电信、广播电视和卫星传输服务"><span>电信、广播电视和卫星传输服务</span></a></li>
+                <li class="sidebar-item"><a href="#互联网和相关服务"><span>互联网和相关服务</span></a></li>
+                <li class="sidebar-item"><a href="#软件和信息技术服务业"><span>软件和信息技术服务业</span></a></li>
+                <li class="sidebar-item"><a href="#货币金融服务"><span>货币金融服务</span></a></li>
+                <li class="sidebar-item"><a href="#资本市场服务"><span>资本市场服务</span></a></li>
+                <li class="sidebar-item"><a href="#保险业"><span>保险业</span></a></li>
+                <li class="sidebar-item"><a href="#其他金融业"><span>其他金融业</span></a></li>
+                <li class="sidebar-item"><a href="#房地产业"><span>房地产业</span></a></li>
+                <li class="sidebar-item"><a href="#租赁业"><span>租赁业</span></a></li>
+                <li class="sidebar-item"><a href="#商务服务业"><span>商务服务业</span></a></li>
+                <li class="sidebar-item"><a href="#研究和试验发展"><span>研究和试验发展</span></a></li>
+                <li class="sidebar-item"><a href="#专业技术服务业"><span>专业技术服务业</span></a></li>
+                <li class="sidebar-item"><a href="#科技推广和应用服务业"><span>科技推广和应用服务业</span></a></li>
+                <li class="sidebar-item"><a href="#生态保护和环境治理业"><span>生态保护和环境治理业</span></a></li>
+                <li class="sidebar-item"><a href="#公共设施管理业"><span>公共设施管理业</span></a></li>
+                <li class="sidebar-item"><a href="#教育"><span>教育</span></a></li>
+                <li class="sidebar-item"><a href="#卫生"><span>卫生</span></a></li>
+                <li class="sidebar-item"><a href="#新闻和出版业"><span>新闻和出版业</span></a></li>
+                <li class="sidebar-item"><a href="#广播、电视、电影和影视录音制作业"><span>广播、电视、电影和影视录音制作业</span></a></li>
+                <li class="sidebar-item"><a href="#文化艺术业"><span>文化艺术业</span></a></li>
+                <li class="sidebar-item"><a href="#体育"><span>体育</span></a></li>
+                <li class="sidebar-item"><a href="#综合"><span>综合</span></a></li>
               </ul>
             </div>
           </div>

@@ -13,19 +13,22 @@
       a{color:#282a2d;outline:0!important;text-decoration:none}
       a:hover{text-decoration:none;color:#e94041}
       .size-full{width:100%;height:100%}
+      .h-full {height: 100%;}
+      .flex{display: flex;}
+      .flex-col {flex-direction: column;}
       .sticky{position:sticky;top:0;z-index:1080}
       .overflow-hidden{overflow:hidden}
       .mt24{margin-top:24px}
       .border-top{border-top:1px solid #dee2e6}
       .sidebar-nav{position:fixed;top:0;font-size:14px;width:200px;height:100vh;z-index:1081;background:#f0f2f4;box-shadow:0 0 32px 0 rgba(0,0,0,.1)}
-      .sidebar-logo{height:74px;border-bottom:1px solid #dee2e6;background:#fff;text-align:center;line-height:74px;font-size:22px}
+      .sidebar-logo{height:48px;border-bottom:1px solid #dee2e6;background:#fff;text-align:center;line-height:48px;font-size:22px}
       .sidebar-nav ul{margin:0;padding:0}
       .sidebar-item{position:relative;display:block}
       .sidebar-item:hover{background:rgba(0,0,0,.1);color:#e94041}
       .sidebar-item a:hover{color:#e94041}
       .sidebar-menu-inner a,.sidebar-nav .flex-bottom a{display:flex;overflow:hidden;padding:4px;margin:0 4px;color:#515c6b;font-size:16px;align-items:center;white-space:nowrap;transition:all .3s}
-      .sidebar-nav-inner{max-width:200px;display:flex;flex-direction:column;height:100%}
-      .sidebar-nav-inner .flex-fill{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+      .sidebar-nav-inner{max-width:200px;}
+      .sidebar-nav-inner .flex-fill{overflow-y:auto;overflow-x:hidden;}
       .header-nav{position:fixed;right:0;left:200px;background:rgb(255 255 255 / 77%)}
       .main-content{flex-direction:column;display:flex}
       .flex-fill{flex:1 1 auto}
@@ -44,7 +47,7 @@
   </head>
   <body class="size-full">
     <div class="sidebar-nav sticky">
-      <div class="sidebar-nav-inner">
+      <div class="flex flex-col h-full sidebar-nav-inner">
         <div class="sidebar-logo">
           <div class="logo overflow-hidden">电视直播</div>
         </div>
@@ -52,105 +55,39 @@
           <div class="sidebar-scroll">
             <div class="sidebar-menu-inner">
               <ul>
-                <li class="sidebar-item">
-                  <a href="#电视台"><span>电视台</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#湖南"><span>湖南</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#浙江"><span>浙江</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#北京"><span>北京</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#上海"><span>上海</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#天津"><span>天津</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#河北"><span>河北</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#山东"><span>山东</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#山西"><span>山西</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#广东"><span>广东</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#广西"><span>广西</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#吉林"><span>吉林</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#辽宁"><span>辽宁</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#江苏"><span>江苏</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#安徽"><span>安徽</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#福建"><span>福建</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#湖北"><span>湖北</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#河南"><span>河南</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#重庆"><span>重庆</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#四川"><span>四川</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#贵州"><span>贵州</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#云南"><span>云南</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#陕西"><span>陕西</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#甘肃"><span>甘肃</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#青海"><span>青海</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#宁夏"><span>宁夏</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#厦门"><span>厦门</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#新疆"><span>新疆</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#海南"><span>海南</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#西藏"><span>西藏</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#黑龙江"><span>黑龙江</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#内蒙古"><span>内蒙古</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#直播链接"><span>直播链接</span></a>
-                </li>
+                <li class="sidebar-item"><a href="#电视台"><span>电视台</span></a></li>
+                <li class="sidebar-item"><a href="#湖南"><span>湖南</span></a></li>
+                <li class="sidebar-item"><a href="#浙江"><span>浙江</span></a></li>
+                <li class="sidebar-item"><a href="#北京"><span>北京</span></a></li>
+                <li class="sidebar-item"><a href="#上海"><span>上海</span></a></li>
+                <li class="sidebar-item"><a href="#天津"><span>天津</span></a></li>
+                <li class="sidebar-item"><a href="#河北"><span>河北</span></a></li>
+                <li class="sidebar-item"><a href="#山东"><span>山东</span></a></li>
+                <li class="sidebar-item"><a href="#山西"><span>山西</span></a></li>
+                <li class="sidebar-item"><a href="#广东"><span>广东</span></a></li>
+                <li class="sidebar-item"><a href="#广西"><span>广西</span></a></li>
+                <li class="sidebar-item"><a href="#吉林"><span>吉林</span></a></li>
+                <li class="sidebar-item"><a href="#辽宁"><span>辽宁</span></a></li>
+                <li class="sidebar-item"><a href="#江苏"><span>江苏</span></a></li>
+                <li class="sidebar-item"><a href="#安徽"><span>安徽</span></a></li>
+                <li class="sidebar-item"><a href="#福建"><span>福建</span></a></li>
+                <li class="sidebar-item"><a href="#湖北"><span>湖北</span></a></li>
+                <li class="sidebar-item"><a href="#河南"><span>河南</span></a></li>
+                <li class="sidebar-item"><a href="#重庆"><span>重庆</span></a></li>
+                <li class="sidebar-item"><a href="#四川"><span>四川</span></a></li>
+                <li class="sidebar-item"><a href="#贵州"><span>贵州</span></a></li>
+                <li class="sidebar-item"><a href="#云南"><span>云南</span></a></li>
+                <li class="sidebar-item"><a href="#陕西"><span>陕西</span></a></li>
+                <li class="sidebar-item"><a href="#甘肃"><span>甘肃</span></a></li>
+                <li class="sidebar-item"><a href="#青海"><span>青海</span></a></li>
+                <li class="sidebar-item"><a href="#宁夏"><span>宁夏</span></a></li>
+                <li class="sidebar-item"><a href="#厦门"><span>厦门</span></a></li>
+                <li class="sidebar-item"><a href="#新疆"><span>新疆</span></a></li>
+                <li class="sidebar-item"><a href="#海南"><span>海南</span></a></li>
+                <li class="sidebar-item"><a href="#西藏"><span>西藏</span></a></li>
+                <li class="sidebar-item"><a href="#黑龙江"><span>黑龙江</span></a></li>
+                <li class="sidebar-item"><a href="#内蒙古"><span>内蒙古</span></a></li>
+                <li class="sidebar-item"><a href="#直播链接"><span>直播链接</span></a></li>
               </ul>
             </div>
           </div>

@@ -13,19 +13,22 @@
       a{color:#282a2d;outline:0!important;text-decoration:none}
       a:hover{text-decoration:none;color:#e94041}
       .size-full{width:100%;height:100%}
+      .h-full {height: 100%;}
+      .flex{display: flex;}
+      .flex-col {flex-direction: column;}
       .sticky{position:sticky;top:0;z-index:1080}
       .overflow-hidden{overflow:hidden}
       .mt24{margin-top:24px}
       .border-top{border-top:1px solid #dee2e6}
       .sidebar-nav{position:fixed;top:0;font-size:14px;width:200px;height:100vh;z-index:1081;background:#f0f2f4;box-shadow:0 0 32px 0 rgba(0,0,0,.1)}
-      .sidebar-logo{height:74px;border-bottom:1px solid #dee2e6;background:#fff;text-align:center;line-height:74px;font-size:22px}
+      .sidebar-logo{height:48px;border-bottom:1px solid #dee2e6;background:#fff;text-align:center;line-height:48px;font-size:22px}
       .sidebar-nav ul{margin:0;padding:0}
       .sidebar-item{position:relative;display:block}
       .sidebar-item:hover{background:rgba(0,0,0,.1);color:#e94041}
       .sidebar-item a:hover{color:#e94041}
       .sidebar-menu-inner a,.sidebar-nav .flex-bottom a{display:flex;overflow:hidden;padding:4px;margin:0 4px;color:#515c6b;font-size:16px;align-items:center;white-space:nowrap;transition:all .3s}
-      .sidebar-nav-inner{max-width:200px;display:flex;flex-direction:column;height:100%}
-      .sidebar-nav-inner .flex-fill{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+      .sidebar-nav-inner{max-width:200px;}
+      .sidebar-nav-inner .flex-fill{overflow-y:auto;overflow-x:hidden;}
       .header-nav{position:fixed;right:0;left:200px;background:rgb(255 255 255 / 77%)}
       .main-content{flex-direction:column;display:flex}
       .flex-fill{flex:1 1 auto}
@@ -44,7 +47,7 @@
   </head>
   <body class="size-full">
     <div class="sidebar-nav sticky">
-      <div class="sidebar-nav-inner">
+      <div class="flex flex-col h-full sidebar-nav-inner">
         <div class="sidebar-logo">
           <div class="logo overflow-hidden">上海导航</div>
         </div>
@@ -52,249 +55,87 @@
           <div class="sidebar-scroll">
             <div class="sidebar-menu-inner">
               <ul>
-                <li class="sidebar-item">
-                  <a href="#政府部门"><span>政府部门</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#区政府"><span>区政府</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各区民政"><span>各区民政</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市经济信息化委"><span>市经济信息化委</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#功能性机构"><span>功能性机构</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#上海高校"><span>上海高校</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市教委"><span>市教委</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#教育"><span>教育</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#上海市科技系统单位"><span>上海市科技系统单位</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#上海科协"><span>上海科协</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#本市党政部门"><span>本市党政部门</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#人力资源社会保障局"><span>人力资源社会保障局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市水务局"><span>市水务局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市卫生健康委"><span>市卫生健康委</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市退役军人局"><span>市退役军人局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市应急局"><span>市应急局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#金融监管"><span>金融监管</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#金融市场"><span>金融市场</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#金融机构"><span>金融机构</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#林业"><span>林业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市机管局"><span>市机管局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#对口地区"><span>对口地区</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各地驻沪办"><span>各地驻沪办</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#全国参文系统"><span>全国参文系统</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#友情链接"><span>友情链接</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#相关粮食"><span>相关粮食</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市监狱管理局"><span>市监狱管理局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#住房相关部门"><span>住房相关部门</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#行业协会"><span>行业协会</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市药品监管局"><span>市药品监管局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#国外知识产权相关"><span>国外知识产权相关</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#下属事业单位"><span>下属事业单位</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#联系单位"><span>联系单位</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#区信访"><span>区信访</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#国家级地方志机构"><span>国家级地方志机构</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#本市区地方志机构"><span>本市区地方志机构</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#其他"><span>其他</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#媒体链接"><span>媒体链接</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市妇儿工委"><span>市妇儿工委</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#在京直属事业单位"><span>在京直属事业单位</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#世界海关组织"><span>世界海关组织</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#社会团体"><span>社会团体</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市税务局"><span>市税务局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市总工会"><span>市总工会</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省司法厅局"><span>各省司法厅局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省公安局"><span>各省公安局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省市民政"><span>各省市民政</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省科技部"><span>各省科技部</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省科普科协"><span>各省科普科协</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省教委"><span>各省教委</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省农业"><span>各省农业</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省审计局"><span>各省审计局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省监局"><span>各省监局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省交通运输厅"><span>各省交通运输厅</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省发改委"><span>各省发改委</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#长三角统计局"><span>长三角统计局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#省市统计"><span>省市统计</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#地方信息产业主管部门"><span>地方信息产业主管部门</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市民族宗教局"><span>市民族宗教局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#民政业务"><span>民政业务</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#民政其他"><span>民政其他</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#其他"><span>其他</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#财政局"><span>财政局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#住房城乡建设管理委"><span>住房城乡建设管理委</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市体育局"><span>市体育局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#其他"><span>其他</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市医保局"><span>市医保局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#省市医保部门"><span>省市医保部门</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市政府部门"><span>市政府部门</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各地国资委"><span>各地国资委</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#林业和草原局"><span>林业和草原局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#监狱管理局"><span>监狱管理局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省市信访部门"><span>各省市信访部门</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#省级地方志机构"><span>省级地方志机构</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#市国家保密局"><span>市国家保密局</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#各省妇联"><span>各省妇联</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#直属海关"><span>直属海关</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#地方政府"><span>地方政府</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#友情链接"><span>友情链接</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#中国政府网"><span>中国政府网</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#国务院部门"><span>国务院部门</span></a>
-                </li>
+                <li class="sidebar-item"><a href="#政府部门"><span>政府部门</span></a></li>
+                <li class="sidebar-item"><a href="#区政府"><span>区政府</span></a></li>
+                <li class="sidebar-item"><a href="#各区民政"><span>各区民政</span></a></li>
+                <li class="sidebar-item"><a href="#市经济信息化委"><span>市经济信息化委</span></a></li>
+                <li class="sidebar-item"><a href="#功能性机构"><span>功能性机构</span></a></li>
+                <li class="sidebar-item"><a href="#上海高校"><span>上海高校</span></a></li>
+                <li class="sidebar-item"><a href="#市教委"><span>市教委</span></a></li>
+                <li class="sidebar-item"><a href="#教育"><span>教育</span></a></li>
+                <li class="sidebar-item"><a href="#上海市科技系统单位"><span>上海市科技系统单位</span></a></li>
+                <li class="sidebar-item"><a href="#上海科协"><span>上海科协</span></a></li>
+                <li class="sidebar-item"><a href="#本市党政部门"><span>本市党政部门</span></a></li>
+                <li class="sidebar-item"><a href="#人力资源社会保障局"><span>人力资源社会保障局</span></a></li>
+                <li class="sidebar-item"><a href="#市水务局"><span>市水务局</span></a></li>
+                <li class="sidebar-item"><a href="#市卫生健康委"><span>市卫生健康委</span></a></li>
+                <li class="sidebar-item"><a href="#市退役军人局"><span>市退役军人局</span></a></li>
+                <li class="sidebar-item"><a href="#市应急局"><span>市应急局</span></a></li>
+                <li class="sidebar-item"><a href="#金融监管"><span>金融监管</span></a></li>
+                <li class="sidebar-item"><a href="#金融市场"><span>金融市场</span></a></li>
+                <li class="sidebar-item"><a href="#金融机构"><span>金融机构</span></a></li>
+                <li class="sidebar-item"><a href="#林业"><span>林业</span></a></li>
+                <li class="sidebar-item"><a href="#市机管局"><span>市机管局</span></a></li>
+                <li class="sidebar-item"><a href="#对口地区"><span>对口地区</span></a></li>
+                <li class="sidebar-item"><a href="#各地驻沪办"><span>各地驻沪办</span></a></li>
+                <li class="sidebar-item"><a href="#全国参文系统"><span>全国参文系统</span></a></li>
+                <li class="sidebar-item"><a href="#友情链接"><span>友情链接</span></a></li>
+                <li class="sidebar-item"><a href="#相关粮食"><span>相关粮食</span></a></li>
+                <li class="sidebar-item"><a href="#市监狱管理局"><span>市监狱管理局</span></a></li>
+                <li class="sidebar-item"><a href="#住房相关部门"><span>住房相关部门</span></a></li>
+                <li class="sidebar-item"><a href="#行业协会"><span>行业协会</span></a></li>
+                <li class="sidebar-item"><a href="#市药品监管局"><span>市药品监管局</span></a></li>
+                <li class="sidebar-item"><a href="#国外知识产权相关"><span>国外知识产权相关</span></a></li>
+                <li class="sidebar-item"><a href="#下属事业单位"><span>下属事业单位</span></a></li>
+                <li class="sidebar-item"><a href="#联系单位"><span>联系单位</span></a></li>
+                <li class="sidebar-item"><a href="#区信访"><span>区信访</span></a></li>
+                <li class="sidebar-item"><a href="#国家级地方志机构"><span>国家级地方志机构</span></a></li>
+                <li class="sidebar-item"><a href="#本市区地方志机构"><span>本市区地方志机构</span></a></li>
+                <li class="sidebar-item"><a href="#其他"><span>其他</span></a></li>
+                <li class="sidebar-item"><a href="#媒体链接"><span>媒体链接</span></a></li>
+                <li class="sidebar-item"><a href="#市妇儿工委"><span>市妇儿工委</span></a></li>
+                <li class="sidebar-item"><a href="#在京直属事业单位"><span>在京直属事业单位</span></a></li>
+                <li class="sidebar-item"><a href="#世界海关组织"><span>世界海关组织</span></a></li>
+                <li class="sidebar-item"><a href="#社会团体"><span>社会团体</span></a></li>
+                <li class="sidebar-item"><a href="#市税务局"><span>市税务局</span></a></li>
+                <li class="sidebar-item"><a href="#市总工会"><span>市总工会</span></a></li>
+                <li class="sidebar-item"><a href="#各省司法厅局"><span>各省司法厅局</span></a></li>
+                <li class="sidebar-item"><a href="#各省公安局"><span>各省公安局</span></a></li>
+                <li class="sidebar-item"><a href="#各省市民政"><span>各省市民政</span></a></li>
+                <li class="sidebar-item"><a href="#各省科技部"><span>各省科技部</span></a></li>
+                <li class="sidebar-item"><a href="#各省科普科协"><span>各省科普科协</span></a></li>
+                <li class="sidebar-item"><a href="#各省教委"><span>各省教委</span></a></li>
+                <li class="sidebar-item"><a href="#各省农业"><span>各省农业</span></a></li>
+                <li class="sidebar-item"><a href="#各省审计局"><span>各省审计局</span></a></li>
+                <li class="sidebar-item"><a href="#各省监局"><span>各省监局</span></a></li>
+                <li class="sidebar-item"><a href="#各省交通运输厅"><span>各省交通运输厅</span></a></li>
+                <li class="sidebar-item"><a href="#各省发改委"><span>各省发改委</span></a></li>
+                <li class="sidebar-item"><a href="#长三角统计局"><span>长三角统计局</span></a></li>
+                <li class="sidebar-item"><a href="#省市统计"><span>省市统计</span></a></li>
+                <li class="sidebar-item"><a href="#地方信息产业主管部门"><span>地方信息产业主管部门</span></a></li>
+                <li class="sidebar-item"><a href="#市民族宗教局"><span>市民族宗教局</span></a></li>
+                <li class="sidebar-item"><a href="#民政业务"><span>民政业务</span></a></li>
+                <li class="sidebar-item"><a href="#民政其他"><span>民政其他</span></a></li>
+                <li class="sidebar-item"><a href="#其他"><span>其他</span></a></li>
+                <li class="sidebar-item"><a href="#财政局"><span>财政局</span></a></li>
+                <li class="sidebar-item"><a href="#住房城乡建设管理委"><span>住房城乡建设管理委</span></a></li>
+                <li class="sidebar-item"><a href="#市体育局"><span>市体育局</span></a></li>
+                <li class="sidebar-item"><a href="#其他"><span>其他</span></a></li>
+                <li class="sidebar-item"><a href="#市医保局"><span>市医保局</span></a></li>
+                <li class="sidebar-item"><a href="#省市医保部门"><span>省市医保部门</span></a></li>
+                <li class="sidebar-item"><a href="#市政府部门"><span>市政府部门</span></a></li>
+                <li class="sidebar-item"><a href="#各地国资委"><span>各地国资委</span></a></li>
+                <li class="sidebar-item"><a href="#林业和草原局"><span>林业和草原局</span></a></li>
+                <li class="sidebar-item"><a href="#监狱管理局"><span>监狱管理局</span></a></li>
+                <li class="sidebar-item"><a href="#各省市信访部门"><span>各省市信访部门</span></a></li>
+                <li class="sidebar-item"><a href="#省级地方志机构"><span>省级地方志机构</span></a></li>
+                <li class="sidebar-item"><a href="#市国家保密局"><span>市国家保密局</span></a></li>
+                <li class="sidebar-item"><a href="#各省妇联"><span>各省妇联</span></a></li>
+                <li class="sidebar-item"><a href="#直属海关"><span>直属海关</span></a></li>
+                <li class="sidebar-item"><a href="#地方政府"><span>地方政府</span></a></li>
+                <li class="sidebar-item"><a href="#友情链接"><span>友情链接</span></a></li>
+                <li class="sidebar-item"><a href="#中国政府网"><span>中国政府网</span></a></li>
+                <li class="sidebar-item"><a href="#国务院部门"><span>国务院部门</span></a></li>
               </ul>
             </div>
           </div>
