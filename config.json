@@ -12,6 +12,18 @@
     "type": "shanghai"
   },
   {
+    "title": "湖南导航",
+    "type": "hunan"
+  },
+  {
+    "title": "地方志",
+    "type": "difangzhi"
+  },
+  {
+    "title": "招聘",
+    "type": "zhaopin"
+  },
+  {
     "title": "院校导航",
     "type": "school"
   },
@@ -228,14 +240,6 @@
     "type": "wuliu"
   },
   {
-    "title": "招聘",
-    "type": "zhaopin"
-  },
-  {
-    "title": "湖南",
-    "type": "hunan"
-  },
-  {
     "title": "coonav",
     "type": "coonav"
   },
@@ -258,9 +262,5 @@
   {
     "title": "孕婴童导航",
     "type": "yyt"
-  },
-  {
-    "title": "地方志",
-    "type": "difangzhi"
   }
 ]
