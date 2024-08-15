@@ -3,171 +3,43 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>上海导航</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
     <meta name="keywords" content="上海导航,导航网址大全,网址分类,网址分享" />
     <meta name="description" content="上海导航" />
     <style>
-      *,
-      ::after,
-      ::before {
-        box-sizing: border-box;
-      }
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        border: 0;
-      }
-      body {
-        min-height: 100vh;
-        vertical-align: baseline;
-        word-wrap: break-word;
-        color: #282a2d;
-        background: #f9f9f9;
-      }
-      a {
-        color: #282a2d;
-        outline: 0 !important;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: none;
-        color: #e94041;
-      }
-      .size-full {
-        width: 100%;
-        height: 100%;
-      }
-      .sticky {
-        position: sticky;
-        top: 0;
-        z-index: 1080;
-      }
-      .overflow-hidden {
-        overflow: hidden;
-      }
-      .mt24 {
-        margin-top: 24px
-      }
-      .border-top {
-        border-top: 1px solid #dee2e6;
-      }
-      .sidebar-nav {
-        position: fixed;
-        top: 0;
-        font-size: 14px;
-        width: 200px;
-        height: 100vh;
-        z-index: 1081;
-        background: #f0f2f4;
-        box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);
-      }
-      .sidebar-logo {
-        height: 74px;
-        border-bottom: 1px solid #dee2e6;
-        background: #fff;
-        text-align: center;
-        line-height: 74px;
-        font-size: 22px;
-      }
-      .sidebar-nav ul {
-        margin: 0;
-        padding: 0;
-      }
-      .sidebar-item {
-        position: relative;
-        display: block;
-      }
-      .sidebar-item:hover {
-        background: rgba(0, 0, 0, 0.1);
-        color: #e94041;
-      }
-      .sidebar-item a:hover {
-        color: #e94041;
-      }
-      .sidebar-nav .flex-bottom a,
-      .sidebar-menu-inner a {
-        display: flex;
-        overflow: hidden;
-        padding: 4px;
-        margin: 0 4px;
-        color: #515c6b;
-        font-size: 16px;
-        align-items: center;
-        white-space: nowrap;
-        transition: all 0.3s;
-      }
-      .sidebar-nav-inner {
-        max-width: 200px;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
-      .sidebar-nav-inner .flex-fill {
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-      }
-      .header-nav {
-        position: fixed;
-        right: 0;
-        left: 200px;
-        background: rgb(255 255 255 / 77%);
-      }
-      .main-content {
-        flex-direction: column;
-        display: flex;
-      }
-      .flex-fill {
-        flex: 1 1 auto;
-      }
-      .container {
-        margin: auto;
-      }
-      .ml200{ margin-left: 200px; }
-      .ml12{ margin-left: 12px; }
-
-      .customize-width {
-        min-width: 1140px;
-        max-width: 1900px;
-      }
-      .flex {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .flex-item {
-        flex: 0 0 20%;
-        border: 1px solid transparent;
-        padding: 0 6px;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-      .card {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        word-wrap: break-word;
-        background-color: #eee;
-        margin-bottom: 12px;
-      }
-      .card-body {
-        position: relative;
-        padding: 12px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-      .column {
-        flex: 1 1 100%;
-        padding: 0 12px;
-        margin-top: 24px;
-      }
-      .column .card {
-        border-left: 4px solid #e94041;
-        background: transparent;
-      }
-      .column .card-body {
-        padding: 0 0 0 12px;
-      }
+      *,::after,::before{box-sizing:border-box}
+      body,html{margin:0;padding:0;border:0}
+      body{min-height:100vh;vertical-align:baseline;word-wrap:break-word;color:#282a2d;background:#f9f9f9}
+      a{color:#282a2d;outline:0!important;text-decoration:none}
+      a:hover{text-decoration:none;color:#e94041}
+      .size-full{width:100%;height:100%}
+      .sticky{position:sticky;top:0;z-index:1080}
+      .overflow-hidden{overflow:hidden}
+      .mt24{margin-top:24px}
+      .border-top{border-top:1px solid #dee2e6}
+      .sidebar-nav{position:fixed;top:0;font-size:14px;width:200px;height:100vh;z-index:1081;background:#f0f2f4;box-shadow:0 0 32px 0 rgba(0,0,0,.1)}
+      .sidebar-logo{height:74px;border-bottom:1px solid #dee2e6;background:#fff;text-align:center;line-height:74px;font-size:22px}
+      .sidebar-nav ul{margin:0;padding:0}
+      .sidebar-item{position:relative;display:block}
+      .sidebar-item:hover{background:rgba(0,0,0,.1);color:#e94041}
+      .sidebar-item a:hover{color:#e94041}
+      .sidebar-menu-inner a,.sidebar-nav .flex-bottom a{display:flex;overflow:hidden;padding:4px;margin:0 4px;color:#515c6b;font-size:16px;align-items:center;white-space:nowrap;transition:all .3s}
+      .sidebar-nav-inner{max-width:200px;display:flex;flex-direction:column;height:100%}
+      .sidebar-nav-inner .flex-fill{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+      .header-nav{position:fixed;right:0;left:200px;background:rgb(255 255 255 / 77%)}
+      .main-content{flex-direction:column;display:flex}
+      .flex-fill{flex:1 1 auto}
+      .container{margin:auto}
+      .ml200{margin-left:200px}
+      .ml12{margin-left:12px}
+      .customize-width{min-width:1140px;max-width:1900px}
+      .flex{display:flex;flex-wrap:wrap}
+      .flex-item{flex:0 0 20%;border:1px solid transparent;padding:0 6px;overflow:hidden;white-space:nowrap}
+      .card{position:relative;display:flex;flex-direction:column;word-wrap:break-word;background-color:#eee;margin-bottom:12px}
+      .card-body{position:relative;padding:12px;text-overflow:ellipsis;overflow:hidden}
+      .column{flex:1 1 100%;padding:0 12px;margin-top:24px}
+      .column .card{border-left:4px solid #e94041;background:0 0}
+      .column .card-body{padding:0 0 0 12px}
     </style>
   </head>
   <body class="size-full">
@@ -232,9 +104,6 @@
                   <a href="#金融监管"><span>金融监管</span></a>
                 </li>
                 <li class="sidebar-item">
-                  <a href="#政府部门"><span>政府部门</span></a>
-                </li>
-                <li class="sidebar-item">
                   <a href="#金融市场"><span>金融市场</span></a>
                 </li>
                 <li class="sidebar-item">
@@ -265,7 +134,7 @@
                   <a href="#市监狱管理局"><span>市监狱管理局</span></a>
                 </li>
                 <li class="sidebar-item">
-                  <a href="#本市相关部门"><span>本市相关部门</span></a>
+                  <a href="#住房相关部门"><span>住房相关部门</span></a>
                 </li>
                 <li class="sidebar-item">
                   <a href="#行业协会"><span>行业协会</span></a>
@@ -448,6 +317,8 @@
         <div class="ml12">
           <div class="flex">
             <div id="政府部门" class="column"><a class="card" href="#政府部门" title="政府部门" target="_self"><div class="card-body">政府部门</div></a></div>
+            <div id="上海市国有资产监督管理委员会" class="flex-item"><a class="card" href="https://www.gzw.sh.gov.cn/" title="上海市国有资产监督管理委员会" target="_blank"><div class="card-body">上海市国有资产监督管理委员会</div></a></div>
+            <div id="上海市人力资源和社会保障局" class="flex-item"><a class="card" href="https://rsj.sh.gov.cn/" title="上海市人力资源和社会保障局" target="_blank"><div class="card-body">上海市人力资源和社会保障局</div></a></div>
             <div id="上海市发展和改革委员会" class="flex-item"><a class="card" href="https://fgw.sh.gov.cn/" title="上海市发展和改革委员会" target="_blank"><div class="card-body">上海市发展和改革委员会</div></a></div>
             <div id="上海市经济和信息化委员会" class="flex-item"><a class="card" href="https://www.sheitc.sh.gov.cn/" title="上海市经济和信息化委员会" target="_blank"><div class="card-body">上海市经济和信息化委员会</div></a></div>
             <div id="上海市商务委员会" class="flex-item"><a class="card" href="https://sww.sh.gov.cn/" title="上海市商务委员会" target="_blank"><div class="card-body">上海市商务委员会</div></a></div>
@@ -853,9 +724,6 @@
             <div id="中国人民银行" class="flex-item"><a class="card" href="http://www.pbc.gov.cn/" title="中国人民银行" target="_blank"><div class="card-body">中国人民银行</div></a></div>
             <div id="中国人民银行上海总部" class="flex-item"><a class="card" href="http://shanghai.pbc.gov.cn/" title="中国人民银行上海总部" target="_blank"><div class="card-body">中国人民银行上海总部</div></a></div>
             <div id="中国证监会上海监管局" class="flex-item"><a class="card" href="http://www.csrc.gov.cn/pub/shanghai/" title="中国证监会上海监管局" target="_blank"><div class="card-body">中国证监会上海监管局</div></a></div>
-            <div id="政府部门" class="column"><a class="card" href="#政府部门" title="政府部门" target="_self"><div class="card-body">政府部门</div></a></div>
-            <div id="上海市国有资产监督管理委员会" class="flex-item"><a class="card" href="https://www.gzw.sh.gov.cn/" title="上海市国有资产监督管理委员会" target="_blank"><div class="card-body">上海市国有资产监督管理委员会</div></a></div>
-            <div id="上海市人力资源和社会保障局" class="flex-item"><a class="card" href="https://rsj.sh.gov.cn/" title="上海市人力资源和社会保障局" target="_blank"><div class="card-body">上海市人力资源和社会保障局</div></a></div>
             <div id="金融市场" class="column"><a class="card" href="#金融市场" title="金融市场" target="_self"><div class="card-body">金融市场</div></a></div>
             <div id="上海证券交易所" class="flex-item"><a class="card" href="http://www.sse.com.cn/" title="上海证券交易所" target="_blank"><div class="card-body">上海证券交易所</div></a></div>
             <div id="中国外汇交易中心" class="flex-item"><a class="card" href="http://www.chinamoney.com.cn/" title="中国外汇交易中心" target="_blank"><div class="card-body">中国外汇交易中心</div></a></div>
@@ -963,7 +831,7 @@
             <div id="上海市宝山监狱" class="flex-item"><a class="card" href="http://jyj.sh.gov.cn/n66/20141229/0042-226.html" title="上海市宝山监狱" target="_blank"><div class="card-body">上海市宝山监狱</div></a></div>
             <div id="上海市南汇监狱" class="flex-item"><a class="card" href="http://jyj.sh.gov.cn/n66/20141229/0042-229.html" title="上海市南汇监狱" target="_blank"><div class="card-body">上海市南汇监狱</div></a></div>
             <div id="上海市监狱总医院" class="flex-item"><a class="card" href="http://jyj.sh.gov.cn/n66/20141230/0042-373.html" title="上海市监狱总医院" target="_blank"><div class="card-body">上海市监狱总医院</div></a></div>
-            <div id="本市相关部门" class="column"><a class="card" href="#本市相关部门" title="本市相关部门" target="_self"><div class="card-body">本市相关部门</div></a></div>
+            <div id="住房相关部门" class="column"><a class="card" href="#住房相关部门" title="住房相关部门" target="_self"><div class="card-body">住房相关部门</div></a></div>
             <div id="上海住宅物业网" class="flex-item"><a class="card" href="http://962121.fgj.sh.gov.cn/wyweb/web/front/index.jsp?id=A000000000000000" title="上海住宅物业网" target="_blank"><div class="card-body">上海住宅物业网</div></a></div>
             <div id="上海市住房租赁公共服务平台" class="flex-item"><a class="card" href="https://zfzl.fgj.sh.gov.cn" title="上海市住房租赁公共服务平台" target="_blank"><div class="card-body">上海市住房租赁公共服务平台</div></a></div>
             <div id="行业协会" class="column"><a class="card" href="#行业协会" title="行业协会" target="_self"><div class="card-body">行业协会</div></a></div>
