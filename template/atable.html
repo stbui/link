@@ -3,77 +3,32 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>国务院部门导航</title>
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
-    <meta name="keywords" content="国务院部门网站导航" />
-    <meta name="description" content="国务院部门网站导航" />
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta name="keywords" content="<%= title %>,导航网址大全,网址分类,网址分享" />
+    <meta name="description" content="<%= title %>" />
     <title></title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        a {
-            color: #282a2d;
-            outline: 0 !important;
-            text-decoration: none;
-        }
-
-        a:hover,
-        a:visited {
-            text-decoration: none;
-            color: #e94041;
-        }
-
-        .table {
-            display: table;
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .row {
-            display: table-row;
-            position: relative;
-        }
-
-        .row:hover {
-            background-color: #fff1f1;
-        }
-
-        .cell {
-            display: table-cell;
-            border: 1px solid #ccc;
-            padding: 5px;
-            min-width: 80px;
-            text-align: center;
-        }
-
-        .w-200 {
-            min-width: 200px;
-        }
-
-        .text-left {
-            text-align: left;
-        }
-
-        .title {
-            font-weight: bold;
-            font-size: 18px;
-            text-align: center;
-            padding: 12px 0;
-        }
+        body {margin: 0;padding: 0;font-size: 14px;color: #333;}
+        a {color: #282a2d;outline: 0 !important;text-decoration: none;}
+        a:hover,a:visited {text-decoration: none;color: #e94041;}
+        .table {display: table;width: 100%;border-collapse: collapse;}
+        .row {display: table-row;position: relative;}
+        .row:hover {background-color: #fff1f1;}
+        .cell {display: table-cell;border: 1px solid #ccc;padding: 5px;min-width: 80px;text-align: center;}
+        .w-200 {min-width: 200px;}
+        .text-left {text-align: left;}
+        .title {font-weight: bold;font-size: 18px;text-align: center;padding: 12px 0;}
     </style>
 </head>
 
 <body>
-    <div class="title">全国政府部门站群</div>
+    <div class="title"><%= title %></div>
     <div class="table"><% for (var i=0;i<data.length;i++) { %>
         <div class="row"><% for (var j=0;j<data[0].length;j++) { %><% if (j===0) {%>
-            <div class="cell w-200 text-left"><%=data[i][j]%></div><%} else { %><% if (i===0) {%>
+            <div class="cell text-left <%= cellWidth %>"><%=data[i][j]%></div><%} else { %><% if (i===0) {%>
             <div class="cell"><%=data[i][j]%></div><%} else { %><% if (data[i][j]) {%>
-            <div class="cell"><a href="<%=data[i][j]%>" target="_blank">查看</a></div><% } else { %>
+            <div class="cell"><a href="<%=data[i][j]%>" target="_blank" title="<%=data[i][j]%>">查看</a></div><% } else { %>
             <div class="cell"></div><% }}}}%>
         </div><% } %>
     </div>
