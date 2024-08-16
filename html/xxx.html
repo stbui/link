@@ -3,107 +3,201 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>xxx</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="xxx,导航网址大全,网址分类,网址分享" />
     <meta name="description" content="xxx" />
     <style>
-      *,::after,::before{box-sizing:border-box}
-      body,html{margin:0;padding:0;border:0}
-      body{min-height:100vh;vertical-align:baseline;word-wrap:break-word;color:#282a2d;background:#f9f9f9}
-      a{color:#282a2d;outline:0!important;text-decoration:none}
-      a:hover{text-decoration:none;color:#e94041}
-      .size-full{width:100%;height:100%}
-      .h-full {height: 100%;}
-      .flex{display: flex;}
-      .flex-col {flex-direction: column;}
-      .sticky{position:sticky;top:0;z-index:1080}
-      .overflow-hidden{overflow:hidden}
-      .mt24{margin-top:24px}
-      .border-top{border-top:1px solid #dee2e6}
-      .sidebar-nav{position:fixed;top:0;font-size:14px;width:200px;height:100vh;z-index:1081;background:#f0f2f4;box-shadow:0 0 32px 0 rgba(0,0,0,.1)}
-      .sidebar-logo{height:48px;border-bottom:1px solid #dee2e6;background:#fff;text-align:center;line-height:48px;font-size:22px}
-      .sidebar-nav ul{margin:0;padding:0}
-      .sidebar-item{position:relative;display:block}
-      .sidebar-item:hover{background:rgba(0,0,0,.1);color:#e94041}
-      .sidebar-item a:hover{color:#e94041}
-      .sidebar-menu-inner a,.sidebar-nav .flex-bottom a{display:flex;overflow:hidden;padding:4px;margin:0 4px;color:#515c6b;font-size:16px;align-items:center;white-space:nowrap;transition:all .3s}
-      .sidebar-nav-inner{max-width:200px;}
-      .sidebar-nav-inner .flex-fill{overflow-y:auto;overflow-x:hidden;}
-      .header-nav{position:fixed;right:0;left:200px;background:rgb(255 255 255 / 77%)}
-      .main-content{flex-direction:column;display:flex}
-      .flex-fill{flex:1 1 auto}
-      .container{margin:auto}
-      .ml200{margin-left:200px}
-      .ml12{margin-left:12px}
-      .customize-width{min-width:1140px;max-width:1900px}
-      .flex{display:flex;flex-wrap:wrap}
-      .flex-item{flex:0 0 20%;border:1px solid transparent;padding:0 6px;overflow:hidden;white-space:nowrap}
-      .card{position:relative;display:flex;flex-direction:column;word-wrap:break-word;background-color:#eee;margin-bottom:12px}
-      .card-body{position:relative;padding:12px;text-overflow:ellipsis;overflow:hidden}
-      .column{flex:1 1 100%;padding:0 12px;margin-top:24px}
-      .column .card{border-left:4px solid #e94041;background:0 0}
-      .column .card-body{padding:0 0 0 12px}
+      *,::after,::before {box-sizing: border-box;}
+      body,html {margin: 0;padding: 0;border: 0;}
+      body {min-height: 100vh;vertical-align: baseline;word-wrap: break-word;color: #282a2d;background: #f9f9f9;font-size: 14px;}
+      a {color: #282a2d;outline: 0 !important;text-decoration: none;}
+      a:hover {text-decoration: none;color: #e94041;}
+      .size-full {width: 100%;height: 100%;}
+      .sticky {position: sticky;top: 0;z-index: 1080;}
+      .overflow-hidden {overflow: hidden;}
+      .mt24 {margin-top: 24px}
+      .border-top {border-top: 1px solid #dee2e6;}
+      .sidebar-nav {position: fixed;top: 0;font-size: 14px;width: 200px;height: 100vh;z-index: 1081;background: #f0f2f4;box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);}
+      .sidebar-logo {height: 48px;border-bottom: 1px solid #dee2e6;background: #fff;text-align: center;line-height: 48px;font-size: 22px;}
+      .sidebar-nav ul {margin: 0;padding: 0;}
+      .sidebar-item {position: relative;display: block;}
+      .sidebar-item:hover {background: rgba(0, 0, 0, 0.1);color: #e94041;}
+      .sidebar-item a:hover {color: #e94041;}
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {display: flex;overflow: hidden;padding: 4px;margin: 0 4px;color: #515c6b;font-size: 16px;align-items: center;white-space: nowrap;transition: all 0.3s;}
+      .sidebar-nav-inner {max-width: 200px;display: flex;flex-direction: column;height: 100%;}
+      .sidebar-nav-inner .flex-fill {overflow-y: auto;overflow-x: hidden;-webkit-overflow-scrolling: touch;}
+      .header-nav {position: fixed;right: 0;left: 200px;background: rgb(255 255 255 / 77%);}
+      .main-content {flex-direction: column;display: flex;}
+      .flex-fill {flex: 1 1 auto;}
+      .container {margin: auto;}
+      .ml200{ margin-left: 200px; }
+      .ml12{ margin-left: 12px; }
+      .customize-width {min-width: 1140px;max-width: 1900px;}
+      .flex {display: flex;flex-wrap: wrap;}
+      .flex-item {flex: 0 0 20%;border: 1px solid transparent;padding: 0 6px;overflow: hidden;white-space: nowrap;}
+      .card {position: relative;display: flex;flex-direction: column;word-wrap: break-word;background-color: #eee;margin-bottom: 12px;}
+      .card-body {position: relative;padding: 10px;text-overflow: ellipsis;overflow: hidden;}
+      .column {flex: 1 1 100%;padding: 0 12px;margin-top: 24px;}
+      .column .card {border-left: 4px solid #e94041;background: transparent;}
+      .column .card-body {padding: 0 0 0 12px;}
     </style>
   </head>
   <body class="size-full">
     <div class="sidebar-nav sticky">
-      <div class="flex flex-col h-full sidebar-nav-inner">
-        <div class="sidebar-logo">
-          <div class="logo overflow-hidden">xxx</div>
-        </div>
+      <div class="sidebar-nav-inner"><div class="sidebar-logo">
+        <div class="logo overflow-hidden">xxx</div></div>
         <div class="sidebar-menu flex-fill">
           <div class="sidebar-scroll">
             <div class="sidebar-menu-inner">
               <ul>
-                <li class="sidebar-item"><a href="#司機推薦！"><span>司機推薦！</span></a></li>
-                <li class="sidebar-item"><a href="#在線視頻：不用下載就能看"><span>在線視頻：不用下載就能看</span></a></li>
-                <li class="sidebar-item"><a href="#宅男導航：為宅男指明方向"><span>宅男導航：為宅男指明方向</span></a></li>
-                <li class="sidebar-item"><a href="#綜合論壇：研究人類存在的意義"><span>綜合論壇：研究人類存在的意義</span></a></li>
-                <li class="sidebar-item"><a href="#特色好站：滿足你的獨特品味"><span>特色好站：滿足你的獨特品味</span></a></li>
-                <li class="sidebar-item"><a href="#動漫專區：迷失在異次元領域"><span>動漫專區：迷失在異次元領域</span></a></li>
-                <li class="sidebar-item"><a href="#信息交友：找到你的私密好友"><span>信息交友：找到你的私密好友</span></a></li>
-                <li class="sidebar-item"><a href="#美圖街拍：最新鮮的正妹貼圖"><span>美圖街拍：最新鮮的正妹貼圖</span></a></li>
-                <li class="sidebar-item"><a href="#小說閱讀：風花雪月更浪漫"><span>小說閱讀：風花雪月更浪漫</span></a></li>
-                <li class="sidebar-item"><a href="#宅男福利：技術宅的愛好更加廣泛"><span>宅男福利：技術宅的愛好更加廣泛</span></a></li>
-                <li class="sidebar-item"><a href="#影視資源：偶爾也得換個口味"><span>影視資源：偶爾也得換個口味</span></a></li>
-                <li class="sidebar-item"><a href="#國外視頻：學習外語的好地方"><span>國外視頻：學習外語的好地方</span></a></li>
-                <li class="sidebar-item"><a href="#片商情報：官方有什麼大動作"><span>片商情報：官方有什麼大動作</span></a></li>
-                <li class="sidebar-item"><a href="#種子搜寻：大自然的搬運工"><span>種子搜寻：大自然的搬運工</span></a></li>
-                <li class="sidebar-item"><a href="#好用好玩：天下利器盡在我手"><span>好用好玩：天下利器盡在我手</span></a></li>
-                <li class="sidebar-item"><a href="#福利APP：手機黨的必備神器"><span>福利APP：手機黨的必備神器</span></a></li>
-                <li class="sidebar-item"><a href="#其他"><span>其他</span></a></li>
-                <li class="sidebar-item"><a href="#名称	简介	网址"><span>名称	简介	网址</span></a></li>
-                <li class="sidebar-item"><a href="#ASMR基佬中心，https://www.asmrgay.com/"><span>ASMR基佬中心，https://www.asmrgay.com/</span></a></li>
-                <li class="sidebar-item"><a href="#eatASMR，https://eatasmr.com"><span>eatASMR，https://eatasmr.com</span></a></li>
-                <li class="sidebar-item"><a href="#Japanese ASMR，https://japaneseasmr.com/"><span>Japanese ASMR，https://japaneseasmr.com/</span></a></li>
-                <li class="sidebar-item"><a href="#JASMR，https://www.jasmr.net/"><span>JASMR，https://www.jasmr.net/</span></a></li>
-                <li class="sidebar-item"><a href="#ASMR吧，https://www.ufov8.com"><span>ASMR吧，https://www.ufov8.com</span></a></li>
-                <li class="sidebar-item"><a href="#姬路白雪の资源小站，https://pan.jlbx.xyz/"><span>姬路白雪の资源小站，https://pan.jlbx.xyz/</span></a></li>
-                <li class="sidebar-item"><a href="#酒馆动漫，https://www.jgacg.com/"><span>酒馆动漫，https://www.jgacg.com/</span></a></li>
-                <li class="sidebar-item"><a href="#猫耳FM，https://www.missevan.com/"><span>猫耳FM，https://www.missevan.com/</span></a></li>
-                <li class="sidebar-item"><a href="#番茄ASRM，https://www.qqasmr.com"><span>番茄ASRM，https://www.qqasmr.com</span></a></li>
-                <li class="sidebar-item"><a href="#ASMR Hub，https://asmrhub.site/"><span>ASMR Hub，https://asmrhub.site/</span></a></li>
-                <li class="sidebar-item"><a href="#清末，https://www.qingmo.net/asmr/asmr-yinpin"><span>清末，https://www.qingmo.net/asmr/asmr-yinpin</span></a></li>
-                <li class="sidebar-item"><a href="#舔耳系列 | 放空你的身心，https://www.bababam.com/en/yi-zhi-bai-bian-lu-tian-er-xi-lie-fang-kong-ni-de-shen-xin"><span>舔耳系列 | 放空你的身心，https://www.bababam.com/en/yi-zhi-bai-bian-lu-tian-er-xi-lie-fang-kong-ni-de-shen-xin</span></a></li>
-                <li class="sidebar-item"><a href="#Telegram ASMR资源，"><span>Telegram ASMR资源，</span></a></li>
-                <li class="sidebar-item"><a href="#niceasmr 国内外asmr免费分享，https://t.me/niceasmrs"><span>niceasmr 国内外asmr免费分享，https://t.me/niceasmrs</span></a></li>
-                <li class="sidebar-item"><a href="#Starry_绅士asmr，https://t.me/Hentaii_asmr"><span>Starry_绅士asmr，https://t.me/Hentaii_asmr</span></a></li>
-                <li class="sidebar-item"><a href="#Starry_ASMR-CN，https://t.me/cn_asmr"><span>Starry_ASMR-CN，https://t.me/cn_asmr</span></a></li>
-                <li class="sidebar-item"><a href="#Starry_漫画聚集地，https://t.me/cn_manhua"><span>Starry_漫画聚集地，https://t.me/cn_manhua</span></a></li>
-                <li class="sidebar-item"><a href="#ASMR CHAOS 视转音|瞎逛|正经，https://t.me/asmrforme"><span>ASMR CHAOS 视转音|瞎逛|正经，https://t.me/asmrforme</span></a></li>
-                <li class="sidebar-item"><a href="#二次元涩涩 ASMR，https://t.me/FuckyouWasteTrump"><span>二次元涩涩 ASMR，https://t.me/FuckyouWasteTrump</span></a></li>
-                <li class="sidebar-item"><a href="#音声谷，https://t.me/asmryinpin"><span>音声谷，https://t.me/asmryinpin</span></a></li>
-                <li class="sidebar-item"><a href="#ASMR 老司机，https://t.me/asmr_laosiji"><span>ASMR 老司机，https://t.me/asmr_laosiji</span></a></li>
-                <li class="sidebar-item"><a href="#ASMR 耳骚 | 好听哒! [CN/EN]，https://t.me/ASMRw"><span>ASMR 耳骚 | 好听哒! [CN/EN]，https://t.me/ASMRw</span></a></li>
-                <li class="sidebar-item"><a href="#三次元·ASMR分享，https://t.me/asmrssos"><span>三次元·ASMR分享，https://t.me/asmrssos</span></a></li>
-                <li class="sidebar-item"><a href="#私藏ASMR | Private ASMR，https://t.me/PrivateASMR"><span>私藏ASMR | Private ASMR，https://t.me/PrivateASMR</span></a></li>
-                <li class="sidebar-item"><a href="#中国好呻吟，https://t.me/jiaochuan"><span>中国好呻吟，https://t.me/jiaochuan</span></a></li>
-                <li class="sidebar-item"><a href="#中文音声&amp;公享，https://t.me/zsygrasmr"><span>中文音声&amp;公享，https://t.me/zsygrasmr</span></a></li>
-                <li class="sidebar-item"><a href="#Youtube ASMR资源，"><span>Youtube ASMR资源，</span></a></li>
-                <li class="sidebar-item"><a href="#Youtube ASMR，https://jubt.top/cn/youtube.html#ASMR"><span>Youtube ASMR，https://jubt.top/cn/youtube.html#ASMR</span></a></li>
-                <li class="sidebar-item"><a href="#白噪声，"><span>白噪声，</span></a></li>
-                <li class="sidebar-item"><a href="#小睡眠	iOS/Android，白噪声	http://psy-1.com"><span>小睡眠	iOS/Android，白噪声	http://psy-1.com</span></a></li>
-                <li class="sidebar-item"><a href="#ASMR资源下载，"><span>ASMR资源下载，</span></a></li>
+                <li class="sidebar-item">
+                  <a href="#司機推薦！"><span>司機推薦！</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#在線視頻：不用下載就能看"><span>在線視頻：不用下載就能看</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#宅男導航：為宅男指明方向"><span>宅男導航：為宅男指明方向</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#綜合論壇：研究人類存在的意義"><span>綜合論壇：研究人類存在的意義</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#特色好站：滿足你的獨特品味"><span>特色好站：滿足你的獨特品味</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#動漫專區：迷失在異次元領域"><span>動漫專區：迷失在異次元領域</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#信息交友：找到你的私密好友"><span>信息交友：找到你的私密好友</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#美圖街拍：最新鮮的正妹貼圖"><span>美圖街拍：最新鮮的正妹貼圖</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#小說閱讀：風花雪月更浪漫"><span>小說閱讀：風花雪月更浪漫</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#宅男福利：技術宅的愛好更加廣泛"><span>宅男福利：技術宅的愛好更加廣泛</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#影視資源：偶爾也得換個口味"><span>影視資源：偶爾也得換個口味</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#國外視頻：學習外語的好地方"><span>國外視頻：學習外語的好地方</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#片商情報：官方有什麼大動作"><span>片商情報：官方有什麼大動作</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#種子搜寻：大自然的搬運工"><span>種子搜寻：大自然的搬運工</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#好用好玩：天下利器盡在我手"><span>好用好玩：天下利器盡在我手</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#福利APP：手機黨的必備神器"><span>福利APP：手機黨的必備神器</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#其他"><span>其他</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#名称	简介	网址"><span>名称	简介	网址</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#ASMR基佬中心，https://www.asmrgay.com/"><span>ASMR基佬中心，https://www.asmrgay.com/</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#eatASMR，https://eatasmr.com"><span>eatASMR，https://eatasmr.com</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#Japanese ASMR，https://japaneseasmr.com/"><span>Japanese ASMR，https://japaneseasmr.com/</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#JASMR，https://www.jasmr.net/"><span>JASMR，https://www.jasmr.net/</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#ASMR吧，https://www.ufov8.com"><span>ASMR吧，https://www.ufov8.com</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#姬路白雪の资源小站，https://pan.jlbx.xyz/"><span>姬路白雪の资源小站，https://pan.jlbx.xyz/</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#酒馆动漫，https://www.jgacg.com/"><span>酒馆动漫，https://www.jgacg.com/</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#猫耳FM，https://www.missevan.com/"><span>猫耳FM，https://www.missevan.com/</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#番茄ASRM，https://www.qqasmr.com"><span>番茄ASRM，https://www.qqasmr.com</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#ASMR Hub，https://asmrhub.site/"><span>ASMR Hub，https://asmrhub.site/</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#清末，https://www.qingmo.net/asmr/asmr-yinpin"><span>清末，https://www.qingmo.net/asmr/asmr-yinpin</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#舔耳系列 | 放空你的身心，https://www.bababam.com/en/yi-zhi-bai-bian-lu-tian-er-xi-lie-fang-kong-ni-de-shen-xin"><span>舔耳系列 | 放空你的身心，https://www.bababam.com/en/yi-zhi-bai-bian-lu-tian-er-xi-lie-fang-kong-ni-de-shen-xin</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#Telegram ASMR资源，"><span>Telegram ASMR资源，</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#niceasmr 国内外asmr免费分享，https://t.me/niceasmrs"><span>niceasmr 国内外asmr免费分享，https://t.me/niceasmrs</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#Starry_绅士asmr，https://t.me/Hentaii_asmr"><span>Starry_绅士asmr，https://t.me/Hentaii_asmr</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#Starry_ASMR-CN，https://t.me/cn_asmr"><span>Starry_ASMR-CN，https://t.me/cn_asmr</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#Starry_漫画聚集地，https://t.me/cn_manhua"><span>Starry_漫画聚集地，https://t.me/cn_manhua</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#ASMR CHAOS 视转音|瞎逛|正经，https://t.me/asmrforme"><span>ASMR CHAOS 视转音|瞎逛|正经，https://t.me/asmrforme</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#二次元涩涩 ASMR，https://t.me/FuckyouWasteTrump"><span>二次元涩涩 ASMR，https://t.me/FuckyouWasteTrump</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#音声谷，https://t.me/asmryinpin"><span>音声谷，https://t.me/asmryinpin</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#ASMR 老司机，https://t.me/asmr_laosiji"><span>ASMR 老司机，https://t.me/asmr_laosiji</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#ASMR 耳骚 | 好听哒! [CN/EN]，https://t.me/ASMRw"><span>ASMR 耳骚 | 好听哒! [CN/EN]，https://t.me/ASMRw</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#三次元·ASMR分享，https://t.me/asmrssos"><span>三次元·ASMR分享，https://t.me/asmrssos</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#私藏ASMR | Private ASMR，https://t.me/PrivateASMR"><span>私藏ASMR | Private ASMR，https://t.me/PrivateASMR</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#中国好呻吟，https://t.me/jiaochuan"><span>中国好呻吟，https://t.me/jiaochuan</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#中文音声&amp;公享，https://t.me/zsygrasmr"><span>中文音声&amp;公享，https://t.me/zsygrasmr</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#Youtube ASMR资源，"><span>Youtube ASMR资源，</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#Youtube ASMR，https://jubt.top/cn/youtube.html#ASMR"><span>Youtube ASMR，https://jubt.top/cn/youtube.html#ASMR</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#白噪声，"><span>白噪声，</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#小睡眠	iOS/Android，白噪声	http://psy-1.com"><span>小睡眠	iOS/Android，白噪声	http://psy-1.com</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#ASMR资源下载，"><span>ASMR资源下载，</span></a>
+                </li>
               </ul>
             </div>
           </div>

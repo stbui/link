@@ -3,159 +3,357 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>政府网站</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="政府网站,导航网址大全,网址分类,网址分享" />
     <meta name="description" content="政府网站" />
     <style>
-      *,::after,::before{box-sizing:border-box}
-      body,html{margin:0;padding:0;border:0}
-      body{min-height:100vh;vertical-align:baseline;word-wrap:break-word;color:#282a2d;background:#f9f9f9}
-      a{color:#282a2d;outline:0!important;text-decoration:none}
-      a:hover{text-decoration:none;color:#e94041}
-      .size-full{width:100%;height:100%}
-      .h-full {height: 100%;}
-      .flex{display: flex;}
-      .flex-col {flex-direction: column;}
-      .sticky{position:sticky;top:0;z-index:1080}
-      .overflow-hidden{overflow:hidden}
-      .mt24{margin-top:24px}
-      .border-top{border-top:1px solid #dee2e6}
-      .sidebar-nav{position:fixed;top:0;font-size:14px;width:200px;height:100vh;z-index:1081;background:#f0f2f4;box-shadow:0 0 32px 0 rgba(0,0,0,.1)}
-      .sidebar-logo{height:48px;border-bottom:1px solid #dee2e6;background:#fff;text-align:center;line-height:48px;font-size:22px}
-      .sidebar-nav ul{margin:0;padding:0}
-      .sidebar-item{position:relative;display:block}
-      .sidebar-item:hover{background:rgba(0,0,0,.1);color:#e94041}
-      .sidebar-item a:hover{color:#e94041}
-      .sidebar-menu-inner a,.sidebar-nav .flex-bottom a{display:flex;overflow:hidden;padding:4px;margin:0 4px;color:#515c6b;font-size:16px;align-items:center;white-space:nowrap;transition:all .3s}
-      .sidebar-nav-inner{max-width:200px;}
-      .sidebar-nav-inner .flex-fill{overflow-y:auto;overflow-x:hidden;}
-      .header-nav{position:fixed;right:0;left:200px;background:rgb(255 255 255 / 77%)}
-      .main-content{flex-direction:column;display:flex}
-      .flex-fill{flex:1 1 auto}
-      .container{margin:auto}
-      .ml200{margin-left:200px}
-      .ml12{margin-left:12px}
-      .customize-width{min-width:1140px;max-width:1900px}
-      .flex{display:flex;flex-wrap:wrap}
-      .flex-item{flex:0 0 20%;border:1px solid transparent;padding:0 6px;overflow:hidden;white-space:nowrap}
-      .card{position:relative;display:flex;flex-direction:column;word-wrap:break-word;background-color:#eee;margin-bottom:12px}
-      .card-body{position:relative;padding:12px;text-overflow:ellipsis;overflow:hidden}
-      .column{flex:1 1 100%;padding:0 12px;margin-top:24px}
-      .column .card{border-left:4px solid #e94041;background:0 0}
-      .column .card-body{padding:0 0 0 12px}
+      *,::after,::before {box-sizing: border-box;}
+      body,html {margin: 0;padding: 0;border: 0;}
+      body {min-height: 100vh;vertical-align: baseline;word-wrap: break-word;color: #282a2d;background: #f9f9f9;font-size: 14px;}
+      a {color: #282a2d;outline: 0 !important;text-decoration: none;}
+      a:hover {text-decoration: none;color: #e94041;}
+      .size-full {width: 100%;height: 100%;}
+      .sticky {position: sticky;top: 0;z-index: 1080;}
+      .overflow-hidden {overflow: hidden;}
+      .mt24 {margin-top: 24px}
+      .border-top {border-top: 1px solid #dee2e6;}
+      .sidebar-nav {position: fixed;top: 0;font-size: 14px;width: 200px;height: 100vh;z-index: 1081;background: #f0f2f4;box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);}
+      .sidebar-logo {height: 48px;border-bottom: 1px solid #dee2e6;background: #fff;text-align: center;line-height: 48px;font-size: 22px;}
+      .sidebar-nav ul {margin: 0;padding: 0;}
+      .sidebar-item {position: relative;display: block;}
+      .sidebar-item:hover {background: rgba(0, 0, 0, 0.1);color: #e94041;}
+      .sidebar-item a:hover {color: #e94041;}
+      .sidebar-nav .flex-bottom a,
+      .sidebar-menu-inner a {display: flex;overflow: hidden;padding: 4px;margin: 0 4px;color: #515c6b;font-size: 16px;align-items: center;white-space: nowrap;transition: all 0.3s;}
+      .sidebar-nav-inner {max-width: 200px;display: flex;flex-direction: column;height: 100%;}
+      .sidebar-nav-inner .flex-fill {overflow-y: auto;overflow-x: hidden;-webkit-overflow-scrolling: touch;}
+      .header-nav {position: fixed;right: 0;left: 200px;background: rgb(255 255 255 / 77%);}
+      .main-content {flex-direction: column;display: flex;}
+      .flex-fill {flex: 1 1 auto;}
+      .container {margin: auto;}
+      .ml200{ margin-left: 200px; }
+      .ml12{ margin-left: 12px; }
+      .customize-width {min-width: 1140px;max-width: 1900px;}
+      .flex {display: flex;flex-wrap: wrap;}
+      .flex-item {flex: 0 0 20%;border: 1px solid transparent;padding: 0 6px;overflow: hidden;white-space: nowrap;}
+      .card {position: relative;display: flex;flex-direction: column;word-wrap: break-word;background-color: #eee;margin-bottom: 12px;}
+      .card-body {position: relative;padding: 10px;text-overflow: ellipsis;overflow: hidden;}
+      .column {flex: 1 1 100%;padding: 0 12px;margin-top: 24px;}
+      .column .card {border-left: 4px solid #e94041;background: transparent;}
+      .column .card-body {padding: 0 0 0 12px;}
     </style>
   </head>
   <body class="size-full">
     <div class="sidebar-nav sticky">
-      <div class="flex flex-col h-full sidebar-nav-inner">
-        <div class="sidebar-logo">
-          <div class="logo overflow-hidden">政府网站</div>
-        </div>
+      <div class="sidebar-nav-inner"><div class="sidebar-logo">
+        <div class="logo overflow-hidden">政府网站</div></div>
         <div class="sidebar-menu flex-fill">
           <div class="sidebar-scroll">
             <div class="sidebar-menu-inner">
               <ul>
-                <li class="sidebar-item"><a href="#常用"><span>常用</span></a></li>
-                <li class="sidebar-item"><a href="#主要机构"><span>主要机构</span></a></li>
-                <li class="sidebar-item"><a href="#国务院各部门"><span>国务院各部门</span></a></li>
-                <li class="sidebar-item"><a href="#群众团体"><span>群众团体</span></a></li>
-                <li class="sidebar-item"><a href="#民主党派"><span>民主党派</span></a></li>
-                <li class="sidebar-item"><a href="#省市政府网站"><span>省市政府网站</span></a></li>
-                <li class="sidebar-item"><a href="#大中城市"><span>大中城市</span></a></li>
-                <li class="sidebar-item"><a href="#北京"><span>北京</span></a></li>
-                <li class="sidebar-item"><a href="#天津"><span>天津</span></a></li>
-                <li class="sidebar-item"><a href="#石家庄"><span>石家庄</span></a></li>
-                <li class="sidebar-item"><a href="#呼和浩特"><span>呼和浩特</span></a></li>
-                <li class="sidebar-item"><a href="#太原"><span>太原</span></a></li>
-                <li class="sidebar-item"><a href="#沈阳"><span>沈阳</span></a></li>
-                <li class="sidebar-item"><a href="#大连"><span>大连</span></a></li>
-                <li class="sidebar-item"><a href="#长春"><span>长春</span></a></li>
-                <li class="sidebar-item"><a href="#哈尔滨"><span>哈尔滨</span></a></li>
-                <li class="sidebar-item"><a href="#上海"><span>上海</span></a></li>
-                <li class="sidebar-item"><a href="#南京"><span>南京</span></a></li>
-                <li class="sidebar-item"><a href="#杭州"><span>杭州</span></a></li>
-                <li class="sidebar-item"><a href="#宁波"><span>宁波</span></a></li>
-                <li class="sidebar-item"><a href="#合肥"><span>合肥</span></a></li>
-                <li class="sidebar-item"><a href="#福州"><span>福州</span></a></li>
-                <li class="sidebar-item"><a href="#厦门"><span>厦门</span></a></li>
-                <li class="sidebar-item"><a href="#南昌"><span>南昌</span></a></li>
-                <li class="sidebar-item"><a href="#济南"><span>济南</span></a></li>
-                <li class="sidebar-item"><a href="#郑州"><span>郑州</span></a></li>
-                <li class="sidebar-item"><a href="#武汉"><span>武汉</span></a></li>
-                <li class="sidebar-item"><a href="#长沙"><span>长沙</span></a></li>
-                <li class="sidebar-item"><a href="#广州"><span>广州</span></a></li>
-                <li class="sidebar-item"><a href="#深圳"><span>深圳</span></a></li>
-                <li class="sidebar-item"><a href="#南宁"><span>南宁</span></a></li>
-                <li class="sidebar-item"><a href="#海口"><span>海口</span></a></li>
-                <li class="sidebar-item"><a href="#重庆"><span>重庆</span></a></li>
-                <li class="sidebar-item"><a href="#成都"><span>成都</span></a></li>
-                <li class="sidebar-item"><a href="#贵阳"><span>贵阳</span></a></li>
-                <li class="sidebar-item"><a href="#昆明"><span>昆明</span></a></li>
-                <li class="sidebar-item"><a href="#西安"><span>西安</span></a></li>
-                <li class="sidebar-item"><a href="#兰州"><span>兰州</span></a></li>
-                <li class="sidebar-item"><a href="#西宁"><span>西宁</span></a></li>
-                <li class="sidebar-item"><a href="#银川"><span>银川</span></a></li>
-                <li class="sidebar-item"><a href="#乌鲁木齐"><span>乌鲁木齐</span></a></li>
-                <li class="sidebar-item"><a href="#唐山"><span>唐山</span></a></li>
-                <li class="sidebar-item"><a href="#秦皇岛"><span>秦皇岛</span></a></li>
-                <li class="sidebar-item"><a href="#包头"><span>包头</span></a></li>
-                <li class="sidebar-item"><a href="#丹东"><span>丹东</span></a></li>
-                <li class="sidebar-item"><a href="#锦州"><span>锦州</span></a></li>
-                <li class="sidebar-item"><a href="#吉林"><span>吉林</span></a></li>
-                <li class="sidebar-item"><a href="#牡丹江"><span>牡丹江</span></a></li>
-                <li class="sidebar-item"><a href="#无锡"><span>无锡</span></a></li>
-                <li class="sidebar-item"><a href="#扬州"><span>扬州</span></a></li>
-                <li class="sidebar-item"><a href="#徐州"><span>徐州</span></a></li>
-                <li class="sidebar-item"><a href="#温州"><span>温州</span></a></li>
-                <li class="sidebar-item"><a href="#金华"><span>金华</span></a></li>
-                <li class="sidebar-item"><a href="#蚌埠"><span>蚌埠</span></a></li>
-                <li class="sidebar-item"><a href="#安庆"><span>安庆</span></a></li>
-                <li class="sidebar-item"><a href="#泉州"><span>泉州</span></a></li>
-                <li class="sidebar-item"><a href="#九江"><span>九江</span></a></li>
-                <li class="sidebar-item"><a href="#赣州"><span>赣州</span></a></li>
-                <li class="sidebar-item"><a href="#烟台"><span>烟台</span></a></li>
-                <li class="sidebar-item"><a href="#济宁"><span>济宁</span></a></li>
-                <li class="sidebar-item"><a href="#洛阳"><span>洛阳</span></a></li>
-                <li class="sidebar-item"><a href="#平顶山"><span>平顶山</span></a></li>
-                <li class="sidebar-item"><a href="#宜昌"><span>宜昌</span></a></li>
-                <li class="sidebar-item"><a href="#襄阳"><span>襄阳</span></a></li>
-                <li class="sidebar-item"><a href="#岳阳"><span>岳阳</span></a></li>
-                <li class="sidebar-item"><a href="#常德"><span>常德</span></a></li>
-                <li class="sidebar-item"><a href="#惠州"><span>惠州</span></a></li>
-                <li class="sidebar-item"><a href="#湛江"><span>湛江</span></a></li>
-                <li class="sidebar-item"><a href="#韶关"><span>韶关</span></a></li>
-                <li class="sidebar-item"><a href="#桂林"><span>桂林</span></a></li>
-                <li class="sidebar-item"><a href="#北海"><span>北海</span></a></li>
-                <li class="sidebar-item"><a href="#三亚"><span>三亚</span></a></li>
-                <li class="sidebar-item"><a href="#泸州"><span>泸州</span></a></li>
-                <li class="sidebar-item"><a href="#南充"><span>南充</span></a></li>
-                <li class="sidebar-item"><a href="#遵义"><span>遵义</span></a></li>
-                <li class="sidebar-item"><a href="#大理"><span>大理</span></a></li>
-                <li class="sidebar-item"><a href="#行业网站"><span>行业网站</span></a></li>
-                <li class="sidebar-item"><a href="#资源规划"><span>资源规划</span></a></li>
-                <li class="sidebar-item"><a href="#教育体育"><span>教育体育</span></a></li>
-                <li class="sidebar-item"><a href="#科学技术"><span>科学技术</span></a></li>
-                <li class="sidebar-item"><a href="#卫生食药"><span>卫生食药</span></a></li>
-                <li class="sidebar-item"><a href="#金融财税"><span>金融财税</span></a></li>
-                <li class="sidebar-item"><a href="#文化旅游"><span>文化旅游</span></a></li>
-                <li class="sidebar-item"><a href="#农业农村"><span>农业农村</span></a></li>
-                <li class="sidebar-item"><a href="#资源交易"><span>资源交易</span></a></li>
-                <li class="sidebar-item"><a href="#市场监督"><span>市场监督</span></a></li>
-                <li class="sidebar-item"><a href="#经济综合"><span>经济综合</span></a></li>
-                <li class="sidebar-item"><a href="#人资综合"><span>人资综合</span></a></li>
-                <li class="sidebar-item"><a href="#政法综合"><span>政法综合</span></a></li>
-                <li class="sidebar-item"><a href="#民政事务"><span>民政事务</span></a></li>
-                <li class="sidebar-item"><a href="#生态环境"><span>生态环境</span></a></li>
-                <li class="sidebar-item"><a href="#人事考试信息查询"><span>人事考试信息查询</span></a></li>
-                <li class="sidebar-item"><a href="#全国人社"><span>全国人社</span></a></li>
-                <li class="sidebar-item"><a href="#全国教育"><span>全国教育</span></a></li>
-                <li class="sidebar-item"><a href="#教育考试信息查询"><span>教育考试信息查询</span></a></li>
-                <li class="sidebar-item"><a href="#其他"><span>其他</span></a></li>
-                <li class="sidebar-item"><a href="#地方政府"><span>地方政府</span></a></li>
-                <li class="sidebar-item"><a href="#浙江省级部门"><span>浙江省级部门</span></a></li>
-                <li class="sidebar-item"><a href="#改革委员会"><span>改革委员会</span></a></li>
-                <li class="sidebar-item"><a href="#湖南省级部门"><span>湖南省级部门</span></a></li>
-                <li class="sidebar-item"><a href="#上海省级部门"><span>上海省级部门</span></a></li>
+                <li class="sidebar-item">
+                  <a href="#常用"><span>常用</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#主要机构"><span>主要机构</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#国务院各部门"><span>国务院各部门</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#群众团体"><span>群众团体</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#民主党派"><span>民主党派</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#省市政府网站"><span>省市政府网站</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#大中城市"><span>大中城市</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#北京"><span>北京</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#天津"><span>天津</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#石家庄"><span>石家庄</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#呼和浩特"><span>呼和浩特</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#太原"><span>太原</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#沈阳"><span>沈阳</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#大连"><span>大连</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#长春"><span>长春</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#哈尔滨"><span>哈尔滨</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#上海"><span>上海</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#南京"><span>南京</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#杭州"><span>杭州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#宁波"><span>宁波</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#合肥"><span>合肥</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#福州"><span>福州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#厦门"><span>厦门</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#南昌"><span>南昌</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#济南"><span>济南</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#郑州"><span>郑州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#武汉"><span>武汉</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#长沙"><span>长沙</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#广州"><span>广州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#深圳"><span>深圳</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#南宁"><span>南宁</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#海口"><span>海口</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#重庆"><span>重庆</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#成都"><span>成都</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#贵阳"><span>贵阳</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#昆明"><span>昆明</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#西安"><span>西安</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#兰州"><span>兰州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#西宁"><span>西宁</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#银川"><span>银川</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#乌鲁木齐"><span>乌鲁木齐</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#唐山"><span>唐山</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#秦皇岛"><span>秦皇岛</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#包头"><span>包头</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#丹东"><span>丹东</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#锦州"><span>锦州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#吉林"><span>吉林</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#牡丹江"><span>牡丹江</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#无锡"><span>无锡</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#扬州"><span>扬州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#徐州"><span>徐州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#温州"><span>温州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#金华"><span>金华</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#蚌埠"><span>蚌埠</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#安庆"><span>安庆</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#泉州"><span>泉州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#九江"><span>九江</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#赣州"><span>赣州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#烟台"><span>烟台</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#济宁"><span>济宁</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#洛阳"><span>洛阳</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#平顶山"><span>平顶山</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#宜昌"><span>宜昌</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#襄阳"><span>襄阳</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#岳阳"><span>岳阳</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#常德"><span>常德</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#惠州"><span>惠州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#湛江"><span>湛江</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#韶关"><span>韶关</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#桂林"><span>桂林</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#北海"><span>北海</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#三亚"><span>三亚</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#泸州"><span>泸州</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#南充"><span>南充</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#遵义"><span>遵义</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#大理"><span>大理</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#行业网站"><span>行业网站</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#资源规划"><span>资源规划</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#教育体育"><span>教育体育</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#科学技术"><span>科学技术</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#卫生食药"><span>卫生食药</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#金融财税"><span>金融财税</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#文化旅游"><span>文化旅游</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#农业农村"><span>农业农村</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#资源交易"><span>资源交易</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#市场监督"><span>市场监督</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#经济综合"><span>经济综合</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#人资综合"><span>人资综合</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#政法综合"><span>政法综合</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#民政事务"><span>民政事务</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#生态环境"><span>生态环境</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#人事考试信息查询"><span>人事考试信息查询</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#全国人社"><span>全国人社</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#全国教育"><span>全国教育</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#教育考试信息查询"><span>教育考试信息查询</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#其他"><span>其他</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#地方政府"><span>地方政府</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#浙江省级部门"><span>浙江省级部门</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#改革委员会"><span>改革委员会</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#湖南省级部门"><span>湖南省级部门</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#上海省级部门"><span>上海省级部门</span></a>
+                </li>
               </ul>
             </div>
           </div>

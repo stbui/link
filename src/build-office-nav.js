@@ -10,7 +10,7 @@ const config = { key: 'office-nav', title: '全国政府部门站群', data };
 const res = ejs.render(html, {
   data: config.data,
   title: config.title,
-  cellWidth: 200,
+  cellWidth: 'w-200',
 });
 
 fs.writeFileSync(`./html/${config.key}.html`, res);
