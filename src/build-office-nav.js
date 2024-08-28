@@ -11,6 +11,7 @@ const res = ejs.render(html, {
   data: config.data,
   title: config.title,
   cellWidth: 'w-200',
+  cellFixed: 0
 });
 
 fs.writeFileSync(`./html/${config.key}.html`, res);
