@@ -25,7 +25,7 @@
 <body>
     <div class="title"><%= title %></div>
     <div class="table"><% for (var i=0;i<data.length;i++) { %>
-        <div class="row"><% for (var j=0;j<data[0].length;j++) { %><% if (j===0) {%>
+        <div class="row"><% for (var j=0;j<data[0].length;j++) { %><% if (j<=cellFixed) {%>
             <div class="cell text-left <%= cellWidth %>"><%=data[i][j]%></div><%} else { %><% if (i<=cellFixed) {%>
             <div class="cell"><%=data[i][j]%></div><%} else { %><% if (data[i][j]) {%>
             <div class="cell"><a href="<%=data[i][j]%>" target="_blank" title="<%=data[i][j]%>">查看</a></div><% } else { %>
