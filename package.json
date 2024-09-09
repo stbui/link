@@ -6,6 +6,8 @@
     "tools": "node tools.js"
   },
   "dependencies": {
-    "ejs": "^3.1.8"
+    "ejs": "^3.1.8",
+    "csv": "^6.3.10",
+    "xlsx": "^0.18.5"
   }
 }
