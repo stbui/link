@@ -266,5 +266,9 @@
   {
     "title": "福建",
     "type": "fujian"
+  },
+  {
+    "title": "协会",
+    "type": "xiehui"
   }
 ]
